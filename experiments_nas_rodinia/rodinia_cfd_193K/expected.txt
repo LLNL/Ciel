@@ -1,0 +1,236 @@
+rm -f euler3d euler3d_double pre_euler3d pre_euler3d_double *.linkinfo *.txt
+rm -rf workspace *.out
+[timer] func analysis time: 0.6753625869750977
+============= perform search =============
+has signature changed: False
+[timer] transform time for 0: 0.5329210758209229
+cp: cannot stat './workspace/euler3d.cu': No such file or directory
+[timer] compile run time for 0: 19.542356252670288
+cp: cannot stat './workspace/transform_list.txt': No such file or directory
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 1: 0.5380580425262451
+[timer] compile run time for 1: 81.4893045425415
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 2: 0.5233235359191895
+[timer] compile run time for 2: 60.54078221321106
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 3: 0.4141123294830322
+[timer] compile run time for 3: 42.9427809715271
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 4: 0.44478940963745117
+[timer] compile run time for 4: 28.611824989318848
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 5: 0.46343326568603516
+[timer] compile run time for 5: 39.99402618408203
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 6: 0.5289113521575928
+[timer] compile run time for 6: 47.500834703445435
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 7: 0.6039276123046875
+[timer] compile run time for 7: 33.41346335411072
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 8: 0.500213623046875
+[timer] compile run time for 8: 29.837969541549683
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 9: 0.5126538276672363
+[timer] compile run time for 9: 28.213637113571167
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 10: 0.5075960159301758
+[timer] compile run time for 10: 30.009318113327026
+has enhancing precision resolve inconsistency: True
+====== begin blocks search of ./workspace/func_analysis/euler3d_cu/compute_pressure.json from 0 to 1 ======
+block 0 fpcount: 6
+====== enter block 0 ======
+====== begin stmts search of ./workspace/func_analysis/euler3d_cu/compute_pressure.json from 0 to 1 ======
+block 0 fpcount: 6
+====== begin blocks search of ./workspace/func_analysis/euler3d_cu/compute_speed_sqd.json from 0 to 1 ======
+block 0 fpcount: 6
+====== enter block 0 ======
+====== begin stmts search of ./workspace/func_analysis/euler3d_cu/compute_speed_sqd.json from 0 to 1 ======
+block 0 fpcount: 6
+Print result:
+offending text: ./euler3d.cu:257:2, ./euler3d.cu:257:83
+Individual statements:
+offending text: ./euler3d.cu:257:2, ./euler3d.cu:257:83
+Has continuous statements: no
+offending text: ./euler3d.cu:252:2, ./euler3d.cu:252:77
+Individual statements:
+offending text: ./euler3d.cu:252:2, ./euler3d.cu:252:77
+Has continuous statements: no
+----- end of results -----
+[timer] Total Transform Time: 5.569940090179443
+[timer] Total Compile Run Time: 442.09629797935486
+[timer] total time: 449.02958369255066
+[0, 0]:[-1, 0, 1, 2, 3, 4, 3, 6, 1, 8, 9, 10, 9, 12, 13, 14, 13, 16, 12, 18]
+[0, 0]:[-1, 0, 1, 2, 3, 4, 5, 3, 7, 8, 2, 10, 11, 12, 10, 14, 15, 1, 17, 18, 19, 17, 21, 22]
+new config [1]
+[timer] transform time for 11: 0.5771448612213135
+[timer] compile run time for 11: 28.253392219543457
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [2]
+[timer] transform time for 12: 0.5072851181030273
+[timer] compile run time for 12: 26.890185832977295
+has enhancing precision resolve inconsistency: False
+new config [8]
+[timer] transform time for 13: 0.5206124782562256
+[timer] compile run time for 13: 28.628000736236572
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [9]
+[timer] transform time for 14: 0.511359453201294
+[timer] compile run time for 14: 28.391796112060547
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [10]
+[timer] transform time for 15: 0.5096871852874756
+[timer] compile run time for 15: 28.23312997817993
+has enhancing precision resolve inconsistency: False
+new config [12]
+[timer] transform time for 16: 0.5071883201599121
+[timer] compile run time for 16: 29.206617832183838
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [13]
+[timer] transform time for 17: 1.2268776893615723
+[timer] compile run time for 17: 33.52247071266174
+has enhancing precision resolve inconsistency: True
+new config [18]
+[timer] transform time for 18: 0.8766505718231201
+[timer] compile run time for 18: 31.870039701461792
+has enhancing precision resolve inconsistency: True
+eligible set num 2
+new config [19]
+[timer] transform time for 19: 0.765350341796875
+[timer] compile run time for 19: 30.39482855796814
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+eligible set num 0
+new config [1]
+[timer] transform time for 20: 0.7280948162078857
+[timer] compile run time for 20: 30.745710372924805
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [2]
+[timer] transform time for 21: 0.6340117454528809
+[timer] compile run time for 21: 30.477569341659546
+has enhancing precision resolve inconsistency: False
+new config [17]
+[timer] transform time for 22: 0.5632214546203613
+[timer] compile run time for 22: 28.84391212463379
+has enhancing precision resolve inconsistency: False
+eligible set num 0
+new config [18, 2]
+[timer] transform time for 23: 0.5538218021392822
+[timer] compile run time for 23: 29.28048086166382
+has enhancing precision resolve inconsistency: True
+new config [21, 2]
+[timer] transform time for 24: 0.5613489151000977
+[timer] compile run time for 24: 29.179359674453735
+has enhancing precision resolve inconsistency: True
+eligible set num 2
+new config [19, 2]
+[timer] transform time for 25: 0.5904066562652588
+[timer] compile run time for 25: 30.048638820648193
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [20, 2]
+[timer] transform time for 26: 0.5060253143310547
+[timer] compile run time for 26: 27.836731433868408
+has enhancing precision resolve inconsistency: False
+eligible set num 0
+eligible set num 0
+new config [20, 3]
+[timer] transform time for 27: 0.5749735832214355
+[timer] compile run time for 27: 27.25837278366089
+has enhancing precision resolve inconsistency: False
+new config [20, 10]
+[timer] transform time for 28: 0.5047199726104736
+[timer] compile run time for 28: 27.51419687271118
+has enhancing precision resolve inconsistency: False
+eligible set num 0
+new config [20, 11, 3]
+[timer] transform time for 29: 0.514103889465332
+[timer] compile run time for 29: 27.184741020202637
+has enhancing precision resolve inconsistency: False
+new config [20, 14, 3]
+[timer] transform time for 30: 0.5904667377471924
+[timer] compile run time for 30: 27.365396738052368
+has enhancing precision resolve inconsistency: False
+eligible set num 0
+new config [20, 15, 11, 3]
+[timer] transform time for 31: 0.49657392501831055
+[timer] compile run time for 31: 27.27620577812195
+has enhancing precision resolve inconsistency: False
+eligible set num 0
+new config [20, 16, 11, 3]
+[timer] transform time for 32: 0.5338795185089111
+[timer] compile run time for 32: 27.299992561340332
+has enhancing precision resolve inconsistency: False
+eligible set num 0
+eligible set num 0
+new config [20, 16, 12, 3]
+[timer] transform time for 33: 0.5077195167541504
+[timer] compile run time for 33: 27.764450311660767
+has enhancing precision resolve inconsistency: False
+eligible set num 0
+new config [20, 16, 13, 3]
+[timer] transform time for 34: 0.6021921634674072
+[timer] compile run time for 34: 30.065809726715088
+has enhancing precision resolve inconsistency: False
+eligible set num 0
+eligible set num 0
+new config [20, 16, 13, 4]
+[timer] transform time for 35: 0.6087660789489746
+[timer] compile run time for 35: 29.28583002090454
+has enhancing precision resolve inconsistency: False
+new config [20, 16, 13, 7]
+[timer] transform time for 36: 0.7290282249450684
+[timer] compile run time for 36: 28.740992784500122
+has enhancing precision resolve inconsistency: False
+eligible set num 0
+new config [20, 16, 13, 8, 4]
+[timer] transform time for 37: 0.8072230815887451
+[timer] compile run time for 37: 28.773276567459106
+has enhancing precision resolve inconsistency: False
+eligible set num 0
+new config [20, 16, 13, 9, 4]
+[timer] transform time for 38: 0.5358328819274902
+[timer] compile run time for 38: 27.409146785736084
+has enhancing precision resolve inconsistency: False
+eligible set num 0
+eligible set num 0
+new config [20, 16, 13, 9, 5]
+[timer] transform time for 39: 0.5138411521911621
+[timer] compile run time for 39: 28.234808683395386
+has enhancing precision resolve inconsistency: False
+eligible set num 0
+new config [20, 16, 13, 9, 6]
+[timer] transform time for 40: 0.5302214622497559
+[timer] compile run time for 40: 27.069929838180542
+has enhancing precision resolve inconsistency: False
+eligible set num 0
+eligible set num 0
+Print result:
+Individual statements:
+offending text: ./euler3d.cu:257:2, ./euler3d.cu:257:83
+Has continuous statements: no
+Individual statements:
+offending text: ./euler3d.cu:252:2, ./euler3d.cu:252:77
+Has continuous statements: no
+offending subexpression: DeclRefExpr, velocity
+offending text: ./euler3d.cu:252:9, ./euler3d.cu:252:9
+offending subexpression: DeclRefExpr, velocity
+offending text: ./euler3d.cu:252:20, ./euler3d.cu:252:20
+offending subexpression: DeclRefExpr, velocity
+offending text: ./euler3d.cu:252:33, ./euler3d.cu:252:33
+offending subexpression: DeclRefExpr, velocity
+offending text: ./euler3d.cu:252:44, ./euler3d.cu:252:44
+offending subexpression: DeclRefExpr, velocity
+offending text: ./euler3d.cu:252:57, ./euler3d.cu:252:57
+offending subexpression: DeclRefExpr, speed_sqd
+offending text: ./euler3d.cu:257:74, ./euler3d.cu:257:74
+----- end of results -----
+[timer] Total Transform Time: 23.75856900215149
+[timer] Total Compile Run Time: 1305.1423127651215
+[timer] total time after subexpression isolation: 1331.3684387207031

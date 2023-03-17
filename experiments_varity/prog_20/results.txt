@@ -1,0 +1,27 @@
+Print result: 
+Individual statements: 
+offending text: ./test.cu:19:1, ./test.cu:19:60
+offending text: ./test.cu:21:5, ./test.cu:21:53
+Has continuous statements: no
+	offending subexpression: DeclRefExpr, var_12
+offending text: ./test.cu:19:9, ./test.cu:19:9
+	offending subexpression: DeclRefExpr, i
+offending text: ./test.cu:19:16, ./test.cu:19:16
+	offending subexpression: DeclRefExpr, var_11
+offending text: ./test.cu:19:21, ./test.cu:19:21
+	offending subexpression: DeclRefExpr, i
+offending text: ./test.cu:19:28, ./test.cu:19:28
+	offending subexpression: DeclRefExpr, var_13
+offending text: ./test.cu:19:34, ./test.cu:19:34
+	offending subexpression: DeclRefExpr, var_14
+offending text: ./test.cu:19:44, ./test.cu:19:44
+	offending subexpression: DeclRefExpr, var_15
+offending text: ./test.cu:19:53, ./test.cu:19:53
+	offending subexpression: DeclRefExpr, comp
+offending text: ./test.cu:21:5, ./test.cu:21:5
+	offending subexpression: FloatingLiteral, 1.40990001E+35F
+offending text: ./test.cu:21:14, ./test.cu:21:14
+	offending subexpression: FloatingLiteral, 1.82569998E+34F
+offending text: ./test.cu:21:29, ./test.cu:21:29
+	offending subexpression: FloatingLiteral, 1.05920002E+27F
+offending text: ./test.cu:21:43, ./test.cu:21:43

@@ -1,0 +1,6 @@
+experiments_ecmwf/ecbundle
+experiments_ecmwf/ecbundle/*
+experiments_ecmwf/build/*
+experiments_ecmwf/source/*
+experiments_ecmwf/serialbox2hdf5/venv
+experiments_ecmwf/serialbox2hdf5/serialbox

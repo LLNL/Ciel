@@ -1,0 +1,149 @@
+rm -f euler3d euler3d_double pre_euler3d pre_euler3d_double *.linkinfo *.txt
+rm -rf workspace *.out
+[timer] func analysis time: 0.8966250419616699
+============= perform search =============
+has signature changed: False
+[timer] transform time for 0: 0.7491245269775391
+cp: cannot stat './workspace/euler3d.cu': No such file or directory
+[timer] compile run time for 0: 12.905742406845093
+cp: cannot stat './workspace/transform_list.txt': No such file or directory
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 1: 0.6565456390380859
+[timer] compile run time for 1: 50.89786982536316
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 2: 0.5380046367645264
+[timer] compile run time for 2: 38.77221608161926
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 3: 0.636803388595581
+[timer] compile run time for 3: 19.46047019958496
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 4: 0.6173038482666016
+[timer] compile run time for 4: 40.493621826171875
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 5: 0.6354513168334961
+[timer] compile run time for 5: 37.42416191101074
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 6: 0.5906989574432373
+[timer] compile run time for 6: 18.23268461227417
+has enhancing precision resolve inconsistency: True
+====== begin blocks search of ./workspace/func_analysis/euler3d_cu/cuda_compute_step_factor.json from 0 to 1 ======
+block 0 fpcount: 35
+====== enter block 0 ======
+====== begin stmts search of ./workspace/func_analysis/euler3d_cu/cuda_compute_step_factor.json from 0 to 13 ======
+block 0 fpcount: 0
+block 1 fpcount: 2
+block 2 fpcount: 1
+block 3 fpcount: 2
+block 4 fpcount: 2
+block 5 fpcount: 2
+block 6 fpcount: 2
+block 7 fpcount: 1
+block 8 fpcount: 4
+block 9 fpcount: 3
+block 10 fpcount: 5
+block 11 fpcount: 4
+block 12 fpcount: 7
+[timer] transform time for 7: 0.6829466819763184
+[timer] compile run time for 7: 17.521482944488525
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 8: 0.5407848358154297
+[timer] compile run time for 8: 18.984570741653442
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 9: 0.5775697231292725
+[timer] compile run time for 9: 17.032862901687622
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 10: 0.5897104740142822
+[timer] compile run time for 10: 17.26797127723694
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 11: 0.6303820610046387
+[timer] compile run time for 11: 17.43313980102539
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 12: 0.621335506439209
+[timer] compile run time for 12: 18.95828080177307
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 13: 0.6126041412353516
+[timer] compile run time for 13: 18.46780753135681
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 14: 0.5918047428131104
+[timer] compile run time for 14: 17.874555349349976
+has enhancing precision resolve inconsistency: True
+Print result:
+offending text: ./euler3d.cu:283:2, ./euler3d.cu:283:88
+Individual statements:
+offending text: ./euler3d.cu:283:2, ./euler3d.cu:283:88
+Has continuous statements: no
+----- end of results -----
+[timer] Total Transform Time: 9.27107048034668
+[timer] Total Compile Run Time: 361.72743821144104
+[timer] total time: 373.3239903450012
+[0, 12]:[-1, 0, 1, 2, 1, 4, 0, 6, 7, 6, 9, 10, 11, 12, 11, 14, 15, 16, 15, 18, 10, 20, 21, 22, 23, 22, 25, 21, 27]
+new config [7]
+[timer] transform time for 15: 0.5593955516815186
+[timer] compile run time for 15: 17.744081020355225
+has enhancing precision resolve inconsistency: False
+new config [9]
+[timer] transform time for 16: 0.827864408493042
+[timer] compile run time for 16: 21.30853772163391
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [10]
+[timer] transform time for 17: 1.086258888244629
+[timer] compile run time for 17: 18.836505889892578
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [11]
+[timer] transform time for 18: 0.6545553207397461
+[timer] compile run time for 18: 19.504371166229248
+has enhancing precision resolve inconsistency: False
+new config [20]
+[timer] transform time for 19: 0.6109821796417236
+[timer] compile run time for 19: 18.79317331314087
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [21]
+[timer] transform time for 20: 0.5311179161071777
+[timer] compile run time for 20: 18.43492817878723
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [22]
+[timer] transform time for 21: 0.5893206596374512
+[timer] compile run time for 21: 18.44877529144287
+has enhancing precision resolve inconsistency: True
+new config [27]
+[timer] transform time for 22: 0.5510344505310059
+[timer] compile run time for 22: 18.375116109848022
+has enhancing precision resolve inconsistency: False
+eligible set num 1
+new config [23]
+[timer] transform time for 23: 0.5576274394989014
+[timer] compile run time for 23: 18.579657077789307
+has enhancing precision resolve inconsistency: False
+new config [25]
+[timer] transform time for 24: 0.5773067474365234
+[timer] compile run time for 24: 18.25847315788269
+has enhancing precision resolve inconsistency: False
+eligible set num 0
+new config [26, 23]
+[timer] transform time for 25: 0.6737282276153564
+[timer] compile run time for 25: 19.34480309486389
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+eligible set num 0
+new config [26, 24]
+[timer] transform time for 26: 0.7704222202301025
+[timer] compile run time for 26: 19.723264455795288
+has enhancing precision resolve inconsistency: False
+eligible set num 0
+eligible set num 0
+Print result:
+Individual statements:
+offending text: ./euler3d.cu:283:2, ./euler3d.cu:283:88
+Has continuous statements: no
+offending subexpression: DeclRefExpr, sqrtf
+offending text: ./euler3d.cu:283:54, ./euler3d.cu:283:54
+offending subexpression: DeclRefExpr, speed_sqd
+offending text: ./euler3d.cu:283:60, ./euler3d.cu:283:60
+----- end of results -----
+[timer] Total Transform Time: 17.260684490203857
+[timer] Total Compile Run Time: 589.0791246891022
+[timer] total time after subexpression isolation: 610.045426607132

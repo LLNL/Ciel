@@ -1,0 +1,6 @@
+Print result: 
+offending text: ./test.cu:25:1, ./test.cu:26:145
+Individual statements: 
+offending text: ./test.cu:25:1, ./test.cu:25:132
+offending text: ./test.cu:26:1, ./test.cu:26:145
+Has continuous statements: yes

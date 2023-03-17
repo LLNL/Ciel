@@ -1,0 +1,111 @@
+#---------------------------------------------------------------------------
+# Items in this file will need to be changed for each platform.
+#---------------------------------------------------------------------------
+
+#---------------------------------------------------------------------------
+# Parallel C:
+#
+# CC         - C compiler 
+# CFLAGS     - C compilation arguments
+# C_INC      - any -I arguments required for compiling C 
+# CLINK      - C linker
+# CLINKFLAGS - C linker flags
+# C_LIB      - any -L and -l arguments required for linking C 
+#
+# compilations are done with $(CC) $(C_INC) $(CFLAGS) or
+#                            $(CC) $(CFLAGS)
+# linking is done with       $(CLINK) $(C_LIB) $(CLINKFLAGS)
+#---------------------------------------------------------------------------
+
+#---------------------------------------------------------------------------
+# This is the compiler used for CUDA programs
+#---------------------------------------------------------------------------
+COMPUTE_CAPABILITY = -gencode arch=compute_61,code=$(CUDA_CC_VERSION)
+
+OPENMP = -Xcompiler -fopenmp -lgomp
+
+REGISTERS = 
+
+####-maxrregcount 50
+
+# OPTIMIZATIONS = -use_fast_math -Xptxas --preserve-relocs -Xptxas -O3
+OPTIMIZATIONS = -Xptxas --preserve-relocs -Xptxas -O0
+
+CPP_14 = -std=c++14
+
+NO_NPB_CPP_CONVENTIONS = -DDO_NOT_ALLOCATE_ARRAYS_WITH_DYNAMIC_MEMORY_AND_AS_SINGLE_DIMENSION
+
+PROFILING = -DPROFILING
+
+EXTRA_STUFF = ${COMPUTE_CAPABILITY} ${OPENMP} ${OPTIMIZATIONS} ${REGISTERS}
+
+NVCC = nvcc
+
+CC = ${NVCC} ${EXTRA_STUFF}
+
+#---------------------------------------------------------------------------
+# This links C programs; usually the same as ${CC}
+#---------------------------------------------------------------------------
+CLINK = $(CC)
+
+#---------------------------------------------------------------------------
+# These macros are passed to the linker 
+#---------------------------------------------------------------------------
+C_LIB = -lm 
+
+#---------------------------------------------------------------------------
+# These macros are passed to the compiler 
+#---------------------------------------------------------------------------
+C_INC = 
+
+#---------------------------------------------------------------------------
+# Global *compile time* flags for C programs
+#---------------------------------------------------------------------------
+CFLAGS = -O0
+
+#---------------------------------------------------------------------------
+# Global *link time* flags. Flags for increasing maximum executable 
+# size usually go here. 
+#---------------------------------------------------------------------------
+CLINKFLAGS = -O0
+
+#---------------------------------------------------------------------------
+# Utilities C:
+#
+# This is the C compiler used to compile C utilities. Flags required by 
+# this compiler go here also; typically there are few flags required; hence 
+# there are no separate macros provided for such flags.
+#---------------------------------------------------------------------------
+UCC	= cc
+
+#---------------------------------------------------------------------------
+# Destination of executables, relative to subdirs of the main directory. 
+#---------------------------------------------------------------------------
+BINDIR	= ./
+
+#---------------------------------------------------------------------------
+# The variable RAND controls which random number generator 
+# is used. It is described in detail in Doc/README.install. 
+# Use "randi8" unless there is a reason to use another one. 
+# Other allowed values are "randi8_safe", "randdp" and "randdpvec"
+#---------------------------------------------------------------------------
+# RAND = randi8
+# The following is highly reliable but may be slow:
+RAND = randdp
+
+#---------------------------------------------------------------------------
+# The variable WTIME is the name of the wtime source code module in the
+# NPB2.x/common directory.  
+# For most machines,       use wtime.c
+# For SGI power challenge: use wtime_sgi64.c
+#---------------------------------------------------------------------------
+WTIME = wtime.cpp
+
+#---------------------------------------------------------------------------
+# Enable if either Cray or IBM: 
+# (no such flag for most machines: see common/wtime.h)
+# This is used by the C compiler to pass the machine name to common/wtime.h,
+# where the C/Fortran binding interface format is determined
+#---------------------------------------------------------------------------
+# MACHINE = -DCRAY
+# MACHINE = -DIBM

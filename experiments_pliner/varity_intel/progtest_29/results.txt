@@ -1,0 +1,8 @@
+Print result: 
+Individual statements: 
+offending text: ./test.cpp:18:1, ./test.cpp:18:78
+Has continuous statements: no
+	offending subexpression: DeclRefExpr, log
+offending text: ./test.cpp:18:43, ./test.cpp:18:43
+	offending subexpression: DeclRefExpr, var_13
+offending text: ./test.cpp:18:47, ./test.cpp:18:47

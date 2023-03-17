@@ -1,0 +1,17 @@
+Print result: 
+offending text: ./test.cu:11:5, ./test.cu:11:53
+offending text: ./test.cu:13:5, ./test.cu:20:1
+offending text: ./test.cu:20:31, ./test.cu:23:1
+offending text: ./test.cu:26:4, ./test.cu:26:28
+Individual statements: 
+offending text: ./test.cu:11:5, ./test.cu:11:50
+offending text: ./test.cu:13:5, ./test.cu:13:60
+offending text: ./test.cu:14:5, ./test.cu:14:128
+offending text: ./test.cu:15:3, ./test.cu:15:25
+offending text: ./test.cu:16:1, ./test.cu:16:27
+offending text: ./test.cu:17:1, ./test.cu:17:69
+offending text: ./test.cu:18:1, ./test.cu:18:108
+offending text: ./test.cu:21:3, ./test.cu:21:26
+offending text: ./test.cu:22:1, ./test.cu:22:74
+offending text: ./test.cu:26:4, ./test.cu:26:28
+Has continuous statements: yes

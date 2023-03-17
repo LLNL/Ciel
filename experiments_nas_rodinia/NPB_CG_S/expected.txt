@@ -1,0 +1,186 @@
+rm -f *.o *~ 
+rm -rf workspace
+rm -f core cg.S *.out
+[timer] func analysis time: 0.31273484230041504
+============= perform search =============
+has signature changed: False
+[timer] transform time for 0: 0.18202567100524902
+cp: cannot stat './workspace/cg.cu': No such file or directory
+[timer] compile run time for 0: 2.2670254707336426
+cp: cannot stat './workspace/transform_list.txt': No such file or directory
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 1: 0.2516658306121826
+[timer] compile run time for 1: 4.182221412658691
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 2: 0.22465872764587402
+[timer] compile run time for 2: 4.0775744915008545
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 3: 0.2028031349182129
+[timer] compile run time for 3: 4.094080448150635
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 4: 0.2028806209564209
+[timer] compile run time for 4: 4.061892986297607
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 5: 0.19163823127746582
+[timer] compile run time for 5: 4.207006454467773
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 6: 0.19634389877319336
+[timer] compile run time for 6: 4.269328594207764
+has enhancing precision resolve inconsistency: True
+====== begin blocks search of ./workspace/func_analysis/cg_cu/sparse.json from 0 to 14 ======
+block 0 fpcount: 4
+block 1 fpcount: 0
+block 2 fpcount: 0
+block 3 fpcount: 0
+block 4 fpcount: 0
+block 5 fpcount: 0
+block 6 fpcount: 0
+block 7 fpcount: 2
+block 8 fpcount: 6
+block 9 fpcount: 20
+block 10 fpcount: 0
+block 11 fpcount: 2
+block 12 fpcount: 0
+block 13 fpcount: 0
+loops in this level: [1, 2, 4, 7, 9, 10, 11, 12]
+[timer] transform time for 7: 0.22944235801696777
+[timer] compile run time for 7: 4.059372663497925
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 8: 0.24615812301635742
+[timer] compile run time for 8: 4.107815504074097
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 9: 0.2468883991241455
+[timer] compile run time for 9: 4.075580835342407
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 10: 0.2424924373626709
+[timer] compile run time for 10: 4.190401315689087
+has enhancing precision resolve inconsistency: True
+====== enter block 9 ======
+====== begin blocks search of ./workspace/func_analysis/cg_cu/sparse.json from 0 to 2 ======
+block 0 fpcount: 0
+block 1 fpcount: 20
+loops in this level: []
+====== enter block 1 ======
+====== begin blocks search of ./workspace/func_analysis/cg_cu/sparse.json from 0 to 2 ======
+block 0 fpcount: 17
+block 1 fpcount: 3
+loops in this level: [0]
+[timer] transform time for 11: 0.2403261661529541
+[timer] compile run time for 11: 4.452528715133667
+has enhancing precision resolve inconsistency: True
+====== enter block 0 ======
+====== begin blocks search of ./workspace/func_analysis/cg_cu/sparse.json from 0 to 2 ======
+block 0 fpcount: 0
+block 1 fpcount: 17
+loops in this level: []
+====== enter block 1 ======
+====== begin blocks search of ./workspace/func_analysis/cg_cu/sparse.json from 0 to 2 ======
+block 0 fpcount: 3
+block 1 fpcount: 14
+loops in this level: [1]
+[timer] transform time for 12: 0.2400214672088623
+[timer] compile run time for 12: 4.126799583435059
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 13: 0.23582935333251953
+[timer] compile run time for 13: 4.1546313762664795
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 14: 0.23730015754699707
+[timer] compile run time for 14: 4.094331741333008
+has enhancing precision resolve inconsistency: False
+====== enter block 0 ======
+====== begin stmts search of ./workspace/func_analysis/cg_cu/sparse.json from 0 to 2 ======
+block 0 fpcount: 0
+block 1 fpcount: 3
+====== enter block 1 ======
+====== begin blocks search of ./workspace/func_analysis/cg_cu/sparse.json from 0 to 2 ======
+block 0 fpcount: 0
+block 1 fpcount: 14
+loops in this level: []
+====== enter block 1 ======
+====== begin blocks search of ./workspace/func_analysis/cg_cu/sparse.json from 0 to 6 ======
+block 0 fpcount: 3
+block 1 fpcount: 4
+block 2 fpcount: 0
+block 3 fpcount: 4
+block 4 fpcount: 0
+block 5 fpcount: 3
+loops in this level: [3]
+[timer] transform time for 15: 0.23904180526733398
+[timer] compile run time for 15: 4.624938249588013
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 16: 0.27031850814819336
+[timer] compile run time for 16: 4.496106386184692
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 17: 0.25723791122436523
+[timer] compile run time for 17: 4.770427465438843
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 18: 0.25609683990478516
+[timer] compile run time for 18: 4.3342976570129395
+has enhancing precision resolve inconsistency: True
+====== enter block 1 ======
+====== begin blocks search of ./workspace/func_analysis/cg_cu/sparse.json from 0 to 2 ======
+block 0 fpcount: 0
+block 1 fpcount: 4
+loops in this level: []
+====== enter block 1 ======
+====== begin blocks search of ./workspace/func_analysis/cg_cu/sparse.json from 0 to 1 ======
+block 0 fpcount: 4
+====== enter block 0 ======
+====== begin stmts search of ./workspace/func_analysis/cg_cu/sparse.json from 0 to 1 ======
+block 0 fpcount: 4
+Print result:
+offending text: ./cg.cu:1710:4, ./cg.cu:1710:30
+offending text: ./cg.cu:1721:28, ./cg.cu:1723:5
+Individual statements:
+offending text: ./cg.cu:1710:4, ./cg.cu:1710:30
+offending text: ./cg.cu:1722:6, ./cg.cu:1722:24
+Has continuous statements: no
+----- end of results -----
+[timer] Total Transform Time: 4.393169641494751
+[timer] Total Compile Run Time: 78.64636135101318
+[timer] total time: 83.85636353492737
+[9, 1, 0, 1, 0, 1]:[-1, 0, 0, 2, 3, 2, 5, 6, 7, 8, 9, 8, 11, 6, 13]
+[9, 1, 0, 1, 1, 1, 1, 1, 0, 0]:[-1, 0, 0, 2, 3, 4, 3, 6, 2, 8]
+new config [3]
+[timer] transform time for 19: 0.2329847812652588
+[timer] compile run time for 19: 4.413118600845337
+has enhancing precision resolve inconsistency: True
+new config [5]
+[timer] transform time for 20: 0.21049022674560547
+[timer] compile run time for 20: 4.39183497428894
+has enhancing precision resolve inconsistency: False
+eligible set num 1
+new config [4]
+[timer] transform time for 21: 0.21768736839294434
+[timer] compile run time for 21: 4.3601460456848145
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+eligible set num 0
+new config [3]
+[timer] transform time for 22: 0.22042465209960938
+[timer] compile run time for 22: 4.579584121704102
+has enhancing precision resolve inconsistency: True
+new config [8]
+[timer] transform time for 23: 0.21611952781677246
+[timer] compile run time for 23: 4.630917072296143
+has enhancing precision resolve inconsistency: True
+eligible set num 2
+new config [9]
+[timer] transform time for 24: 0.21233296394348145
+[timer] compile run time for 24: 4.429296016693115
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+eligible set num 0
+Print result:
+Individual statements:
+offending text: ./cg.cu:1710:4, ./cg.cu:1710:30
+offending text: ./cg.cu:1722:6, ./cg.cu:1722:24
+Has continuous statements: no
+offending subexpression: DeclRefExpr, size
+offending text: ./cg.cu:1710:12, ./cg.cu:1710:12
+offending subexpression: DeclRefExpr, shift
+offending text: ./cg.cu:1722:24, ./cg.cu:1722:24
+----- end of results -----
+[timer] Total Transform Time: 5.703209161758423
+[timer] Total Compile Run Time: 105.45125818252563
+[timer] total time after subexpression isolation: 112.23984384536743

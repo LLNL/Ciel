@@ -1,0 +1,6 @@
+Print result: 
+Individual statements: 
+offending text: ./test.cu:22:1, ./test.cu:22:77
+Has continuous statements: no
+	offending subexpression: DeclRefExpr, var_22
+offending text: ./test.cu:22:70, ./test.cu:22:70

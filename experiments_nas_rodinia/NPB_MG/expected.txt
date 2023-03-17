@@ -1,0 +1,190 @@
+rm -f *.o *~ 
+rm -rf workspace
+rm -f core mg.S *.out
+cp: cannot stat './workspace/mg-no-cast.cu': No such file or directory
+[timer] func analysis time: 0.4621551036834717
+============= perform search =============
+has signature changed: False
+[timer] transform time for 0: 0.18851709365844727
+cp: cannot stat './workspace/transform_list.txt': No such file or directory
+[timer] compile run time for 0: 2.91402530670166
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 1: 0.3497591018676758
+[timer] compile run time for 1: 5.007861375808716
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 2: 0.26558518409729004
+[timer] compile run time for 2: 4.899695873260498
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 3: 0.27756667137145996
+[timer] compile run time for 3: 4.979418039321899
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 4: 0.20159101486206055
+[timer] compile run time for 4: 4.719531059265137
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 5: 0.21802377700805664
+[timer] compile run time for 5: 4.8915815353393555
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 6: 0.21384596824645996
+[timer] compile run time for 6: 5.145814657211304
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 7: 0.18625831604003906
+[timer] compile run time for 7: 4.858612298965454
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 8: 0.21469569206237793
+[timer] compile run time for 8: 5.085837125778198
+has enhancing precision resolve inconsistency: True
+====== begin blocks search of ./workspace/func_analysis/mg-no-cast_cu/rprj3_gpu_kernel.json from 0 to 4 ======
+block 0 fpcount: 0
+block 1 fpcount: 0
+block 2 fpcount: 8
+block 3 fpcount: 12
+loops in this level: []
+[timer] transform time for 9: 0.229705810546875
+[timer] compile run time for 9: 4.959577322006226
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 10: 0.24315428733825684
+[timer] compile run time for 10: 4.878356695175171
+has enhancing precision resolve inconsistency: True
+====== enter block 3 ======
+====== begin blocks search of ./workspace/func_analysis/mg-no-cast_cu/rprj3_gpu_kernel.json from 0 to 2 ======
+block 0 fpcount: 0
+block 1 fpcount: 12
+loops in this level: []
+====== enter block 1 ======
+====== begin blocks search of ./workspace/func_analysis/mg-no-cast_cu/rprj3_gpu_kernel.json from 0 to 1 ======
+block 0 fpcount: 12
+====== enter block 0 ======
+====== begin stmts search of ./workspace/func_analysis/mg-no-cast_cu/rprj3_gpu_kernel.json from 0 to 4 ======
+block 0 fpcount: 0
+block 1 fpcount: 1
+block 2 fpcount: 1
+block 3 fpcount: 10
+[timer] transform time for 11: 0.2385413646697998
+[timer] compile run time for 11: 4.824681282043457
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 12: 0.2399756908416748
+[timer] compile run time for 12: 4.8616416454315186
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 13: 0.24037456512451172
+[timer] compile run time for 13: 4.714392423629761
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 14: 0.2442312240600586
+[timer] compile run time for 14: 4.9311323165893555
+has enhancing precision resolve inconsistency: True
+Print result:
+offending text: ./mg-no-cast.cu:2045:3, ./mg-no-cast.cu:2050:29
+Individual statements:
+offending text: ./mg-no-cast.cu:2045:3, ./mg-no-cast.cu:2050:29
+Has continuous statements: no
+----- end of results -----
+[timer] Total Transform Time: 3.551825761795044
+[timer] Total Compile Run Time: 71.67215895652771
+[timer] total time: 76.07150197029114
+[3, 1, 0, 3]:[-1, 0, 1, 2, 1, 4, 5, 6, 7, 8, 7, 10, 6, 12, 5, 14, 15, 14, 17, 4, 19, 0, 21, 22, 23, 24, 25, 26, 26, 28, 29, 30, 29, 32, 33, 34, 35, 36, 37, 38, 39, 38, 36, 42, 35, 44, 34, 46, 47, 48, 49, 48, 46, 52, 33, 54, 32, 25, 57, 57, 59, 60, 61, 62, 63, 64, 63, 66, 67, 68, 69, 70, 71, 72, 71, 69, 75, 68, 77, 67, 79, 80, 81, 82, 81, 79, 85, 66, 87, 61, 89, 90, 91, 90, 93, 94, 95, 96, 97, 98, 99, 100, 99, 97, 103, 96, 105, 95, 107, 108, 109, 110, 109, 107, 113, 94, 115, 93, 60, 118, 24, 120, 120, 122, 123, 124, 125, 126, 127, 126, 129, 124, 131, 132, 133, 132, 135, 136, 135, 123, 139, 23, 141, 141, 143, 144, 145, 146, 147, 146, 149, 144, 151, 152, 153, 152, 155, 156, 155]
+new config [22]
+[timer] transform time for 15: 0.2165544033050537
+[timer] compile run time for 15: 4.955404758453369
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [23]
+[timer] transform time for 16: 0.20685720443725586
+[timer] compile run time for 16: 4.931825876235962
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [24]
+[timer] transform time for 17: 0.20964479446411133
+[timer] compile run time for 17: 4.893475294113159
+has enhancing precision resolve inconsistency: True
+new config [141]
+[timer] transform time for 18: 0.2226872444152832
+[timer] compile run time for 18: 5.12394118309021
+has enhancing precision resolve inconsistency: False
+eligible set num 1
+new config [25]
+[timer] transform time for 19: 0.2223823070526123
+[timer] compile run time for 19: 5.010928392410278
+has enhancing precision resolve inconsistency: False
+new config [120]
+[timer] transform time for 20: 0.2070004940032959
+[timer] compile run time for 20: 5.017386436462402
+has enhancing precision resolve inconsistency: False
+eligible set num 0
+new config [121, 25]
+[timer] transform time for 21: 0.2065868377685547
+[timer] compile run time for 21: 4.850634813308716
+has enhancing precision resolve inconsistency: False
+new config [122, 25]
+[timer] transform time for 22: 0.2104651927947998
+[timer] compile run time for 22: 4.818399906158447
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [123, 25]
+[timer] transform time for 23: 0.2100505828857422
+[timer] compile run time for 23: 4.773400068283081
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [124, 25]
+[timer] transform time for 24: 0.2105422019958496
+[timer] compile run time for 24: 4.7964348793029785
+has enhancing precision resolve inconsistency: False
+new config [139, 25]
+[timer] transform time for 25: 0.20438027381896973
+[timer] compile run time for 25: 4.818861246109009
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [140, 25]
+[timer] transform time for 26: 0.2221512794494629
+[timer] compile run time for 26: 4.887245416641235
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+eligible set num 0
+new config [140, 26]
+[timer] transform time for 27: 0.211961030960083
+[timer] compile run time for 27: 4.789876461029053
+has enhancing precision resolve inconsistency: False
+new config [140, 57]
+[timer] transform time for 28: 0.23673009872436523
+[timer] compile run time for 28: 5.1917877197265625
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [140, 58]
+[timer] transform time for 29: 0.21264052391052246
+[timer] compile run time for 29: 4.8694257736206055
+has enhancing precision resolve inconsistency: False
+new config [140, 59]
+[timer] transform time for 30: 0.2321796417236328
+[timer] compile run time for 30: 5.272819519042969
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [140, 60]
+[timer] transform time for 31: 0.2010788917541504
+[timer] compile run time for 31: 4.9988298416137695
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [140, 61]
+[timer] transform time for 32: 0.20531964302062988
+[timer] compile run time for 32: 4.836785793304443
+has enhancing precision resolve inconsistency: False
+new config [140, 118]
+[timer] transform time for 33: 0.21152687072753906
+[timer] compile run time for 33: 5.613032341003418
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [140, 119]
+[timer] transform time for 34: 0.19867205619812012
+[timer] compile run time for 34: 6.92905330657959
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+eligible set num 0
+Print result:
+Individual statements:
+offending text: ./mg-no-cast.cu:2045:3, ./mg-no-cast.cu:2050:29
+Has continuous statements: no
+offending subexpression: DeclRefExpr, x2
+offending text: ./mg-no-cast.cu:2048:41, ./mg-no-cast.cu:2048:41
+offending subexpression: DeclRefExpr, y2
+offending text: ./mg-no-cast.cu:2049:28, ./mg-no-cast.cu:2049:28
+----- end of results -----
+[timer] Total Transform Time: 7.811237335205078
+[timer] Total Compile Run Time: 173.05170798301697
+[timer] total time after subexpression isolation: 182.14182662963867

@@ -1,0 +1,149 @@
+rm -f *.o *~ 
+rm -f core
+rm -rf workspace
+rm -f ./cg.B *.out
+[timer] func analysis time: 0.10279178619384766
+============= perform search =============
+has signature changed: False
+[timer] transform time for 0: 0.045629024505615234
+cp: cannot stat './workspace/cg.cpp': No such file or directory
+[timer] compile run time for 0: 41.59970140457153
+['./workspace/config_000/run_GCC5_O3_fastmath.out']
+cp: cannot stat './workspace/transform_list.txt': No such file or directory
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 1: 0.07587170600891113
+[timer] compile run time for 1: 45.76685357093811
+['./workspace/config_001/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 2: 0.11332821846008301
+[timer] compile run time for 2: 42.60167622566223
+['./workspace/config_002/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 3: 0.05786323547363281
+[timer] compile run time for 3: 42.195987701416016
+['./workspace/config_003/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 4: 0.06900191307067871
+[timer] compile run time for 4: 42.23491072654724
+['./workspace/config_004/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+====== begin blocks search of ./workspace/func_analysis/cg_cpp/sparse.json from 0 to 14 ======
+block 0 fpcount: 4
+block 1 fpcount: 0
+block 2 fpcount: 0
+block 3 fpcount: 0
+block 4 fpcount: 0
+block 5 fpcount: 0
+block 6 fpcount: 0
+block 7 fpcount: 2
+block 8 fpcount: 6
+block 9 fpcount: 20
+block 10 fpcount: 0
+block 11 fpcount: 2
+block 12 fpcount: 0
+block 13 fpcount: 0
+loops in this level: [1, 2, 4, 7, 9, 10, 11, 12]
+[timer] transform time for 5: 0.08340764045715332
+[timer] compile run time for 5: 44.68263578414917
+['./workspace/config_005/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 6: 0.08492255210876465
+[timer] compile run time for 6: 46.102434396743774
+['./workspace/config_006/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 7: 0.09084057807922363
+[timer] compile run time for 7: 68.94947361946106
+['./workspace/config_007/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 8: 0.18176722526550293
+[timer] compile run time for 8: 53.97779130935669
+['./workspace/config_008/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 9: 0.08512091636657715
+[timer] compile run time for 9: 49.707460165023804
+['./workspace/config_009/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 10: 0.0854177474975586
+[timer] compile run time for 10: 54.16570544242859
+['./workspace/config_010/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 11: 0.1703169345855713
+[timer] compile run time for 11: 47.0839056968689
+['./workspace/config_011/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 12: 0.17645883560180664
+[timer] compile run time for 12: 54.29064893722534
+['./workspace/config_012/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: False
+====== enter block 8 ======
+====== begin stmts search of ./workspace/func_analysis/cg_cpp/sparse.json from 0 to 2 ======
+block 0 fpcount: 2
+block 1 fpcount: 4
+[timer] transform time for 13: 0.0996713638305664
+[timer] compile run time for 13: 50.211700439453125
+['./workspace/config_013/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 14: 0.09179472923278809
+[timer] compile run time for 14: 49.96165490150452
+['./workspace/config_014/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+====== enter block 9 ======
+====== begin blocks search of ./workspace/func_analysis/cg_cpp/sparse.json from 0 to 2 ======
+block 0 fpcount: 0
+block 1 fpcount: 20
+loops in this level: []
+====== enter block 1 ======
+====== begin blocks search of ./workspace/func_analysis/cg_cpp/sparse.json from 0 to 2 ======
+block 0 fpcount: 17
+block 1 fpcount: 3
+loops in this level: [0]
+[timer] transform time for 15: 0.08584809303283691
+[timer] compile run time for 15: 59.369566679000854
+['./workspace/config_015/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 16: 0.08697986602783203
+[timer] compile run time for 16: 45.42424774169922
+['./workspace/config_016/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 17: 0.10698223114013672
+[timer] compile run time for 17: 47.21346139907837
+['./workspace/config_017/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: False
+====== enter block 0 ======
+====== begin blocks search of ./workspace/func_analysis/cg_cpp/sparse.json from 0 to 2 ======
+block 0 fpcount: 0
+block 1 fpcount: 17
+loops in this level: []
+====== enter block 1 ======
+====== begin blocks search of ./workspace/func_analysis/cg_cpp/sparse.json from 0 to 2 ======
+block 0 fpcount: 3
+block 1 fpcount: 14
+loops in this level: [1]
+[timer] transform time for 18: 0.0880124568939209
+[timer] compile run time for 18: 46.15942907333374
+['./workspace/config_018/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 19: 0.0830543041229248
+[timer] compile run time for 19: 48.772942304611206
+['./workspace/config_019/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+====== enter block 0 ======
+====== begin stmts search of ./workspace/func_analysis/cg_cpp/sparse.json from 0 to 2 ======
+block 0 fpcount: 0
+block 1 fpcount: 3
+====== enter block 1 ======
+====== begin stmts search of ./workspace/func_analysis/cg_cpp/sparse.json from 0 to 1 ======
+block 0 fpcount: 3
+Print result:
+offending text: ./cg.cpp:814:2, ./cg.cpp:814:40
+offending text: ./cg.cpp:819:4, ./cg.cpp:819:30
+offending text: ./cg.cpp:876:3, ./cg.cpp:876:17
+Individual statements:
+offending text: ./cg.cpp:814:2, ./cg.cpp:814:40
+offending text: ./cg.cpp:819:4, ./cg.cpp:819:30
+offending text: ./cg.cpp:876:3, ./cg.cpp:876:17
+Has continuous statements: no
+----- end of results -----
+[timer] Total Transform Time: 1.962289571762085
+[timer] Total Compile Run Time: 980.4721875190735
+[timer] total time: 983.7059466838837

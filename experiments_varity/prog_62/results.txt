@@ -1,0 +1,10 @@
+Print result: 
+Individual statements: 
+offending text: ./test.cu:17:3, ./test.cu:17:43
+Has continuous statements: no
+	offending subexpression: DeclRefExpr, atan2f
+offending text: ./test.cu:17:10, ./test.cu:17:10
+	offending subexpression: FloatingLiteral, 1.40129846E-44F
+offending text: ./test.cu:17:18, ./test.cu:17:18
+	offending subexpression: FloatingLiteral, 1.87510003E-36F
+offending text: ./test.cu:17:32, ./test.cu:17:32

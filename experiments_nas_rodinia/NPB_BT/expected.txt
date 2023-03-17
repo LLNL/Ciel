@@ -1,0 +1,123 @@
+rm -f *.o *~ 
+rm -rf workspace
+rm -f core bt.S *.out
+cp: cannot stat './workspace/bt.cu': No such file or directory
+[timer] func analysis time: 1.1836867332458496
+============= perform search =============
+has signature changed: False
+[timer] transform time for 0: 0.22939181327819824
+cp: cannot stat './workspace/transform_list.txt': No such file or directory
+[timer] compile run time for 0: 4.207676410675049
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 1: 0.9382331371307373
+[timer] compile run time for 1: 13.095645427703857
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 2: 0.6484603881835938
+[timer] compile run time for 2: 13.7870512008667
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 3: 0.5756802558898926
+[timer] compile run time for 3: 5.91531777381897
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 4: 0.4091055393218994
+[timer] compile run time for 4: 5.717143297195435
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 5: 0.26989221572875977
+[timer] compile run time for 5: 6.024191379547119
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 6: 0.24410581588745117
+[timer] compile run time for 6: 5.398772716522217
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 7: 0.2550504207611084
+[timer] compile run time for 7: 5.675161361694336
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 8: 0.23639988899230957
+[timer] compile run time for 8: 5.475934267044067
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 9: 0.21507740020751953
+[timer] compile run time for 9: 5.951648950576782
+has enhancing precision resolve inconsistency: True
+====== begin blocks search of ./workspace/func_analysis/bt_cu/exact_solution.json from 0 to 2 ======
+block 0 fpcount: 0
+block 1 fpcount: 13
+loops in this level: [1]
+[timer] transform time for 10: 0.25525593757629395
+[timer] compile run time for 10: 6.0136260986328125
+has enhancing precision resolve inconsistency: True
+====== enter block 1 ======
+====== begin blocks search of ./workspace/func_analysis/bt_cu/exact_solution.json from 0 to 2 ======
+block 0 fpcount: 0
+block 1 fpcount: 13
+loops in this level: []
+====== enter block 1 ======
+====== begin blocks search of ./workspace/func_analysis/bt_cu/exact_solution.json from 0 to 1 ======
+block 0 fpcount: 13
+====== enter block 0 ======
+====== begin stmts search of ./workspace/func_analysis/bt_cu/exact_solution.json from 0 to 1 ======
+block 0 fpcount: 13
+Print result:
+offending text: ./bt.cu:1873:20, ./bt.cu:1887:2
+Individual statements:
+offending text: ./bt.cu:1874:3, ./bt.cu:1886:24
+Has continuous statements: no
+----- end of results -----
+[timer] Total Transform Time: 4.276652812957764
+[timer] Total Compile Run Time: 77.26216888427734
+[timer] total time: 83.17103838920593
+[1, 1, 0, 0]:[-1, 0, 1, 2, 1, 4, 0, 6, 7, 8, 9, 10, 11, 12, 13, 12, 15, 10, 8, 18, 19, 18, 21, 22, 23, 24, 25, 26, 27, 26, 29, 24, 22, 32, 33, 32, 35, 36, 37, 38, 39, 40, 41, 40, 43, 38, 36, 46, 47, 46, 49, 50, 51, 52, 53, 54, 55, 54, 57, 52, 50, 60, 61, 60, 63, 64, 65, 66, 67, 66, 69, 64, 7, 72, 73, 72, 75, 76, 77, 78, 79, 80, 81, 80, 83, 78, 76, 86, 87, 86, 89, 90, 91, 92, 93, 94, 95, 94, 97, 92, 90, 100, 101, 100, 103, 104, 105, 106, 107, 108, 109, 108, 111, 106, 104, 114, 115, 114, 117, 118, 119, 120, 121, 120, 123, 118, 6, 126, 127, 126, 129, 130, 131, 132, 133, 134, 135, 134, 137, 132, 130, 140, 141, 140, 143, 144, 145, 146, 147, 148, 149, 148, 151, 146, 144, 154, 155, 154, 157, 158, 159, 160, 161, 162, 163, 162, 165, 160, 158, 168, 169, 168, 171, 172, 173, 174, 175, 174, 177, 172]
+new config [7]
+[timer] transform time for 11: 0.21979117393493652
+[timer] compile run time for 11: 5.265239953994751
+has enhancing precision resolve inconsistency: True
+new config [126]
+[timer] transform time for 12: 0.22035765647888184
+[timer] compile run time for 12: 5.3397557735443115
+has enhancing precision resolve inconsistency: True
+eligible set num 2
+new config [127]
+[timer] transform time for 13: 0.22162199020385742
+[timer] compile run time for 13: 5.251634836196899
+has enhancing precision resolve inconsistency: True
+new config [129]
+[timer] transform time for 14: 0.21776700019836426
+[timer] compile run time for 14: 5.290306568145752
+has enhancing precision resolve inconsistency: True
+eligible set num 2
+new config [130]
+[timer] transform time for 15: 0.2268199920654297
+[timer] compile run time for 15: 5.416544198989868
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [131]
+[timer] transform time for 16: 0.22629976272583008
+[timer] compile run time for 16: 5.37772011756897
+has enhancing precision resolve inconsistency: False
+new config [140]
+[timer] transform time for 17: 0.22262954711914062
+[timer] compile run time for 17: 5.366162538528442
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [141]
+[timer] transform time for 18: 0.24187707901000977
+[timer] compile run time for 18: 5.325143337249756
+has enhancing precision resolve inconsistency: True
+new config [143]
+[timer] transform time for 19: 0.21572589874267578
+[timer] compile run time for 19: 5.233450412750244
+has enhancing precision resolve inconsistency: True
+eligible set num 2
+new config [142]
+[timer] transform time for 20: 0.22754836082458496
+[timer] compile run time for 20: 5.206005573272705
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+eligible set num 0
+Print result:
+Individual statements:
+offending text: ./bt.cu:1874:3, ./bt.cu:1886:24
+Has continuous statements: no
+offending subexpression: DeclRefExpr, zeta
+offending text: ./bt.cu:1884:6, ./bt.cu:1884:6
+----- end of results -----
+[timer] Total Transform Time: 6.517091274261475
+[timer] Total Compile Run Time: 130.33413219451904
+[timer] total time after subexpression isolation: 138.8255021572113

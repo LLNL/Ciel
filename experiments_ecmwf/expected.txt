@@ -1,0 +1,404 @@
+rm -rf build/
+rm -rf workspace *.out error.txt
+cp: cannot stat './workspace/cloudsc_c.cpp': No such file or directory
+[timer] func analysis time: 0.5554208755493164
+============= perform search =============
+has signature changed: False
+[timer] transform time for 0: 0.30223917961120605
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 5.5562936337261e-09
+cp: cannot stat './workspace/transform_list.txt': No such file or directory
+[timer] compile run time for 0: 13.18367052078247
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 1: 0.7507951259613037
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 1.5894326304591e-12
+[timer] compile run time for 1: 12.597894668579102
+has enhancing precision resolve inconsistency: True
+====== begin blocks search of ./workspace/func_analysis/cloudsc_c_cpp/cloudsc_c.json from 0 to 25 ======
+block 0 fpcount: 302
+block 1 fpcount: 3
+block 2 fpcount: 1
+block 3 fpcount: 7
+block 4 fpcount: 0
+block 5 fpcount: 2
+block 6 fpcount: 0
+block 7 fpcount: 10
+block 8 fpcount: 4
+block 9 fpcount: 2
+block 10 fpcount: 4
+block 11 fpcount: 1
+block 12 fpcount: 33
+block 13 fpcount: 17
+block 14 fpcount: 108
+block 15 fpcount: 20
+block 16 fpcount: 4
+block 17 fpcount: 10
+block 18 fpcount: 12
+block 19 fpcount: 2233
+block 20 fpcount: 4
+block 21 fpcount: 10
+block 22 fpcount: 34
+block 23 fpcount: 2
+block 24 fpcount: 0
+loops in this level: [1, 2, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+[timer] transform time for 2: 1.2373929023742676
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 7.3483722087539e-12
+[timer] compile run time for 2: 9.456611394882202
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 3: 1.1340365409851074
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 5.5564252695139e-09
+[timer] compile run time for 3: 13.64385724067688
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 4: 1.9882993698120117
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 7.3450247360416e-12
+[timer] compile run time for 4: 13.47386884689331
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 5: 1.2560710906982422
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 5.556223912023e-09
+[timer] compile run time for 5: 14.570784330368042
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 6: 1.5105688571929932
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 7.2829236310142e-12
+[timer] compile run time for 6: 13.912138223648071
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 7: 1.1871962547302246
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 7.2829236310142e-12
+[timer] compile run time for 7: 10.726964473724365
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 8: 1.3192939758300781
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 5.5562936337261e-09
+[timer] compile run time for 8: 13.770257472991943
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 9: 1.3505549430847168
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 7.2829236310142e-12
+[timer] compile run time for 9: 13.098565578460693
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 10: 1.1169037818908691
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 7.2829236310142e-12
+[timer] compile run time for 10: 11.31325888633728
+has enhancing precision resolve inconsistency: True
+====== enter block 19 ======
+====== begin blocks search of ./workspace/func_analysis/cloudsc_c_cpp/cloudsc_c.json from 0 to 2 ======
+block 0 fpcount: 0
+block 1 fpcount: 2233
+loops in this level: []
+====== enter block 1 ======
+====== begin blocks search of ./workspace/func_analysis/cloudsc_c_cpp/cloudsc_c.json from 0 to 54 ======
+block 0 fpcount: 2
+block 1 fpcount: 32
+block 2 fpcount: 4
+block 3 fpcount: 12
+block 4 fpcount: 132
+block 5 fpcount: 10
+block 6 fpcount: 20
+block 7 fpcount: 81
+block 8 fpcount: 21
+block 9 fpcount: 56
+block 10 fpcount: 17
+block 11 fpcount: 5
+block 12 fpcount: 41
+block 13 fpcount: 47
+block 14 fpcount: 232
+block 15 fpcount: 7
+block 16 fpcount: 40
+block 17 fpcount: 88
+block 18 fpcount: 143
+block 19 fpcount: 234
+block 20 fpcount: 15
+block 21 fpcount: 24
+block 22 fpcount: 44
+block 23 fpcount: 151
+block 24 fpcount: 27
+block 25 fpcount: 36
+block 26 fpcount: 24
+block 27 fpcount: 61
+block 28 fpcount: 5
+block 29 fpcount: 0
+block 30 fpcount: 14
+block 31 fpcount: 223
+block 32 fpcount: 229
+block 33 fpcount: 7
+block 34 fpcount: 17
+block 35 fpcount: 2
+block 36 fpcount: 3
+block 37 fpcount: 11
+block 38 fpcount: 2
+block 39 fpcount: 29
+block 40 fpcount: 8
+block 41 fpcount: 8
+block 42 fpcount: 7
+block 43 fpcount: 4
+block 44 fpcount: 3
+block 45 fpcount: 7
+block 46 fpcount: 7
+block 47 fpcount: 4
+block 48 fpcount: 4
+block 49 fpcount: 3
+block 50 fpcount: 4
+block 51 fpcount: 20
+block 52 fpcount: 5
+block 53 fpcount: 1
+loops in this level: [0, 1, 2, 3, 4, 5, 6, 7, 10, 11, 12, 13, 14, 15, 16, 17, 18, 20, 21, 22, 23, 25, 26, 27, 28, 30, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53]
+[timer] transform time for 11: 1.2837257385253906
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 5.5570182441025e-09
+[timer] compile run time for 11: 13.737783193588257
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 12: 1.3310892581939697
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 7.286729741365e-12
+[timer] compile run time for 12: 12.838787078857422
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 13: 1.2167127132415771
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 5.5566521878424e-09
+[timer] compile run time for 13: 14.516412734985352
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 14: 1.3580167293548584
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 7.3031037608102e-12
+[timer] compile run time for 14: 14.250781059265137
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 15: 1.2047584056854248
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 5.556590748919e-09
+[timer] compile run time for 15: 14.07768988609314
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 16: 1.227393388748169
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 1.3224774841199e-12
+[timer] compile run time for 16: 14.410386085510254
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 17: 1.1014153957366943
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 5.5562931333425e-09
+[timer] compile run time for 17: 10.55340838432312
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 18: 1.1897220611572266
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 1.3228372323789e-12
+[timer] compile run time for 18: 12.9043550491333
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 19: 1.1604418754577637
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 1.3228372323789e-12
+[timer] compile run time for 19: 14.243464708328247
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 20: 1.0868706703186035
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 5.5562939419169e-09
+[timer] compile run time for 20: 10.936711072921753
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 21: 1.1709723472595215
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 1.3215059552536e-12
+[timer] compile run time for 21: 12.954832315444946
+has enhancing precision resolve inconsistency: True
+====== enter block 24 ======
+====== begin blocks search of ./workspace/func_analysis/cloudsc_c_cpp/cloudsc_c.json from 0 to 2 ======
+block 0 fpcount: 0
+block 1 fpcount: 27
+loops in this level: []
+====== enter block 1 ======
+====== begin blocks search of ./workspace/func_analysis/cloudsc_c_cpp/cloudsc_c.json from 0 to 1 ======
+block 0 fpcount: 27
+====== enter block 0 ======
+====== begin blocks search of ./workspace/func_analysis/cloudsc_c_cpp/cloudsc_c.json from 0 to 2 ======
+block 0 fpcount: 0
+block 1 fpcount: 27
+loops in this level: []
+====== enter block 1 ======
+====== begin blocks search of ./workspace/func_analysis/cloudsc_c_cpp/cloudsc_c.json from 0 to 1 ======
+block 0 fpcount: 27
+====== enter block 0 ======
+====== begin blocks search of ./workspace/func_analysis/cloudsc_c_cpp/cloudsc_c.json from 0 to 2 ======
+block 0 fpcount: 4
+block 1 fpcount: 23
+loops in this level: []
+[timer] transform time for 22: 1.0443789958953857
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 5.5562936337261e-09
+[timer] compile run time for 22: 13.56884241104126
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 23: 1.1739230155944824
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 1.3215059552536e-12
+[timer] compile run time for 23: 11.635453462600708
+has enhancing precision resolve inconsistency: True
+====== enter block 1 ======
+====== begin blocks search of ./workspace/func_analysis/cloudsc_c_cpp/cloudsc_c.json from 0 to 2 ======
+block 0 fpcount: 4
+block 1 fpcount: 19
+loops in this level: []
+[timer] transform time for 24: 1.439702033996582
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 1.3215821874992e-12
+[timer] compile run time for 24: 12.388617753982544
+has enhancing precision resolve inconsistency: True
+====== enter block 0 ======
+====== begin stmts search of ./workspace/func_analysis/cloudsc_c_cpp/cloudsc_c.json from 0 to 1 ======
+block 0 fpcount: 4
+Print result:
+offending text: ./src/cloudsc_c/cloudsc/cloudsc_c.cpp:1779:4, ./src/cloudsc_c/cloudsc/cloudsc_c.cpp:1783:4
+Individual statements:
+offending text: ./src/cloudsc_c/cloudsc/cloudsc_c.cpp:1779:4, ./src/cloudsc_c/cloudsc/cloudsc_c.cpp:1779:60
+Has continuous statements: no
+----- end of results -----
+[timer] Total Transform Time: 30.14247465133667
+[timer] Total Compile Run Time: 322.7653968334198
+[timer] total time: 359.79563641548157
+[19, 1, 24, 1, 0, 1, 0, 1, 0, 0]:[-1, 0, 0, 2, 3, 2, 5, 6, 7, 8, 5, 10, 11, 12, 11, 14, 15, 14, 2, 18, 19, 20]
+new config [3]
+[timer] transform time for 25: 0.7656140327453613
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 5.5562936337261e-09
+[timer] compile run time for 25: 13.865762948989868
+has enhancing precision resolve inconsistency: False
+new config [5]
+[timer] transform time for 26: 0.6993401050567627
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 5.5562936337261e-09
+[timer] compile run time for 26: 11.755484342575073
+has enhancing precision resolve inconsistency: False
+new config [18]
+[timer] transform time for 27: 0.6522741317749023
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 1.3215821874992e-12
+[timer] compile run time for 27: 10.29243278503418
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [19]
+[timer] transform time for 28: 0.7726626396179199
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 1.3215821874992e-12
+[timer] compile run time for 28: 12.07303261756897
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [20]
+[timer] transform time for 29: 0.7119119167327881
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 5.5562936337261e-09
+[timer] compile run time for 29: 14.068655967712402
+has enhancing precision resolve inconsistency: False
+eligible set num 0
+new config [21]
+[timer] transform time for 30: 0.7566046714782715
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+make: *** [Makefile:40: run] Segmentation fault
+max diff: 5.5562936337261e-09
+[timer] compile run time for 30: 15.025878667831421
+has enhancing precision resolve inconsistency: False
+eligible set num 0
+eligible set num 0
+Print result:
+Individual statements:
+offending text: ./src/cloudsc_c/cloudsc/cloudsc_c.cpp:1779:4, ./src/cloudsc_c/cloudsc/cloudsc_c.cpp:1779:60
+Has continuous statements: no
+offending subexpression: FloatingLiteral, 0.40000000000000002
+offending text: ./src/cloudsc_c/cloudsc/cloudsc_c.cpp:1779:57, ./src/cloudsc_c/cloudsc/cloudsc_c.cpp:1779:57
+----- end of results -----
+[timer] Total Transform Time: 34.500882148742676
+[timer] Total Compile Run Time: 399.8466441631317
+[timer] total time after subexpression isolation: 441.8147895336151

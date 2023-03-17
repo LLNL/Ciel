@@ -1,0 +1,6 @@
+Print result: 
+Individual statements: 
+offending text: ./test.cu:11:1, ./test.cu:11:29
+Has continuous statements: no
+	offending subexpression: FloatingLiteral, 1.85779994E-35F
+offending text: ./test.cu:11:18, ./test.cu:11:18

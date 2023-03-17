@@ -1,0 +1,20 @@
+Print result: 
+Individual statements: 
+offending text: ./test.cpp:19:1, ./test.cpp:19:245
+Has continuous statements: no
+	offending subexpression: DeclRefExpr, fmod
+offending text: ./test.cpp:19:17, ./test.cpp:19:17
+	offending subexpression: DeclRefExpr, exp
+offending text: ./test.cpp:19:22, ./test.cpp:19:22
+	offending subexpression: DeclRefExpr, var_7
+offending text: ./test.cpp:19:26, ./test.cpp:19:26
+	offending subexpression: FloatingLiteral, 1.2544E-306
+offending text: ./test.cpp:19:35, ./test.cpp:19:35
+	offending subexpression: DeclRefExpr, var_8
+offending text: ./test.cpp:19:49, ./test.cpp:19:49
+	offending subexpression: FloatingLiteral, 1.2961001950985923E-317
+offending text: ./test.cpp:19:59, ./test.cpp:19:59
+	offending subexpression: FloatingLiteral, 1.8071000000000001E+305
+offending text: ./test.cpp:19:74, ./test.cpp:19:74
+	offending subexpression: DeclRefExpr, fabs
+offending text: ./test.cpp:19:104, ./test.cpp:19:104

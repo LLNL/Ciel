@@ -1,0 +1,8 @@
+Print result: 
+Individual statements: 
+offending text: ./test.cu:12:1, ./test.cu:12:57
+Has continuous statements: no
+	offending subexpression: DeclRefExpr, log10f
+offending text: ./test.cu:12:30, ./test.cu:12:30
+	offending subexpression: DeclRefExpr, var_4
+offending text: ./test.cu:12:52, ./test.cu:12:52

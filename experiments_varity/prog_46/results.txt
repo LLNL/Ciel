@@ -1,0 +1,51 @@
+Print result: 
+Individual statements: 
+offending text: ./test.cu:15:1, ./test.cu:15:53
+offending text: ./test.cu:16:5, ./test.cu:16:104
+offending text: ./test.cu:17:3, ./test.cu:17:75
+offending text: ./test.cu:19:4, ./test.cu:19:28
+Has continuous statements: no
+	offending subexpression: DeclRefExpr, asinf
+offending text: ./test.cu:15:8, ./test.cu:15:8
+	offending subexpression: DeclRefExpr, comp
+offending text: ./test.cu:16:5, ./test.cu:16:5
+	offending subexpression: FloatingLiteral, 0.F
+offending text: ./test.cu:16:14, ./test.cu:16:14
+	offending subexpression: DeclRefExpr, ldexpf
+offending text: ./test.cu:16:21, ./test.cu:16:21
+	offending subexpression: DeclRefExpr, log10f
+offending text: ./test.cu:16:28, ./test.cu:16:28
+	offending subexpression: FloatingLiteral, 1.81468151E-42F
+offending text: ./test.cu:16:37, ./test.cu:16:37
+	offending subexpression: DeclRefExpr, sinhf
+offending text: ./test.cu:16:51, ./test.cu:16:51
+	offending subexpression: FloatingLiteral, 150.649994F
+offending text: ./test.cu:16:59, ./test.cu:16:59
+	offending subexpression: DeclRefExpr, sqrtf
+offending text: ./test.cu:16:71, ./test.cu:16:71
+	offending subexpression: DeclRefExpr, var_2
+offending text: ./test.cu:16:77, ./test.cu:16:77
+	offending subexpression: FloatingLiteral, 16234000.F
+offending text: ./test.cu:16:86, ./test.cu:16:86
+	offending subexpression: IntegerLiteral, 2
+offending text: ./test.cu:16:102, ./test.cu:16:102
+	offending subexpression: FloatingLiteral, 1.40460001E-15F
+offending text: ./test.cu:17:11, ./test.cu:17:11
+	offending subexpression: DeclRefExpr, log10f
+offending text: ./test.cu:17:25, ./test.cu:17:25
+	offending subexpression: DeclRefExpr, cosf
+offending text: ./test.cu:17:32, ./test.cu:17:32
+	offending subexpression: DeclRefExpr, var_3
+offending text: ./test.cu:17:37, ./test.cu:17:37
+	offending subexpression: FloatingLiteral, 1.28189998E+35F
+offending text: ./test.cu:17:47, ./test.cu:17:47
+	offending subexpression: FloatingLiteral, 0.F
+offending text: ./test.cu:17:61, ./test.cu:17:61
+	offending subexpression: DeclRefExpr, var_4
+offending text: ./test.cu:17:68, ./test.cu:17:68
+	offending subexpression: DeclRefExpr, dump
+offending text: ./test.cu:19:4, ./test.cu:19:4
+	offending subexpression: DeclRefExpr, comp
+offending text: ./test.cu:19:10, ./test.cu:19:10
+	offending subexpression: DeclRefExpr, comp
+offending text: ./test.cu:19:23, ./test.cu:19:23

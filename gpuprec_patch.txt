@@ -1,0 +1,551 @@
+diff --git a/gqd/common.cu b/gqd/common.cu
+old mode 100644
+new mode 100755
+index 1ab122b..709701e
+--- a/gqd/common.cu
++++ b/gqd/common.cu
+@@ -24,12 +24,16 @@ using namespace CUDAUtil;
+ /* type construction */
+ __device__ __host__
+ gdd_real make_dd(const double x, const double y) {
+-    return make_double2(x, y);
++    gdd_real ret;
++    ret.x = x; ret.y = y;
++    return ret;
+ }
+ 
+ __device__ __host__
+ gdd_real make_dd(const double x) {
+-    return make_double2(x, 0.0);
++    gdd_real ret;
++    ret.x = x; ret.y = 0.0;
++    return ret;
+ }
+ 
+ __device__ __host__
+@@ -70,9 +74,9 @@ gqd_real make_qd(const double x) {
+ 
+ /* data in the constant memory */
+ #define n_dd_inv_fact (15)
+-static __device__ __constant__ gdd_real dd_inv_fact[n_dd_inv_fact];
+-static __device__ __constant__ gdd_real d_dd_sin_table[4];
+-static __device__ __constant__ gdd_real d_dd_cos_table[4];
++static __device__ __constant__ double dd_inv_fact[n_dd_inv_fact * 2];
++static __device__ __constant__ double d_dd_sin_table[4 * 2];
++static __device__ __constant__ double d_dd_cos_table[4 * 2];
+ 
+ static const int n_inv_fact = 15;
+ static __device__ __constant__ gqd_real inv_fact[15];
+@@ -81,63 +85,54 @@ static __device__ __constant__ gqd_real d_cos_table[256];
+ 
+ /** initialization function */
+ void GDDStart(const int device) {
+-    printf("GDD turns on...\n");
+     cudaSetDevice(device);
+ 
+-    gdd_real h_inv_fact[] = {
+-        make_dd(1.66666666666666657e-01, 9.25185853854297066e-18),
+-        make_dd(4.16666666666666644e-02, 2.31296463463574266e-18),
+-        make_dd(8.33333333333333322e-03, 1.15648231731787138e-19),
+-        make_dd(1.38888888888888894e-03, -5.30054395437357706e-20),
+-        make_dd(1.98412698412698413e-04, 1.72095582934207053e-22),
+-        make_dd(2.48015873015873016e-05, 2.15119478667758816e-23),
+-        make_dd(2.75573192239858925e-06, -1.85839327404647208e-22),
+-        make_dd(2.75573192239858883e-07, 2.37677146222502973e-23),
+-        make_dd(2.50521083854417202e-08, -1.44881407093591197e-24),
+-        make_dd(2.08767569878681002e-09, -1.20734505911325997e-25),
+-        make_dd(1.60590438368216133e-10, 1.25852945887520981e-26),
+-        make_dd(1.14707455977297245e-11, 2.06555127528307454e-28),
+-        make_dd(7.64716373181981641e-13, 7.03872877733453001e-30),
+-        make_dd(4.77947733238738525e-14, 4.39920548583408126e-31),
+-        make_dd(2.81145725434552060e-15, 1.65088427308614326e-31)
++    double h_inv_fact[] = {
++        1.66666666666666657e-01, 9.25185853854297066e-18,
++        4.16666666666666644e-02, 2.31296463463574266e-18,
++        8.33333333333333322e-03, 1.15648231731787138e-19,
++        1.38888888888888894e-03, -5.30054395437357706e-20,
++        1.98412698412698413e-04, 1.72095582934207053e-22,
++        2.48015873015873016e-05, 2.15119478667758816e-23,
++        2.75573192239858925e-06, -1.85839327404647208e-22,
++        2.75573192239858883e-07, 2.37677146222502973e-23,
++        2.50521083854417202e-08, -1.44881407093591197e-24,
++        2.08767569878681002e-09, -1.20734505911325997e-25,
++        1.60590438368216133e-10, 1.25852945887520981e-26,
++        1.14707455977297245e-11, 2.06555127528307454e-28,
++        7.64716373181981641e-13, 7.03872877733453001e-30,
++        4.77947733238738525e-14, 4.39920548583408126e-31,
++        2.81145725434552060e-15, 1.65088427308614326e-31
+ 
+     };
+-    checkCudaErrors(cudaMemcpyToSymbol(dd_inv_fact, h_inv_fact, sizeof (gdd_real) * n_dd_inv_fact));
++    checkCudaErrors(cudaMemcpyToSymbol(dd_inv_fact, h_inv_fact, sizeof (double) * n_dd_inv_fact * 2));
+ 
+-    gdd_real h_sin_table [] = {
+-        make_dd(1.950903220161282758e-01, -7.991079068461731263e-18),
+-        make_dd(3.826834323650897818e-01, -1.005077269646158761e-17),
+-        make_dd(5.555702330196021776e-01, 4.709410940561676821e-17),
+-        make_dd(7.071067811865475727e-01, -4.833646656726456726e-17)
++    double h_sin_table [] = {
++        1.950903220161282758e-01, -7.991079068461731263e-18,
++        3.826834323650897818e-01, -1.005077269646158761e-17,
++        5.555702330196021776e-01, 4.709410940561676821e-17,
++        7.071067811865475727e-01, -4.833646656726456726e-17
+     };
+-    checkCudaErrors(cudaMemcpyToSymbol(d_dd_sin_table, h_sin_table, sizeof (gdd_real)*4));
++    checkCudaErrors(cudaMemcpyToSymbol(d_dd_sin_table, h_sin_table, sizeof (double)*4*2));
+ 
+-    gdd_real h_cos_table [] = {
+-        make_dd(9.807852804032304306e-01, 1.854693999782500573e-17),
+-        make_dd(9.238795325112867385e-01, 1.764504708433667706e-17),
+-        make_dd(8.314696123025452357e-01, 1.407385698472802389e-18),
+-        make_dd(7.071067811865475727e-01, -4.833646656726456726e-17)
++    double h_cos_table [] = {
++        9.807852804032304306e-01, 1.854693999782500573e-17,
++        9.238795325112867385e-01, 1.764504708433667706e-17,
++        8.314696123025452357e-01, 1.407385698472802389e-18,
++        7.071067811865475727e-01, -4.833646656726456726e-17
+     };
+-    checkCudaErrors(cudaMemcpyToSymbol(d_dd_cos_table, h_cos_table, sizeof (gdd_real)*4));
+-
+-    printf("\tdone.\n");
++    checkCudaErrors(cudaMemcpyToSymbol(d_dd_cos_table, h_cos_table, sizeof (double)*4*2));
+ }
+ 
+ void GDDEnd() {
+-    printf("GQD turns off...\n");
+-    cudaThreadExit();
+-    printf("\tdone.\n");
++    cudaDeviceReset();
+ }
+ 
+ void GQDEnd() {
+-    printf("GQD turns off...\n");
+-    cudaThreadExit();
+-    printf("\tdone.\n");
++    cudaDeviceReset();
+ }
+ 
+ void GQDStart(const int device) {
+-    printf("GQD turns on ...\n");
+-
+     cudaSetDevice(device);
+ 
+     //inverse table
+@@ -1211,9 +1206,6 @@ void GQDStart(const int device) {
+     };
+     checkCudaErrors(cudaMemcpyToSymbol(d_cos_table, h_cos_table, sizeof (gqd_real)*256));
+     //TOGPU( d_cos_table, h_cos_table, sizeof(gqd_real)*256 );
+-
+-
+-    printf("\tdone.\n");
+ }
+ 
+ 
+diff --git a/gqd/cuda_util.h b/gqd/cuda_util.h
+old mode 100644
+new mode 100755
+index b4d16ec..20f8270
+--- a/gqd/cuda_util.h
++++ b/gqd/cuda_util.h
+@@ -68,9 +68,9 @@ namespace CUDAUtil {
+     /*CUDA helper functions*/
+ 
+     // This will output the proper CUDA error strings in the event that a CUDA host call returns an error
+-#define checkCudaErrors(err)           __checkCudaErrors (err, __FILE__, __LINE__)
++#define checkCudaErrors(err)           __checkCudaErrors_gqd (err, __FILE__, __LINE__)
+ 
+-    inline void __checkCudaErrors(cudaError err, const char *file, const int line) {
++    inline void __checkCudaErrors_gqd(cudaError err, const char *file, const int line) {
+         if (cudaSuccess != err) {
+             fprintf(stderr, "%s(%i) : CUDA Runtime API error %d: %s.\n",
+                     file, line, (int) err, cudaGetErrorString(err));
+@@ -79,9 +79,9 @@ namespace CUDAUtil {
+     }
+ 
+     // This will output the proper error string when calling cudaGetLastError
+-#define getLastCudaError(msg)      __getLastCudaError (msg, __FILE__, __LINE__)
++#define getLastCudaError(msg)      __getLastCudaError_gqd (msg, __FILE__, __LINE__)
+ 
+-    inline void __getLastCudaError(const char *errorMessage, const char *file, const int line) {
++    inline void __getLastCudaError_gqd(const char *errorMessage, const char *file, const int line) {
+         cudaError_t err = cudaGetLastError();
+         if (cudaSuccess != err) {
+             fprintf(stderr, "%s(%i) : getLastCudaError() CUDA error : %s : (%d) %s.\n",
+diff --git a/gqd/gdd_basic.cu b/gqd/gdd_basic.cu
+old mode 100644
+new mode 100755
+index 0011ef6..8ee70db
+--- a/gqd/gdd_basic.cu
++++ b/gqd/gdd_basic.cu
+@@ -221,6 +221,67 @@ gdd_real operator/(const gdd_real &a, double b) {
+     return r;
+ }
+ 
++// begin placeholder functions
++__device__ gdd_real ceil(const gdd_real a) {
++    return make_dd(ceil(a.x));
++}
++
++__device__ gdd_real floor(const gdd_real a) {
++    return make_dd(floor(a.x));
++}
++
++__device__ gdd_real pow(const gdd_real a, const gdd_real b) {
++    return make_dd(pow(a.x, b.x));
++}
++
++__device__ gdd_real fmod(const gdd_real a, const gdd_real b) {
++    return make_dd(fmod(a.x, b.x));
++}
++// end placeholder functions
++
++// unary operators
++__device__ gdd_real operator+(const gdd_real a) {
++    return a;
++}
++
++__device__ gdd_real operator-(const gdd_real a) {
++    return make_dd(0.0) - a;
++}
++
++// compound assignment
++__device__ gdd_real operator+=(const gdd_real a, const gdd_real b) {
++    return a + b;
++}
++
++__device__ gdd_real operator+=(const gdd_real a, const double b) {
++    return a + make_dd(b);
++}
++
++__device__ gdd_real operator-=(const gdd_real a, const gdd_real b) {
++    return a - b;
++}
++
++__device__ gdd_real operator-=(const gdd_real a, const double b) {
++    return a - make_dd(b);
++}
++
++__device__ gdd_real operator*=(const gdd_real a, const gdd_real b) {
++    return a * b;
++}
++
++__device__ gdd_real operator*=(const gdd_real a, const double b) {
++    return a * make_dd(b);
++}
++
++__device__ gdd_real operator/=(const gdd_real a, const gdd_real b) {
++    return a / b;
++}
++
++__device__ gdd_real operator/=(const gdd_real a, const double b) {
++    return a / make_dd(b);
++}
++// end compound assignment
++
+ __host__ __device__
+ bool is_zero(const gdd_real &a) {
+     return (a.x == 0.0);
+diff --git a/gqd/gdd_exp.cu b/gqd/gdd_exp.cu
+old mode 100644
+new mode 100755
+index 6439e48..279ebe3
+--- a/gqd/gdd_exp.cu
++++ b/gqd/gdd_exp.cu
+@@ -67,12 +67,13 @@ gdd_real exp(const gdd_real &a) {
+     p = sqr(r);
+     s = r + mul_pwr2(p, 0.5);
+     p = p * r;
+-    t = p * dd_inv_fact[0];
++    t = p * make_dd(dd_inv_fact[0], dd_inv_fact[1]);
+     int i = 0;
+     do {
+         s = s + t;
+         p = p * r;
+-        t = p * dd_inv_fact[++i];
++        i++;
++        t = p * make_dd(dd_inv_fact[i*2], dd_inv_fact[i*2+1]);
+     } while ((fabs(to_double(t)) > INV_K * _dd_eps) && (i < 5));
+     s = s + t;
+ 
+diff --git a/gqd/gdd_log.cu b/gqd/gdd_log.cu
+old mode 100644
+new mode 100755
+index 30e024d..9dd377c
+--- a/gqd/gdd_log.cu
++++ b/gqd/gdd_log.cu
+@@ -26,6 +26,23 @@ gdd_real log(const gdd_real &a) {
+     return x;
+ }
+ 
++__device__
++
++gdd_real log10(const gdd_real &a) {
++    if (is_one(a)) {
++        return make_dd(0.0);
++    }
++
++    //!!!!!!!!!
++    //TO DO: return an errro
++    if (a.x <= 0.0) {
++        //return _nan;
++        return make_dd(0.0);
++    }
++
++    return log(a) / log(make_dd(10.0));
++}
++
+ #endif /* __GDD_LOG_CU__ */
+ 
+ 
+diff --git a/gqd/gdd_sincos.cu b/gqd/gdd_sincos.cu
+old mode 100644
+new mode 100755
+index 9ed5556..7322767
+--- a/gqd/gdd_sincos.cu
++++ b/gqd/gdd_sincos.cu
+@@ -20,7 +20,7 @@ gdd_real sin_taylor(const gdd_real &a) {
+     r = a;
+     do {
+         r = r*x;
+-        t = r * dd_inv_fact[i];
++        t = r * make_dd(dd_inv_fact[i*2], dd_inv_fact[i*2+1]);
+         s = s + t;
+         i += 2;
+     } while (i < n_dd_inv_fact && fabs(to_double(t)) > thresh);
+@@ -43,7 +43,7 @@ gdd_real cos_taylor(const gdd_real &a) {
+     s = 1.0 + mul_pwr2(r, 0.5);
+     do {
+         r = r*x;
+-        t = r * dd_inv_fact[i];
++        t = r * make_dd(dd_inv_fact[i*2], dd_inv_fact[i*2+1]);
+         s = s + t;
+         i += 2;
+     } while (i < n_dd_inv_fact && fabs(to_double(t)) > thresh);
+@@ -111,8 +111,8 @@ gdd_real sin(const gdd_real &a) {
+         }
+     }
+ 
+-    gdd_real u = d_dd_cos_table[abs_k - 1];
+-    gdd_real v = d_dd_sin_table[abs_k - 1];
++    gdd_real u = make_dd(d_dd_cos_table[(abs_k - 1) * 2], d_dd_cos_table[(abs_k - 1) * 2 + 1]);
++    gdd_real v = make_dd(d_dd_sin_table[(abs_k - 1) * 2], d_dd_sin_table[(abs_k - 1) * 2 + 1]);
+     gdd_real sin_t, cos_t;
+     sincos_taylor(t, sin_t, cos_t);
+     if (j == 0) {
+@@ -194,8 +194,8 @@ gdd_real cos(const gdd_real &a) {
+ 
+     gdd_real sin_t, cos_t;
+     sincos_taylor(t, sin_t, cos_t);
+-    gdd_real u = d_dd_cos_table[abs_k - 1];
+-    gdd_real v = d_dd_sin_table[abs_k - 1];
++    gdd_real u = make_dd(d_dd_cos_table[(abs_k - 1) * 2], d_dd_cos_table[(abs_k - 1) * 2 + 1]);
++    gdd_real v = make_dd(d_dd_sin_table[(abs_k - 1) * 2], d_dd_sin_table[(abs_k - 1) * 2 + 1]);
+ 
+     if (j == 0) {
+         if (k > 0) {
+@@ -273,8 +273,8 @@ void sincos(const gdd_real &a, gdd_real &sin_a, gdd_real &cos_a) {
+         s = sin_t;
+         c = cos_t;
+     } else {
+-        gdd_real u = d_dd_cos_table[abs_k - 1];
+-        gdd_real v = d_dd_sin_table[abs_k - 1];
++        gdd_real u = make_dd(d_dd_cos_table[(abs_k - 1) * 2], d_dd_cos_table[(abs_k - 1) * 2 + 1]);
++        gdd_real v = make_dd(d_dd_sin_table[(abs_k - 1) * 2], d_dd_sin_table[(abs_k - 1) * 2 + 1]);
+ 
+         if (k > 0) {
+             s = u * sin_t + v * cos_t;
+@@ -307,7 +307,6 @@ gdd_real tan(const gdd_real &a) {
+     return s / c;
+ }
+ 
+-
+ #ifndef ALL_MATH
+ 
+ __device__
+diff --git a/gqd/gdd_sqrt.cu b/gqd/gdd_sqrt.cu
+old mode 100644
+new mode 100755
+diff --git a/gqd/gqd.cu b/gqd/gqd.cu
+old mode 100644
+new mode 100755
+index 9428d44..28a8deb
+--- a/gqd/gqd.cu
++++ b/gqd/gqd.cu
+@@ -13,7 +13,7 @@
+ #include "gdd_log.cu"
+ #include "gdd_sincos.cu"
+ 
+-
++#if 0
+ /* gqd_libraray */
+ #include "gqd_basic.cu"
+ #include "gqd_sqrt.cu"
+@@ -21,6 +21,19 @@
+ #include "gqd_log.cu"
+ #include "gqd_sincos.cu"
+ 
++#endif
++
++class GQDInitObj {
++public:
++    GQDInitObj() { GDDStart(); }
++    ~GQDInitObj() { GDDEnd(); }
++};
++
++static __device__ double gdd_to_double(gdd_real a) { return a.x; }
++static __device__ gdd_real double_to_gdd(double a) { return make_dd(a); }
++static __device__ gdd_real double_to_gdd(gdd_real a) { return a; }
++
++
+ #endif // __GQD_CU__
+ 
+ 
+diff --git a/gqd/gqd_basic.cu b/gqd/gqd_basic.cu
+old mode 100644
+new mode 100755
+diff --git a/gqd/gqd_exp.cu b/gqd/gqd_exp.cu
+old mode 100644
+new mode 100755
+diff --git a/gqd/gqd_log.cu b/gqd/gqd_log.cu
+old mode 100644
+new mode 100755
+diff --git a/gqd/gqd_sincos.cu b/gqd/gqd_sincos.cu
+old mode 100644
+new mode 100755
+diff --git a/gqd/gqd_sqrt.cu b/gqd/gqd_sqrt.cu
+old mode 100644
+new mode 100755
+diff --git a/gqd/gqd_type.h b/gqd/gqd_type.h
+old mode 100644
+new mode 100755
+index 5bc21b3..2b50b22
+--- a/gqd/gqd_type.h
++++ b/gqd/gqd_type.h
+@@ -15,7 +15,24 @@
+ 
+ 
+ /* type definition */
+-typedef double2 gdd_real;
++struct gdd_real {
++    double x, y;
++
++    __host__ __device__ gdd_real(const double a) {
++        x = a; y = 0.0;
++    }
++
++    __host__ __device__ gdd_real() {
++    }
++
++    __host__ __device__ explicit operator double() {
++        return x;
++    }
++
++    __host__ __device__ explicit operator int() {
++        return int(x);
++    }
++};
+ 
+ typedef double4 gqd_real;
+ 
+diff --git a/gqd/inline.cu b/gqd/inline.cu
+old mode 100644
+new mode 100755
+diff --git a/gqd/timer.h b/gqd/timer.h
+old mode 100644
+new mode 100755
+diff --git a/gqd_test/gqdtest_kernel.cu b/gqd_test/gqdtest_kernel.cu
+index 16b2028..53e8070 100644
+--- a/gqd_test/gqdtest_kernel.cu
++++ b/gqd_test/gqdtest_kernel.cu
+@@ -203,15 +203,15 @@ float device_basic_template(T* h_in1, T* h_in2, T* h_out, const unsigned int num
+     if (op == ADD) {
+         device_add_kernel << <numBlock, numThread>>>(d_in1, d_in2, numElement, d_out);
+         getLastCudaError("device_add_kernel");
+-        checkCudaErrors(cudaThreadSynchronize());
++        checkCudaErrors(cudaDeviceSynchronize());
+     } else if (op == MUL) {
+         device_mul_kernel << <numBlock, numThread>>>(d_in1, d_in2, numElement, d_out);
+         getLastCudaError("device_mul_kernel");
+-        checkCudaErrors(cudaThreadSynchronize());
++        checkCudaErrors(cudaDeviceSynchronize());
+     } else if (op == DIV) {
+         device_div_kernel << <numBlock, numThread>>>(d_in1, d_in2, numElement, d_out);
+         getLastCudaError("device_div_kernel");
+-        checkCudaErrors(cudaThreadSynchronize());
++        checkCudaErrors(cudaDeviceSynchronize());
+     } else {
+         printf("!!!Never here!\n");
+         exit(EXIT_FAILURE);
+@@ -257,44 +257,44 @@ float device_math_template(T* h_in, const unsigned int numElement, T* h_out,
+     if (math == SQRT) {
+         device_sqrt_kernel << <numBlock, numThread>>>(d_in, numElement, d_out);
+         getLastCudaError("device_sqrt_kernel");
+-        checkCudaErrors(cudaThreadSynchronize());
++        checkCudaErrors(cudaDeviceSynchronize());
+     } else if (math == SQR) {
+         device_sqr_kernel << <numBlock, numThread>>>(d_in, numElement, d_out);
+         getLastCudaError("device_sqr_kernel");
+-        checkCudaErrors(cudaThreadSynchronize());
++        checkCudaErrors(cudaDeviceSynchronize());
+     } else if (math == EXP) {
+         device_exp_kernel << <numBlock, numThread>>>(d_in, numElement, d_out);
+         getLastCudaError("device_exp_kernel");
+-        checkCudaErrors(cudaThreadSynchronize());
++        checkCudaErrors(cudaDeviceSynchronize());
+     } else if (math == LOG) {
+         device_log_kernel << <numBlock, numThread>>>(d_in, numElement, d_out);
+         getLastCudaError("device_log_kernel");
+-        checkCudaErrors(cudaThreadSynchronize());
++        checkCudaErrors(cudaDeviceSynchronize());
+     } else if (math == SIN) {
+         device_sin_kernel << <numBlock, numThread>>>(d_in, numElement, d_out);
+         getLastCudaError("device_sin_kernel");
+-        checkCudaErrors(cudaThreadSynchronize());
++        checkCudaErrors(cudaDeviceSynchronize());
+     } else if (math == COS) {
+         device_cos_kernel << <numBlock, numThread>>>(d_in, numElement, d_out);
+         getLastCudaError("device_cos_kernel");
+-        checkCudaErrors(cudaThreadSynchronize());
++        checkCudaErrors(cudaDeviceSynchronize());
+     } else if (math == TAN) {
+         device_tan_kernel << <numBlock, numThread>>>(d_in, numElement, d_out);
+         getLastCudaError("device_tan_kernel");
+-        checkCudaErrors(cudaThreadSynchronize());
++        checkCudaErrors(cudaDeviceSynchronize());
+     } else if (math == ACOS) {
+         device_acos_kernel << <numBlock, numThread>>>(d_in, numElement, d_out);
+         getLastCudaError("device_acos_kernel");
+-        checkCudaErrors(cudaThreadSynchronize());
++        checkCudaErrors(cudaDeviceSynchronize());
+     } else if (math == ASIN) {
+         device_asin_kernel << <numBlock, numThread>>>(d_in, numElement, d_out);
+         getLastCudaError("device_asin_kernel");
+-        checkCudaErrors(cudaThreadSynchronize());
++        checkCudaErrors(cudaDeviceSynchronize());
+     } else if (math == ATAN) {
+         /*startTimer(&timer);
+         device_atan_kernel<<<numBlock, numThread>>>(d_in, numElement, d_out);
+         getLastCudaError("device_atan_kernel");
+-        checkCudaErrors(cudaThreadSynchronize());
++        checkCudaErrors(cudaDeviceSynchronize());
+         elapsedTime = endTimer(&timer, "device_atan_kernel");*/
+     } else {
+         printf("!!! Never here.\n");
+@@ -347,7 +347,7 @@ float device_defined_template(T* h_in, const unsigned int numElement, T* h_out,
+     timer.go();
+     device_defined_kernel << <numBlock, numThread>>>(d_in, numElement, d_out);
+     getLastCudaError("device_defined_kernel");
+-    checkCudaErrors(cudaThreadSynchronize());
++    checkCudaErrors(cudaDeviceSynchronize());
+     timer.stop();
+     printf("*** kernel time: %f sec ***\n", timer.report() / 1000.f);
+ 
+@@ -401,7 +401,7 @@ void device_qrsmap(const unsigned int N, const int numBlock, const int numThread
+ 
+     timer.go();
+     gpu_fx_map_kernel1 << <numBlock, numThread>>>(d_x, d_c, N);
+-    checkCudaErrors(cudaThreadSynchronize());
++    checkCudaErrors(cudaDeviceSynchronize());
+     getLastCudaError("gpu_fx_map_kernel1");
+     timer.stop();
+     printf("gpu_fx_map_kernel1 %f\n", timer.report());

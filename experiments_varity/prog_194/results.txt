@@ -1,0 +1,13 @@
+Print result: 
+Individual statements: 
+offending text: ./test.cu:30:3, ./test.cu:30:79
+offending text: ./test.cu:32:4, ./test.cu:32:28
+Has continuous statements: no
+	offending subexpression: DeclRefExpr, ldexpf
+offending text: ./test.cu:30:10, ./test.cu:30:10
+	offending subexpression: DeclRefExpr, dump
+offending text: ./test.cu:32:4, ./test.cu:32:4
+	offending subexpression: DeclRefExpr, comp
+offending text: ./test.cu:32:10, ./test.cu:32:10
+	offending subexpression: DeclRefExpr, comp
+offending text: ./test.cu:32:23, ./test.cu:32:23

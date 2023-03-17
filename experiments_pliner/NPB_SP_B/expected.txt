@@ -1,0 +1,444 @@
+rm -f *.o *~ mputil* *.x
+rm -f core
+rm -rf workspace
+rm -f ./sp.U.x *.out
+[timer] func analysis time: 1.023508071899414
+============= perform search =============
+has signature changed: False
+[timer] transform time for 0: 0.3665792942047119
+cp: cannot stat './workspace/adi.c': No such file or directory
+cp: cannot stat './workspace/tzetar.c': No such file or directory
+cp: cannot stat './workspace/error.c': No such file or directory
+cp: cannot stat './workspace/ninvr.c': No such file or directory
+cp: cannot stat './workspace/set_constants.c': No such file or directory
+cp: cannot stat './workspace/sp.c': No such file or directory
+cp: cannot stat './workspace/exact_rhs.c': No such file or directory
+cp: cannot stat './workspace/rhs.c': No such file or directory
+cp: cannot stat './workspace/initialize.c': No such file or directory
+cp: cannot stat './workspace/add.c': No such file or directory
+cp: cannot stat './workspace/pinvr.c': No such file or directory
+cp: cannot stat './workspace/txinvr.c': No such file or directory
+cp: cannot stat './workspace/exact_solution.c': No such file or directory
+cp: cannot stat './workspace/z_solve.c': No such file or directory
+cp: cannot stat './workspace/y_solve.c': No such file or directory
+cp: cannot stat './workspace/x_solve.c': No such file or directory
+[timer] compile run time for 0: 103.2536153793335
+['./workspace/config_000/run_GCC5_O3_fastmath.out']
+cp: cannot stat './workspace/transform_list.txt': No such file or directory
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 1: 0.7359111309051514
+cp: cannot stat './workspace/adi.c': No such file or directory
+cp: cannot stat './workspace/sp.c': No such file or directory
+[timer] compile run time for 1: 118.28515696525574
+['./workspace/config_001/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 2: 0.633730411529541
+cp: cannot stat './workspace/adi.c': No such file or directory
+cp: cannot stat './workspace/error.c': No such file or directory
+cp: cannot stat './workspace/sp.c': No such file or directory
+cp: cannot stat './workspace/exact_rhs.c': No such file or directory
+cp: cannot stat './workspace/initialize.c': No such file or directory
+cp: cannot stat './workspace/add.c': No such file or directory
+cp: cannot stat './workspace/exact_solution.c': No such file or directory
+[timer] compile run time for 2: 118.08741617202759
+['./workspace/config_002/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 3: 0.4336988925933838
+cp: cannot stat './workspace/adi.c': No such file or directory
+cp: cannot stat './workspace/tzetar.c': No such file or directory
+cp: cannot stat './workspace/ninvr.c': No such file or directory
+cp: cannot stat './workspace/set_constants.c': No such file or directory
+cp: cannot stat './workspace/sp.c': No such file or directory
+cp: cannot stat './workspace/rhs.c': No such file or directory
+cp: cannot stat './workspace/pinvr.c': No such file or directory
+cp: cannot stat './workspace/txinvr.c': No such file or directory
+cp: cannot stat './workspace/z_solve.c': No such file or directory
+cp: cannot stat './workspace/y_solve.c': No such file or directory
+cp: cannot stat './workspace/x_solve.c': No such file or directory
+[timer] compile run time for 3: 102.48157787322998
+['./workspace/config_003/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 4: 0.36661410331726074
+cp: cannot stat './workspace/adi.c': No such file or directory
+cp: cannot stat './workspace/tzetar.c': No such file or directory
+cp: cannot stat './workspace/error.c': No such file or directory
+cp: cannot stat './workspace/ninvr.c': No such file or directory
+cp: cannot stat './workspace/set_constants.c': No such file or directory
+cp: cannot stat './workspace/sp.c': No such file or directory
+cp: cannot stat './workspace/exact_rhs.c': No such file or directory
+cp: cannot stat './workspace/rhs.c': No such file or directory
+cp: cannot stat './workspace/add.c': No such file or directory
+cp: cannot stat './workspace/pinvr.c': No such file or directory
+cp: cannot stat './workspace/txinvr.c': No such file or directory
+cp: cannot stat './workspace/z_solve.c': No such file or directory
+cp: cannot stat './workspace/y_solve.c': No such file or directory
+cp: cannot stat './workspace/x_solve.c': No such file or directory
+[timer] compile run time for 4: 102.26045513153076
+['./workspace/config_004/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 5: 0.34157633781433105
+cp: cannot stat './workspace/adi.c': No such file or directory
+cp: cannot stat './workspace/tzetar.c': No such file or directory
+cp: cannot stat './workspace/error.c': No such file or directory
+cp: cannot stat './workspace/ninvr.c': No such file or directory
+cp: cannot stat './workspace/set_constants.c': No such file or directory
+cp: cannot stat './workspace/sp.c': No such file or directory
+cp: cannot stat './workspace/exact_rhs.c': No such file or directory
+cp: cannot stat './workspace/rhs.c': No such file or directory
+cp: cannot stat './workspace/add.c': No such file or directory
+cp: cannot stat './workspace/pinvr.c': No such file or directory
+cp: cannot stat './workspace/txinvr.c': No such file or directory
+cp: cannot stat './workspace/exact_solution.c': No such file or directory
+cp: cannot stat './workspace/z_solve.c': No such file or directory
+cp: cannot stat './workspace/y_solve.c': No such file or directory
+cp: cannot stat './workspace/x_solve.c': No such file or directory
+[timer] compile run time for 5: 100.81482672691345
+['./workspace/config_005/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 6: 0.3566737174987793
+cp: cannot stat './workspace/adi.c': No such file or directory
+cp: cannot stat './workspace/tzetar.c': No such file or directory
+cp: cannot stat './workspace/error.c': No such file or directory
+cp: cannot stat './workspace/ninvr.c': No such file or directory
+cp: cannot stat './workspace/set_constants.c': No such file or directory
+cp: cannot stat './workspace/sp.c': No such file or directory
+cp: cannot stat './workspace/exact_rhs.c': No such file or directory
+cp: cannot stat './workspace/rhs.c': No such file or directory
+cp: cannot stat './workspace/add.c': No such file or directory
+cp: cannot stat './workspace/pinvr.c': No such file or directory
+cp: cannot stat './workspace/txinvr.c': No such file or directory
+cp: cannot stat './workspace/z_solve.c': No such file or directory
+cp: cannot stat './workspace/y_solve.c': No such file or directory
+cp: cannot stat './workspace/x_solve.c': No such file or directory
+[timer] compile run time for 6: 100.36923670768738
+['./workspace/config_006/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 7: 0.34998297691345215
+cp: cannot stat './workspace/adi.c': No such file or directory
+cp: cannot stat './workspace/tzetar.c': No such file or directory
+cp: cannot stat './workspace/error.c': No such file or directory
+cp: cannot stat './workspace/ninvr.c': No such file or directory
+cp: cannot stat './workspace/set_constants.c': No such file or directory
+cp: cannot stat './workspace/sp.c': No such file or directory
+cp: cannot stat './workspace/exact_rhs.c': No such file or directory
+cp: cannot stat './workspace/rhs.c': No such file or directory
+cp: cannot stat './workspace/add.c': No such file or directory
+cp: cannot stat './workspace/pinvr.c': No such file or directory
+cp: cannot stat './workspace/txinvr.c': No such file or directory
+cp: cannot stat './workspace/exact_solution.c': No such file or directory
+cp: cannot stat './workspace/z_solve.c': No such file or directory
+cp: cannot stat './workspace/y_solve.c': No such file or directory
+cp: cannot stat './workspace/x_solve.c': No such file or directory
+[timer] compile run time for 7: 100.6487169265747
+['./workspace/config_007/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 8: 0.3385031223297119
+cp: cannot stat './workspace/adi.c': No such file or directory
+cp: cannot stat './workspace/tzetar.c': No such file or directory
+cp: cannot stat './workspace/error.c': No such file or directory
+cp: cannot stat './workspace/ninvr.c': No such file or directory
+cp: cannot stat './workspace/set_constants.c': No such file or directory
+cp: cannot stat './workspace/sp.c': No such file or directory
+cp: cannot stat './workspace/exact_rhs.c': No such file or directory
+cp: cannot stat './workspace/rhs.c': No such file or directory
+cp: cannot stat './workspace/initialize.c': No such file or directory
+cp: cannot stat './workspace/add.c': No such file or directory
+cp: cannot stat './workspace/pinvr.c': No such file or directory
+cp: cannot stat './workspace/txinvr.c': No such file or directory
+cp: cannot stat './workspace/z_solve.c': No such file or directory
+cp: cannot stat './workspace/y_solve.c': No such file or directory
+cp: cannot stat './workspace/x_solve.c': No such file or directory
+[timer] compile run time for 8: 100.10931515693665
+['./workspace/config_008/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+====== begin blocks search of ./workspace/func_analysis/exact_solution_c/exact_solution.json from 0 to 2 ======
+block 0 fpcount: 0
+block 1 fpcount: 26
+loops in this level: [1]
+[timer] transform time for 9: 0.3393259048461914
+cp: cannot stat './workspace/adi.c': No such file or directory
+cp: cannot stat './workspace/tzetar.c': No such file or directory
+cp: cannot stat './workspace/error.c': No such file or directory
+cp: cannot stat './workspace/ninvr.c': No such file or directory
+cp: cannot stat './workspace/set_constants.c': No such file or directory
+cp: cannot stat './workspace/sp.c': No such file or directory
+cp: cannot stat './workspace/exact_rhs.c': No such file or directory
+cp: cannot stat './workspace/rhs.c': No such file or directory
+cp: cannot stat './workspace/initialize.c': No such file or directory
+cp: cannot stat './workspace/add.c': No such file or directory
+cp: cannot stat './workspace/pinvr.c': No such file or directory
+cp: cannot stat './workspace/txinvr.c': No such file or directory
+cp: cannot stat './workspace/z_solve.c': No such file or directory
+cp: cannot stat './workspace/y_solve.c': No such file or directory
+cp: cannot stat './workspace/x_solve.c': No such file or directory
+[timer] compile run time for 9: 101.93060851097107
+['./workspace/config_009/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+====== enter block 1 ======
+====== begin blocks search of ./workspace/func_analysis/exact_solution_c/exact_solution.json from 0 to 2 ======
+block 0 fpcount: 0
+block 1 fpcount: 26
+loops in this level: []
+====== enter block 1 ======
+====== begin blocks search of ./workspace/func_analysis/exact_solution_c/exact_solution.json from 0 to 1 ======
+block 0 fpcount: 26
+====== enter block 0 ======
+====== begin stmts search of ./workspace/func_analysis/exact_solution_c/exact_solution.json from 0 to 1 ======
+block 0 fpcount: 26
+Print result:
+Print result:
+Print result:
+offending text: exact_solution.c:43:27, exact_solution.c:48:3
+Individual statements:
+offending text: exact_solution.c:44:5, exact_solution.c:47:74
+Has continuous statements: no
+Print result:
+Print result:
+Print result:
+Print result:
+Print result:
+Print result:
+Print result:
+Print result:
+Print result:
+Print result:
+Print result:
+Print result:
+Print result:
+----- end of results -----
+[timer] Total Transform Time: 4.262595891952515
+[timer] Total Compile Run Time: 1048.2409255504608
+[timer] total time: 1054.6249430179596
+[1, 1, 0, 0]:[-1, 0, 1, 2, 1, 4, 0, 6, 7, 8, 9, 10, 11, 12, 13, 12, 15, 10, 8, 18, 19, 18, 21, 22, 23, 24, 25, 26, 27, 26, 29, 24, 22, 32, 33, 32, 35, 36, 37, 38, 39, 40, 41, 40, 43, 38, 36, 46, 47, 46, 49, 50, 51, 52, 53, 54, 55, 54, 57, 52, 50, 60, 61, 60, 63, 64, 65, 66, 67, 66, 69, 64, 7, 72, 73, 72, 75, 76, 77, 78, 79, 80, 81, 80, 83, 78, 76, 86, 87, 86, 89, 90, 91, 92, 93, 94, 95, 94, 97, 92, 90, 100, 101, 100, 103, 104, 105, 106, 107, 108, 109, 108, 111, 106, 104, 114, 115, 114, 117, 118, 119, 120, 121, 120, 123, 118, 6, 126, 127, 126, 129, 130, 131, 132, 133, 134, 135, 134, 137, 132, 130, 140, 141, 140, 143, 144, 145, 146, 147, 148, 149, 148, 151, 146, 144, 154, 155, 154, 157, 158, 159, 160, 161, 162, 163, 162, 165, 160, 158, 168, 169, 168, 171, 172, 173, 174, 175, 174, 177, 172]
+new config [7]
+[timer] transform time for 10: 0.33800745010375977
+cp: cannot stat './workspace/adi.c': No such file or directory
+cp: cannot stat './workspace/tzetar.c': No such file or directory
+cp: cannot stat './workspace/error.c': No such file or directory
+cp: cannot stat './workspace/ninvr.c': No such file or directory
+cp: cannot stat './workspace/set_constants.c': No such file or directory
+cp: cannot stat './workspace/sp.c': No such file or directory
+cp: cannot stat './workspace/exact_rhs.c': No such file or directory
+cp: cannot stat './workspace/rhs.c': No such file or directory
+cp: cannot stat './workspace/initialize.c': No such file or directory
+cp: cannot stat './workspace/add.c': No such file or directory
+cp: cannot stat './workspace/pinvr.c': No such file or directory
+cp: cannot stat './workspace/txinvr.c': No such file or directory
+cp: cannot stat './workspace/z_solve.c': No such file or directory
+cp: cannot stat './workspace/y_solve.c': No such file or directory
+cp: cannot stat './workspace/x_solve.c': No such file or directory
+[timer] compile run time for 10: 101.23691153526306
+['./workspace/config_sub_010/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+new config [126]
+[timer] transform time for 11: 0.3472750186920166
+cp: cannot stat './workspace/adi.c': No such file or directory
+cp: cannot stat './workspace/tzetar.c': No such file or directory
+cp: cannot stat './workspace/error.c': No such file or directory
+cp: cannot stat './workspace/ninvr.c': No such file or directory
+cp: cannot stat './workspace/set_constants.c': No such file or directory
+cp: cannot stat './workspace/sp.c': No such file or directory
+cp: cannot stat './workspace/exact_rhs.c': No such file or directory
+cp: cannot stat './workspace/rhs.c': No such file or directory
+cp: cannot stat './workspace/initialize.c': No such file or directory
+cp: cannot stat './workspace/add.c': No such file or directory
+cp: cannot stat './workspace/pinvr.c': No such file or directory
+cp: cannot stat './workspace/txinvr.c': No such file or directory
+cp: cannot stat './workspace/z_solve.c': No such file or directory
+cp: cannot stat './workspace/y_solve.c': No such file or directory
+cp: cannot stat './workspace/x_solve.c': No such file or directory
+[timer] compile run time for 11: 101.83074188232422
+['./workspace/config_sub_011/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+eligible set num 2
+new config [127]
+[timer] transform time for 12: 0.35677123069763184
+cp: cannot stat './workspace/adi.c': No such file or directory
+cp: cannot stat './workspace/tzetar.c': No such file or directory
+cp: cannot stat './workspace/error.c': No such file or directory
+cp: cannot stat './workspace/ninvr.c': No such file or directory
+cp: cannot stat './workspace/set_constants.c': No such file or directory
+cp: cannot stat './workspace/sp.c': No such file or directory
+cp: cannot stat './workspace/exact_rhs.c': No such file or directory
+cp: cannot stat './workspace/rhs.c': No such file or directory
+cp: cannot stat './workspace/initialize.c': No such file or directory
+cp: cannot stat './workspace/add.c': No such file or directory
+cp: cannot stat './workspace/pinvr.c': No such file or directory
+cp: cannot stat './workspace/txinvr.c': No such file or directory
+cp: cannot stat './workspace/z_solve.c': No such file or directory
+cp: cannot stat './workspace/y_solve.c': No such file or directory
+cp: cannot stat './workspace/x_solve.c': No such file or directory
+[timer] compile run time for 12: 102.48974895477295
+['./workspace/config_sub_012/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+new config [129]
+[timer] transform time for 13: 0.34904909133911133
+cp: cannot stat './workspace/adi.c': No such file or directory
+cp: cannot stat './workspace/tzetar.c': No such file or directory
+cp: cannot stat './workspace/error.c': No such file or directory
+cp: cannot stat './workspace/ninvr.c': No such file or directory
+cp: cannot stat './workspace/set_constants.c': No such file or directory
+cp: cannot stat './workspace/sp.c': No such file or directory
+cp: cannot stat './workspace/exact_rhs.c': No such file or directory
+cp: cannot stat './workspace/rhs.c': No such file or directory
+cp: cannot stat './workspace/initialize.c': No such file or directory
+cp: cannot stat './workspace/add.c': No such file or directory
+cp: cannot stat './workspace/pinvr.c': No such file or directory
+cp: cannot stat './workspace/txinvr.c': No such file or directory
+cp: cannot stat './workspace/z_solve.c': No such file or directory
+cp: cannot stat './workspace/y_solve.c': No such file or directory
+cp: cannot stat './workspace/x_solve.c': No such file or directory
+[timer] compile run time for 13: 105.99765729904175
+['./workspace/config_sub_013/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+eligible set num 2
+new config [130]
+[timer] transform time for 14: 0.34248900413513184
+cp: cannot stat './workspace/adi.c': No such file or directory
+cp: cannot stat './workspace/tzetar.c': No such file or directory
+cp: cannot stat './workspace/error.c': No such file or directory
+cp: cannot stat './workspace/ninvr.c': No such file or directory
+cp: cannot stat './workspace/set_constants.c': No such file or directory
+cp: cannot stat './workspace/sp.c': No such file or directory
+cp: cannot stat './workspace/exact_rhs.c': No such file or directory
+cp: cannot stat './workspace/rhs.c': No such file or directory
+cp: cannot stat './workspace/initialize.c': No such file or directory
+cp: cannot stat './workspace/add.c': No such file or directory
+cp: cannot stat './workspace/pinvr.c': No such file or directory
+cp: cannot stat './workspace/txinvr.c': No such file or directory
+cp: cannot stat './workspace/z_solve.c': No such file or directory
+cp: cannot stat './workspace/y_solve.c': No such file or directory
+cp: cannot stat './workspace/x_solve.c': No such file or directory
+[timer] compile run time for 14: 102.59333872795105
+['./workspace/config_sub_014/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [131]
+[timer] transform time for 15: 0.33675479888916016
+cp: cannot stat './workspace/adi.c': No such file or directory
+cp: cannot stat './workspace/tzetar.c': No such file or directory
+cp: cannot stat './workspace/error.c': No such file or directory
+cp: cannot stat './workspace/ninvr.c': No such file or directory
+cp: cannot stat './workspace/set_constants.c': No such file or directory
+cp: cannot stat './workspace/sp.c': No such file or directory
+cp: cannot stat './workspace/exact_rhs.c': No such file or directory
+cp: cannot stat './workspace/rhs.c': No such file or directory
+cp: cannot stat './workspace/initialize.c': No such file or directory
+cp: cannot stat './workspace/add.c': No such file or directory
+cp: cannot stat './workspace/pinvr.c': No such file or directory
+cp: cannot stat './workspace/txinvr.c': No such file or directory
+cp: cannot stat './workspace/z_solve.c': No such file or directory
+cp: cannot stat './workspace/y_solve.c': No such file or directory
+cp: cannot stat './workspace/x_solve.c': No such file or directory
+[timer] compile run time for 15: 101.15632367134094
+['./workspace/config_sub_015/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: False
+new config [140]
+[timer] transform time for 16: 0.38040590286254883
+cp: cannot stat './workspace/adi.c': No such file or directory
+cp: cannot stat './workspace/tzetar.c': No such file or directory
+cp: cannot stat './workspace/error.c': No such file or directory
+cp: cannot stat './workspace/ninvr.c': No such file or directory
+cp: cannot stat './workspace/set_constants.c': No such file or directory
+cp: cannot stat './workspace/sp.c': No such file or directory
+cp: cannot stat './workspace/exact_rhs.c': No such file or directory
+cp: cannot stat './workspace/rhs.c': No such file or directory
+cp: cannot stat './workspace/initialize.c': No such file or directory
+cp: cannot stat './workspace/add.c': No such file or directory
+cp: cannot stat './workspace/pinvr.c': No such file or directory
+cp: cannot stat './workspace/txinvr.c': No such file or directory
+cp: cannot stat './workspace/z_solve.c': No such file or directory
+cp: cannot stat './workspace/y_solve.c': No such file or directory
+cp: cannot stat './workspace/x_solve.c': No such file or directory
+[timer] compile run time for 16: 102.23545694351196
+['./workspace/config_sub_016/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+new config [141]
+[timer] transform time for 17: 0.36373448371887207
+cp: cannot stat './workspace/adi.c': No such file or directory
+cp: cannot stat './workspace/tzetar.c': No such file or directory
+cp: cannot stat './workspace/error.c': No such file or directory
+cp: cannot stat './workspace/ninvr.c': No such file or directory
+cp: cannot stat './workspace/set_constants.c': No such file or directory
+cp: cannot stat './workspace/sp.c': No such file or directory
+cp: cannot stat './workspace/exact_rhs.c': No such file or directory
+cp: cannot stat './workspace/rhs.c': No such file or directory
+cp: cannot stat './workspace/initialize.c': No such file or directory
+cp: cannot stat './workspace/add.c': No such file or directory
+cp: cannot stat './workspace/pinvr.c': No such file or directory
+cp: cannot stat './workspace/txinvr.c': No such file or directory
+cp: cannot stat './workspace/z_solve.c': No such file or directory
+cp: cannot stat './workspace/y_solve.c': No such file or directory
+cp: cannot stat './workspace/x_solve.c': No such file or directory
+[timer] compile run time for 17: 103.50625514984131
+['./workspace/config_sub_017/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+new config [143]
+[timer] transform time for 18: 0.349224328994751
+cp: cannot stat './workspace/adi.c': No such file or directory
+cp: cannot stat './workspace/tzetar.c': No such file or directory
+cp: cannot stat './workspace/error.c': No such file or directory
+cp: cannot stat './workspace/ninvr.c': No such file or directory
+cp: cannot stat './workspace/set_constants.c': No such file or directory
+cp: cannot stat './workspace/sp.c': No such file or directory
+cp: cannot stat './workspace/exact_rhs.c': No such file or directory
+cp: cannot stat './workspace/rhs.c': No such file or directory
+cp: cannot stat './workspace/initialize.c': No such file or directory
+cp: cannot stat './workspace/add.c': No such file or directory
+cp: cannot stat './workspace/pinvr.c': No such file or directory
+cp: cannot stat './workspace/txinvr.c': No such file or directory
+cp: cannot stat './workspace/z_solve.c': No such file or directory
+cp: cannot stat './workspace/y_solve.c': No such file or directory
+cp: cannot stat './workspace/x_solve.c': No such file or directory
+[timer] compile run time for 18: 102.62532067298889
+['./workspace/config_sub_018/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+eligible set num 2
+new config [142]
+[timer] transform time for 19: 0.35205721855163574
+cp: cannot stat './workspace/adi.c': No such file or directory
+cp: cannot stat './workspace/tzetar.c': No such file or directory
+cp: cannot stat './workspace/error.c': No such file or directory
+cp: cannot stat './workspace/ninvr.c': No such file or directory
+cp: cannot stat './workspace/set_constants.c': No such file or directory
+cp: cannot stat './workspace/sp.c': No such file or directory
+cp: cannot stat './workspace/exact_rhs.c': No such file or directory
+cp: cannot stat './workspace/rhs.c': No such file or directory
+cp: cannot stat './workspace/initialize.c': No such file or directory
+cp: cannot stat './workspace/add.c': No such file or directory
+cp: cannot stat './workspace/pinvr.c': No such file or directory
+cp: cannot stat './workspace/txinvr.c': No such file or directory
+cp: cannot stat './workspace/z_solve.c': No such file or directory
+cp: cannot stat './workspace/y_solve.c': No such file or directory
+cp: cannot stat './workspace/x_solve.c': No such file or directory
+[timer] compile run time for 19: 104.95867824554443
+['./workspace/config_sub_019/run_GCC5_O3_fastmath.out']
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+eligible set num 0
+Print result:
+Print result:
+Print result:
+Individual statements:
+offending text: exact_solution.c:44:5, exact_solution.c:47:74
+Has continuous statements: no
+offending subexpression: DeclRefExpr, zeta
+offending text: exact_solution.c:47:24, exact_solution.c:47:24
+Print result:
+Print result:
+Print result:
+Print result:
+Print result:
+Print result:
+Print result:
+Print result:
+Print result:
+Print result:
+Print result:
+Print result:
+Print result:
+----- end of results -----
+[timer] Total Transform Time: 7.778364419937134
+[timer] Total Compile Run Time: 2076.8713586330414
+[timer] total time after subexpression isolation: 2087.81915974617

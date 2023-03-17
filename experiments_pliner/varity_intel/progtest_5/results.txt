@@ -1,0 +1,6 @@
+Print result: 
+Individual statements: 
+offending text: ./test.cpp:12:5, ./test.cpp:12:194
+Has continuous statements: no
+	offending subexpression: DeclRefExpr, var_10
+offending text: ./test.cpp:12:101, ./test.cpp:12:101

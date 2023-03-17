@@ -1,0 +1,85 @@
+rm -f *.o *~ 
+rm -rf workspace
+rm -f core lu.S *.out
+cp: cannot stat './workspace/lu.cu': No such file or directory
+[timer] func analysis time: 1.4595308303833008
+============= perform search =============
+has signature changed: False
+[timer] transform time for 0: 0.24229192733764648
+cp: cannot stat './workspace/transform_list.txt': No such file or directory
+[timer] compile run time for 0: 4.153915166854858
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 1: 0.8381326198577881
+[timer] compile run time for 1: 15.391874313354492
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 2: 0.42579078674316406
+[timer] compile run time for 2: 5.571631193161011
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 3: 0.2524733543395996
+[timer] compile run time for 3: 5.457217693328857
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 4: 0.2595479488372803
+[timer] compile run time for 4: 5.593040466308594
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 5: 0.2344832420349121
+[timer] compile run time for 5: 5.736698627471924
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 6: 0.23635458946228027
+[timer] compile run time for 6: 5.592180967330933
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 7: 0.2284069061279297
+[timer] compile run time for 7: 5.715911149978638
+has enhancing precision resolve inconsistency: True
+====== begin blocks search of ./workspace/func_analysis/lu_cu/ssor_gpu_kernel_2.json from 0 to 3 ======
+block 0 fpcount: 0
+block 1 fpcount: 0
+block 2 fpcount: 15
+loops in this level: []
+====== enter block 2 ======
+====== begin stmts search of ./workspace/func_analysis/lu_cu/ssor_gpu_kernel_2.json from 0 to 8 ======
+block 0 fpcount: 0
+block 1 fpcount: 0
+block 2 fpcount: 0
+block 3 fpcount: 3
+block 4 fpcount: 3
+block 5 fpcount: 3
+block 6 fpcount: 3
+block 7 fpcount: 3
+[timer] transform time for 8: 0.2643113136291504
+[timer] compile run time for 8: 5.614323139190674
+has enhancing precision resolve inconsistency: True
+Print result:
+offending text: ./lu.cu:4023:2, ./lu.cu:4024:2
+Individual statements:
+offending text: ./lu.cu:4023:2, ./lu.cu:4023:25
+Has continuous statements: no
+----- end of results -----
+[timer] Total Transform Time: 2.981792688369751
+[timer] Total Compile Run Time: 58.82679271697998
+[timer] total time: 63.70683002471924
+[2, 3]:[-1, 0, 1, 2, 1, 4, 5, 4, 7, 7, 9, 10, 11, 12, 10, 14, 15, 14, 17, 18, 19, 20, 18, 22, 23, 22, 25, 26, 0, 28, 29, 28, 31, 32, 33, 32, 35, 36, 35, 38, 38, 40, 41, 42, 43, 41, 45, 46, 45, 48, 49, 50, 51, 49, 53, 54, 53, 56, 57]
+new config [29]
+[timer] transform time for 9: 0.23613929748535156
+[timer] compile run time for 9: 5.4968695640563965
+has enhancing precision resolve inconsistency: True
+new config [31]
+[timer] transform time for 10: 0.23167634010314941
+[timer] compile run time for 10: 5.498832941055298
+has enhancing precision resolve inconsistency: False
+eligible set num 1
+new config [30]
+[timer] transform time for 11: 0.2726750373840332
+[timer] compile run time for 11: 5.729331970214844
+has enhancing precision resolve inconsistency: True
+eligible set num 1
+eligible set num 0
+Print result:
+Individual statements:
+offending text: ./lu.cu:4023:2, ./lu.cu:4023:25
+Has continuous statements: no
+offending subexpression: DeclRefExpr, tmp
+offending text: ./lu.cu:4023:19, ./lu.cu:4023:19
+----- end of results -----
+[timer] Total Transform Time: 3.722283363342285
+[timer] Total Compile Run Time: 75.55182719230652
+[timer] total time after subexpression isolation: 81.42921805381775

@@ -1,0 +1,73 @@
+#!/usr/bin/env bash
+##===-------------------------------------------------------------------------------*- bash -*-===##
+##
+##                                   S E R I A L B O X
+##
+## This file is distributed under terms of BSD license. 
+## See LICENSE.txt for more information.
+##
+##===------------------------------------------------------------------------------------------===##
+
+# Description:
+#   Build serialbox and downstream example projects 
+#   each individually with make/install
+#
+# Usage:
+#   test-individual.sh [CMAKE_ARGUMENTS]
+
+SOURCE=@CMAKE_CURRENT_SOURCE_DIR@/bundle
+BUILDS=@CMAKE_CURRENT_BINARY_DIR@/individual-builds
+INSTALL=@CMAKE_CURRENT_BINARY_DIR@/individual-install
+
+# Error handling
+function test_failed {
+  EXIT_CODE=$?
+  { set +ex; } 2>/dev/null
+  if [ $EXIT_CODE -ne 0 ]; then
+    echo "+++++++++++++++++"
+    echo "Test failed"
+    echo "+++++++++++++++++"
+  fi
+  exit $EXIT_CODE
+}
+trap test_failed EXIT
+set -e -o pipefail
+set -x
+
+# Start with clean build
+rm -rf $BUILDS
+
+# Build/Install serialbox
+mkdir -p $BUILDS/serialbox && cd $BUILDS/serialbox
+cmake $SOURCE/serialbox -DCMAKE_INSTALL_PREFIX=$INSTALL/serialbox -DSERIALBOX_ENABLE_FORTRAN=ON "$@"
+
+make -j@MAKE_PARALLEL@ install
+export Serialbox_ROOT=$INSTALL/serialbox
+
+# Build/Install downstream_fortran
+mkdir -p $BUILDS/downstream_fortran && cd $BUILDS/downstream_fortran
+cmake $SOURCE/downstream_fortran -DCMAKE_INSTALL_PREFIX=$INSTALL/downstream_fortran -DBUILD_SHARED_LIBS=ON "$@"
+
+make -j@MAKE_PARALLEL@
+bin/downstream_fortran_producer
+bin/downstream_fortran_consumer
+
+make -j@MAKE_PARALLEL@ install
+$INSTALL/downstream_fortran/bin/downstream_fortran_producer
+$INSTALL/downstream_fortran/bin/downstream_fortran_consumer
+
+# Build/Install downstream_c
+mkdir -p $BUILDS/downstream_c && cd $BUILDS/downstream_c
+cmake $SOURCE/downstream_c -DCMAKE_INSTALL_PREFIX=$INSTALL/downstream_c -DBUILD_SHARED_LIBS=ON "$@"
+
+make -j@MAKE_PARALLEL@
+bin/downstream_c
+bin/downstream_c
+
+make -j@MAKE_PARALLEL@ install
+$INSTALL/downstream_c/bin/downstream_c
+
+{ set +ex; } 2>/dev/null
+echo "+++++++++++++++++"
+echo "Test passed"
+echo "+++++++++++++++++"

@@ -1,0 +1,100 @@
+rm -f lud *.o
+rm -rf workspace *.out
+cp: cannot stat './workspace/lud_kernel.cu': No such file or directory
+[timer] func analysis time: 0.2627847194671631
+============= perform search =============
+has signature changed: False
+[timer] transform time for 0: 0.18378090858459473
+cp: cannot stat './workspace/transform_list.txt': No such file or directory
+[timer] compile run time for 0: 2.0777781009674072
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 1: 0.18958187103271484
+[timer] compile run time for 1: 4.1056458950042725
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 2: 0.21386122703552246
+[timer] compile run time for 2: 3.3783020973205566
+has enhancing precision resolve inconsistency: True
+[timer] transform time for 3: 0.17718172073364258
+[timer] compile run time for 3: 3.350400686264038
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 4: 0.1772301197052002
+[timer] compile run time for 4: 4.335051536560059
+has enhancing precision resolve inconsistency: True
+====== begin blocks search of ./workspace/func_analysis/lud_kernel_cu/lud_internal.json from 0 to 3 ======
+block 0 fpcount: 8
+block 1 fpcount: 0
+block 2 fpcount: 2
+loops in this level: [1]
+[timer] transform time for 5: 0.23064494132995605
+[timer] compile run time for 5: 4.6150970458984375
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 6: 0.3289358615875244
+[timer] compile run time for 6: 4.123861312866211
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 7: 0.24548840522766113
+[timer] compile run time for 7: 3.9624111652374268
+has enhancing precision resolve inconsistency: False
+====== enter block 0 ======
+====== begin stmts search of ./workspace/func_analysis/lud_kernel_cu/lud_internal.json from 0 to 10 ======
+block 0 fpcount: 1
+block 1 fpcount: 1
+block 2 fpcount: 0
+block 3 fpcount: 1
+block 4 fpcount: 0
+block 5 fpcount: 0
+block 6 fpcount: 2
+block 7 fpcount: 2
+block 8 fpcount: 0
+block 9 fpcount: 1
+[timer] transform time for 8: 0.25109124183654785
+[timer] compile run time for 8: 4.013586521148682
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 9: 0.2659270763397217
+[timer] compile run time for 9: 4.306443214416504
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 10: 0.24509358406066895
+[timer] compile run time for 10: 4.010530948638916
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 11: 0.24726176261901855
+[timer] compile run time for 11: 4.132828712463379
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 12: 0.25275468826293945
+[timer] compile run time for 12: 4.0625927448272705
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 13: 0.2560310363769531
+[timer] compile run time for 13: 4.348098039627075
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 14: 0.24531197547912598
+[timer] compile run time for 14: 4.117665529251099
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 15: 0.25141263008117676
+[timer] compile run time for 15: 4.047439813613892
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 16: 0.24761629104614258
+[timer] compile run time for 16: 4.0441083908081055
+has enhancing precision resolve inconsistency: False
+[timer] transform time for 17: 0.2562525272369385
+[timer] compile run time for 17: 4.30138635635376
+has enhancing precision resolve inconsistency: False
+====== enter block 2 ======
+====== begin stmts search of ./workspace/func_analysis/lud_kernel_cu/lud_internal.json from 0 to 1 ======
+block 0 fpcount: 2
+Print result:
+offending text: ./lud_kernel.cu:170:3, ./lud_kernel.cu:173:3
+offending text: ./lud_kernel.cu:174:3, ./lud_kernel.cu:176:3
+offending text: ./lud_kernel.cu:179:3, ./lud_kernel.cu:182:3
+offending text: ./lud_kernel.cu:184:3, ./lud_kernel.cu:184:9
+offending text: ./lud_kernel.cu:187:3, ./lud_kernel.cu:187:74
+Individual statements:
+offending text: ./lud_kernel.cu:170:3, ./lud_kernel.cu:170:52
+offending text: ./lud_kernel.cu:171:3, ./lud_kernel.cu:171:52
+offending text: ./lud_kernel.cu:174:3, ./lud_kernel.cu:174:12
+offending text: ./lud_kernel.cu:179:3, ./lud_kernel.cu:179:99
+offending text: ./lud_kernel.cu:180:3, ./lud_kernel.cu:180:99
+offending text: ./lud_kernel.cu:184:3, ./lud_kernel.cu:184:9
+offending text: ./lud_kernel.cu:187:3, ./lud_kernel.cu:187:74
+Has continuous statements: yes
+----- end of results -----
+[timer] Total Transform Time: 4.26545786857605
+[timer] Total Compile Run Time: 71.33322811126709
+[timer] total time: 76.28627872467041

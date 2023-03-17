@@ -1,0 +1,1419 @@
+%%% DOCUMENTCLASS 
+%%%-------------------------------------------------------------------------------
+\documentclass[
+a4paper,     % Stock and paper size.
+12pt,        % Type size.
+article,
+%oneside, 
+onecolumn,   % Only one column of text on a page.
+% openright, % Each chapter will start on a recto page.
+% openleft,  % Each chapter will start on a verso page.
+openany,     % A chapter may start on either a recto or verso page.
+]{memoir}
+
+
+%%% PACKAGES 
+%%%------------------------------------------------------------------------------
+% If utf8 encoding
+\usepackage[utf8]{inputenc}
+
+% If not utf8 encoding, then this is probably the way to go
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% English please
+\usepackage[english]{babel}
+
+% Less badboxes
+\usepackage[final]{microtype}
+
+% Math
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+% http://ctan.org/pkg/pifont
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+
+% Include figures
+\usepackage{graphicx}
+\usepackage{makeidx}
+\usepackage{import}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\algdef{SE}[SUBALG]{Indent}{EndIndent}{}{\algorithmicend\ }%
+\algtext*{Indent}
+\algtext*{EndIndent}
+
+\algnewcommand{\LineComment}[1]{\State \(\triangleright\) #1}
+
+
+%%% PAGE LAYOUT 
+%%%-----------------------------------------------------------------------------
+% Left and right margin
+\setlrmarginsandblock{0.15\paperwidth}{*}{1}
+% Upper and lower margin
+\setulmarginsandblock{0.2\paperwidth}{*}{1}
+
+\setpnumwidth{3em}
+\setrmarg{4em}
+\setlength{\cftpartnumwidth}{3em}
+\checkandfixthelayout
+
+\newlength\forceindent
+\setlength{\forceindent}{\parindent}
+\setlength{\parindent}{0cm}
+\renewcommand{\indent}{\hspace*{\forceindent}}
+\setlength{\parskip}{1em}
+
+%%% SECTIONAL DIVISIONS
+%%%------------------------------------------------------------------------------
+% Subsections (and higher) are numbered
+\maxsecnumdepth{paragraph}
+\setsecnumdepth{paragraph}
+
+\usepackage{titlesec}
+\usepackage{etoolbox}
+
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{12pt plus 2pt minus 1pt}{0pt plus 1pt minus 1pt}
+\titlespacing\subsubsection{0pt}{12pt plus 2pt minus 1pt}{0pt plus 1pt minus 1pt}
+
+\counterwithout{section}{chapter}
+\titleformat*{\section}{\Large\bfseries}
+%\patchcmd{\thebibliography}{\chapter*}{\section}{}{}
+
+\setsecheadstyle{\normalfont\large\bfseries}
+\setsubsecheadstyle{\normalfont\normalsize\bfseries}
+\setparaheadstyle{\normalfont\normalsize\bfseries}
+\setparaindent{0pt}\setafterparaskip{0pt}
+
+%%% FLOATS AND CAPTIONS
+%%%------------------------------------------------------------------------------
+\newcommand{\fig}[1]{figure~{\ref{#1}}\xspace}
+\newcommand{\tab}[1]{table~{\ref{#1}}\xspace}
+\newcommand{\lista}[1]{listing~{\ref{#1}}\xspace}
+\newcommand{\parte}[1]{part~{\ref{#1}}\xspace}
+\newcommand{\chap}[1]{chapter~{\ref{#1}}\xspace}
+\newcommand{\sect}[1]{section~{\ref{#1}}\xspace}
+
+% A space between caption name and text
+\captiondelim{\space}
+% Font of the caption name
+\captionnamefont{\small\bfseries}
+% Font of the caption text
+\captiontitlefont{\small\normalfont}
+
+% Change the width of the caption
+\changecaptionwidth        
+\captionwidth{1\textwidth} 
+
+\usepackage{tabularx}
+%\usepackage{float}
+
+%%% ABSTRACT
+%%%------------------------------------------------------------------------------
+% Font of abstract title
+\renewcommand{\abstractnamefont}{\normalfont\small\bfseries}
+% Width of abstract 
+\setlength{\absleftindent}{0.1\textwidth}
+\setlength{\absrightindent}{\absleftindent}
+
+%%% HEADER AND FOOTER 
+%%%------------------------------------------------------------------------------
+% Make standard pagestyle
+\makepagestyle{memoirStylePages}
+\makerunningwidth{memoirStylePages}{\textwidth}
+
+\makeheadrule{memoirStylePages}{\textwidth}{\normalrulethickness}
+\makefootrule{memoirStylePages}{\textwidth}{\normalrulethickness}{0pt}
+
+\makeevenfoot{memoirStylePages}{}{\bfseries\thepage}{}
+\makeoddfoot{memoirStylePages}{}{\bfseries\thepage}{}
+\makeevenhead{memoirStylePages}{}{\textit{Dwarf-P-cloudMicrophysics-IFSScheme}}{}
+\makeoddhead{memoirStylePages}{}{\textit{Dwarf-P-cloudMicrophysics-IFSScheme}}{}
+
+\makeatletter
+\makepsmarks{memoirStylePages}{
+\createmark{chapter}{both}{shownumber}{\@chapapp\ }{ \quad }
+\createmark{section}{right}{shownumber}{}{ \quad }
+\createplainmark{toc}{both}{\contentsname}
+\createplainmark{lof}{both}{\listfigurename}
+\createplainmark{lot}{both}{\listtablename}
+\createplainmark{bib}{both}{\bibname}
+\createplainmark{index}{both}{\indexname}
+\createplainmark{glossary}{both}{\glossaryname}
+}
+\makeatother
+
+% Choosing pagestyle and chapter pagestyle
+\pagestyle{memoirStylePages}
+\aliaspagestyle{chapter}{chap}
+
+
+%%% NEW COMMANDS
+%%%-----------------------------------------------------------------------------
+
+% Nektar++ version
+\usepackage{xspace}
+\ifdefined\HCode
+\newcommand{\version}{0.1.0\unskip}
+\else
+\newcommand{\version}{\input{version.tex}\unskip}
+\fi
+\addto\captionsenglish{\renewcommand{\chaptername}{Chapter}}
+
+% Partial
+\newcommand{\p}{\partial}
+
+
+
+%%% CODE SNIPPETS, COMMANDS, ETC
+%%%-----------------------------------------------------------------------------
+\usepackage{xcolor}
+\usepackage{tikz}
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{lightgray}{rgb}{0.9,0.9,0.9}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+\definecolor{maroon}{rgb}{0.5,0.0,0.0}
+\definecolor{darkgreen}{rgb}{0.0,0.5,0.0}
+
+% Display code / shell commands
+\usepackage{listings}
+\usepackage{lstautogobble}
+
+
+% Bash input style
+\lstdefinestyle{BashStyle}
+{
+  language=bash,
+  basicstyle=\footnotesize\ttfamily,
+%numbers=left,
+%numberstyle=\tiny,
+%numbersep=3pt,
+  frame=single,
+  columns=fullflexible,
+  backgroundcolor=\color{yellow!10},
+  linewidth=\linewidth,
+  xleftmargin=0.05\linewidth,
+  keepspaces=true,
+  framesep=5pt,
+  rulecolor=\color{black!30},
+  aboveskip=10pt,
+  autogobble=true
+}
+
+
+% XML input style definition
+\lstdefinelanguage{XML}
+{
+  basicstyle=\ttfamily\footnotesize,
+  morestring=[b]",
+  moredelim=[s][\bfseries\color{maroon}]{<}{\ },
+  moredelim=[s][\bfseries\color{maroon}]{</}{>},
+  moredelim=[l][\bfseries\color{maroon}]{/>},
+  moredelim=[l][\bfseries\color{maroon}]{>},
+  morecomment=[s]{<?}{?>},
+  morecomment=[s]{<!--}{-->},
+  commentstyle=\color{gray},
+  stringstyle=\color{orange},
+  identifierstyle=\color{darkblue},
+  showstringspaces=false
+}
+
+
+% XML input style
+\lstdefinestyle{XMLStyle}
+{
+  language=make,
+  basicstyle=\ttfamily\footnotesize,
+  numbers=left,
+  numberstyle=\tiny,
+  numbersep=3pt,
+  frame=,
+  columns=fullflexible,
+  backgroundcolor=\color{black!05},
+  linewidth=\linewidth,
+  xleftmargin=0.05\linewidth,
+  keepspaces=true
+}
+\lstset{
+    escapeinside={(*}{*)},
+}
+
+
+\lstdefinestyle{CStyle}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=single,
+  escapeinside={\%*}{*)},
+  xleftmargin=\parindent,
+  language=C,
+  captionpos=b,
+  keepspaces=true,
+  backgroundcolor=\color{black!05},
+  showstringspaces=false,
+  numbers=left,
+  numbersep=5pt,
+  numberstyle=\tiny\color{black},
+  basicstyle=\scriptsize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+  tabsize=4
+}
+
+\lstdefinestyle{CStyleNoLine}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=single,
+  escapeinside={\%*}{*)},
+  xleftmargin=\parindent,
+  language=C,
+  captionpos=b,
+  keepspaces=true,
+  backgroundcolor=\color{black!05},
+  showstringspaces=false,
+  basicstyle=\scriptsize\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+  tabsize=4
+}
+
+
+\lstdefinestyle{FStyle}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=single,
+  escapeinside={\%*}{*)},
+  xleftmargin=\parindent,
+  language=[90]Fortran,
+  captionpos=b,
+  keepspaces=true,
+  backgroundcolor=\color{red!05},
+  showstringspaces=false,
+  numbers=left,
+  numbersep=5pt,
+  numberstyle=\tiny\color{black},
+  basicstyle=\scriptsize\ttfamily,
+  keywordstyle=\bfseries\color{red!40!black},
+  commentstyle=\itshape\color{green!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+  tabsize=4
+}
+
+\lstdefinestyle{FStyleNoLine}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=single,
+  escapeinside={\%*}{*)},
+  xleftmargin=\parindent,
+  language=[90]Fortran,
+  captionpos=b,
+  keepspaces=true,
+  backgroundcolor=\color{red!05},
+  showstringspaces=false,
+  basicstyle=\scriptsize\ttfamily,
+  keywordstyle=\bfseries\color{red!40!black},
+  commentstyle=\itshape\color{green!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+  tabsize=4
+}
+
+% Inline commands for C++ and Fortran
+\ifdefined\HCode
+\newcommand{\inltc}[1]{\texttt{#1}}
+\newcommand{\inltf}[1]{\texttt{#1}}
+\else
+\newcommand{\inltc}[1]{\tikz[anchor=base,baseline]\node[inner sep=2pt,
+outer sep=0,fill=black!05,text=black]{\small\texttt{#1}};}
+\newcommand{\inltf}[1]{\tikz[anchor=base,baseline]\node[inner sep=2pt,
+outer sep=0,fill=red!05,text=black]{\small\texttt{#1}};}
+\fi
+
+
+% Inline commands for general words
+\ifdefined\HCode
+\newcommand{\inlsh}[1]{\texttt{#1}}
+\else
+\newcommand{\inlsh}[1]{\tikz[anchor=base,baseline]\node[inner sep=2pt,
+outer sep=0,draw=yellow!10,fill=yellow!10]{\texttt{#1}};}
+\fi
+
+% double-dash
+\newcommand \ddash{-\hspace{0.07em}-}
+
+% Atlas
+\newcommand{\Atlas}{{\em Atlas}\xspace}
+
+
+
+% Highlight box
+\usepackage{environ}
+\usepackage[tikz]{bclogo}
+\usetikzlibrary{calc}
+
+% Only use fancy boxes for PDF
+\ifdefined\HCode
+\NewEnviron{notebox}{\textbf{Note:} \BODY}
+\NewEnviron{warningbox}{\textbf{Warning:} \BODY}
+\NewEnviron{tipbox}{\textbf{Tip:} \BODY}
+\NewEnviron{custombox}[3]{\textbf{#1} \BODY}
+\else
+\NewEnviron{notebox}
+  {\par\medskip\noindent
+  \begin{tikzpicture}
+    \node[inner sep=5pt,fill=black!10,draw=black!30] (box)
+    {\parbox[t]{.99\linewidth}{%
+      \begin{minipage}{.1\linewidth}
+      \centering\tikz[scale=1]\node[scale=1.5]{\bcinfo};
+      \end{minipage}%
+      \begin{minipage}{.85\linewidth}
+      \textbf{Note}\par\smallskip
+      \BODY
+      \end{minipage}\hfill}%
+    };
+   \end{tikzpicture}\par\medskip%
+}
+\NewEnviron{warningbox}
+  {\par\medskip\noindent
+  \begin{tikzpicture}
+    \node[inner sep=5pt,fill=red!10,draw=black!30] (box)
+    {\parbox[t]{.99\linewidth}{%
+      \begin{minipage}{.1\linewidth}
+      \centering\tikz[scale=1]\node[scale=1.5]{\bcdanger};
+      \end{minipage}%
+      \begin{minipage}{.85\linewidth}
+      \textbf{Warning}\par\smallskip
+      \BODY
+      \end{minipage}\hfill}%
+    };
+   \end{tikzpicture}\par\medskip%
+}
+\NewEnviron{tipbox}
+  {\par\medskip\noindent
+  \begin{tikzpicture}
+    \node[inner sep=5pt,fill=green!10,draw=black!30] (box)
+    {\parbox[t]{.99\linewidth}{%
+      \begin{minipage}{.1\linewidth}
+      \centering\tikz[scale=1]\node[scale=1.5]{\bclampe};
+      \end{minipage}%
+      \begin{minipage}{.85\linewidth}
+      \textbf{Tip}\par\smallskip
+      \BODY
+      \end{minipage}\hfill}%
+    };
+   \end{tikzpicture}\par\medskip%
+}
+\NewEnviron{custombox}[3]
+  {\par\medskip\noindent
+  \begin{tikzpicture}
+    \node[inner sep=5pt,fill=#3!10,draw=black!30] (box)
+    {\parbox[t]{.99\linewidth}{%
+      \begin{minipage}{.1\linewidth}
+      \centering\tikz[scale=1]\node[scale=1.5]{#2};
+      \end{minipage}%
+      \begin{minipage}{.85\linewidth}
+      \textbf{#1}\par\smallskip
+      \BODY
+      \end{minipage}\hfill}%
+    };
+   \end{tikzpicture}\par\medskip%
+}
+\fi
+
+
+
+%%% TABLE OF CONTENTS AND INDEX
+%%%-----------------------------------------------------------------------------
+
+
+\makeindex
+
+
+%%% INTERNAL HYPERLINKS
+%%%-----------------------------------------------------------------------------
+% Internal hyperlinks
+\usepackage[linktoc=all,hyperfootnotes=false]{hyperref}
+\hypersetup{
+colorlinks,
+citecolor=darkblue,
+filecolor=darkblue,
+linkcolor=darkblue,
+urlcolor=darkblue,
+% No borders around internal hyperlinks
+pdfborder={0 0 0},
+% Author
+pdfauthor={I am the Author}
+}
+\usepackage{memhfixc}
+
+
+%%% PRETTY TITLE PAGE FOR PDF DOC
+%%%-----------------------------------------------------------------------------
+\ifdefined\HCode
+\else
+\makeatletter
+\newlength\drop
+\newcommand{\br}{\hfill\break}
+\newcommand*{\titlepage}{
+    \thispagestyle{empty}
+    % Gentle Madness
+    \begingroup
+    \drop = 0.1\textheight
+    \vspace*{\baselineskip}
+    \vfill
+    \hbox{
+      \hspace*{0.1\textwidth}
+      \rule{1pt}{\dimexpr\textheight-28pt\relax}
+      \hspace*{0.05\textwidth}
+      \parbox[b]{0.85\textwidth}{
+        \vbox{
+          \vspace{\drop}
+          {\Huge\bfseries\raggedright\@title\par}
+          \vskip1.10\baselineskip
+          {\Large\bfseries Version \version\par}
+          \vskip4\baselineskip
+          {\huge\bfseries \textcolor{darkgreen}{Documentation}\par}
+          \vskip1.0\baselineskip
+          {\large\bfseries\@date\par}
+          \vspace{0.2\textheight}
+          {\small\noindent\@author}\\[\baselineskip]
+        }% end of vbox
+      }% end of parbox
+    }% end of hbox
+    \vfill
+    \null
+\endgroup}
+\makeatother
+\fi
+
+
+
+%%% THE DOCUMENT
+%%%-------------------------------------------------------------------------------
+\author{ECMWF, Shinfield Park, Reading, UK\newline}
+\title{Dwarf-P-cloudMicrophysics-IFSScheme}
+\date{\today}
+
+
+\begin{document}
+
+\frontmatter
+
+% Render pretty title page if not building HTML
+\ifdefined\HCode
+\maketitle
+\begin{center}
+    \huge{Version \version}
+\end{center}
+\else
+\titlepage
+\fi
+
+\clearpage
+
+\ifx\HCode\undefined
+\tableofcontents*
+\fi
+
+\clearpage
+
+\mainmatter
+
+
+\section{Scope}
+The cloud and precipitation microphysics is an essential building block 
+of any weather and climate prediction model as it is necessary to represent 
+the effects of small-scale sub-grid physical processes, such as cloud 
+and precipitation microphysics, through a parameterization of the grid-scale 
+prognostic variables in the model.
+The cloud microphysics scheme is a computationally expensive routine 
+and alternative ways that can accelerate its computation will be extremely 
+beneficial for the computational performance of weather and climate prediction 
+models.
+
+
+
+\section{Objectives}
+The main objective of this dwarf is to assess the scalability limits 
+of cloud microphysics, mainly based on the IFS scheme, on different 
+hardware such as hosts (e.g. CPUs), devices (e.g. GPUs) and a hybrid 
+combination of them. 
+Some new implementations of the IFS-based cloud scheme are also envisioned.
+These are believed to perform better on device-type hardware, thereby 
+providing a more energy-efficient and computationally faster solution 
+for the cloud scheme.
+
+More specifically, we aim to investigate the following points:
+%
+\begin{itemize}
+\item multi-core (e.g. Broadwell) and many-core hosts (e.g. KNL) 
+using multi-threading via OpenMP;
+\item multi-device (e.g. multiple GPU nodes) implementing multi-threading 
+using OpenACC, CUDA, etc;
+\item explore different data-alignment / data-structure strategies 
+to enhance compiler perfomance;
+\item relax level-dependency by using data from previous time step 
+that might provide finer grain parallelism (that would be beneficial 
+for GPUs and KNL with OpenMP 4.5);
+\end{itemize}
+%
+Each of the points outlined above will have a specific prototype 
+implementation to permit a better understanding of the results, 
+thus ultimately allowing the identification of the solution that 
+guarantees the best compromise in terms of energy requirements 
+/ time-to-solution.
+
+
+
+
+\section{Definition of the Dwarf}
+Weather and climate prediction models need to represent the 
+effects of sub-grid scale physical processes. Radiation, turbulent 
+mixing, convection, cloud and precipitation microphysics are 
+examples of physical processes that are parametrized as a function 
+of the grid-scale prognostic variables in models. This dwarf 
+is the parametrizaton scheme for cloud and precipitation processes 
+in the IFS, described by prognostic equations for cloud liquid water, 
+cloud ice, rain, snow and a grid-box fractional cloud cover. The cloud 
+scheme represents the sources and sinks of cloud and precipitation due 
+to the major generation and destruction processes, including cloud formation 
+by detrainment from cumulus convection, condensation, ice deposition, evaporation, 
+hydrometeor collection, melting and freezing. The scheme is based on \cite{Tiedtke1993} 
+but with an enhanced representation of the ice-phase in clouds and precipitation. 
+A multi-dimensional implicit solver is used for the numerical solution of 
+the cloud and precipitation prognostic equations.  A more detailed description 
+of the formulation of the parametrization can be found in \cite{IFSdoc} with 
+further discussion in \cite{ForbesandTompkins2011} and \cite{Forbesetal2011}.
+
+
+
+\subsection{Governing equations}
+The equations for the tendency of the grid-box averaged cloud
+liquid, cloud ice, rain and snow water contents are
+
+\begin{equation}
+\frac{\partial q_{\text{l}}}{\partial t} =A(q_{\text{l}}) +S_{\text{conv}} 
++S_{\text{strat}}+S_{\text{melt}}^{\text{ice}}-S_{\text{dep}}^{\text{ice}}
+-S_{\text{evap}}^{\text{liq}}-S_{\text{auto}}^{\text{rain}}-S_{\text {rime}}^{\text{snow}}
+\end{equation}
+\begin{equation}
+\frac{\partial q_{\text{i}}}{\partial t} =A(q_{\text{i}}) +S_{\text{conv}} 
++S_{\text{strat}}+S_{\text{dep}}^{\text{ice}}-S_{\text{melt}}^{\text{ice}}
+-S_{\text{evap}}^{\text{ice}}-S_{\text{auto}}^{\text{snow}}
+\end{equation}
+\begin{equation}
+\frac{\partial q_{\text{r}}}{\partial t} =A(q_{\text{r}}) 
+-S_{\text{evap}}^{\text{rain}}+S_{\text{auto}}^{\text{rain}}+S_{\text{melt}^{\text snow}} 
+-S_{\text{frz}}^{\text{rain}}  
+\end{equation}
+\begin{equation}
+\frac{\partial q_{\text{s}}}{\partial t} =A(q_{\text{s}}) 
+-S_{\text{evap}}^{\text{snow}}+S_{\text{auto}}^{\text{snow}}-S_{\text{melt}}^{\text{snow}} 
++S_{\text{frz}}^{\text{rain}}+S_{\text{rime}}^{\text{snow}}
+\end{equation}
+
+and for the cloud fraction,
+
+\begin{equation}
+\frac{\partial a}{\partial t} =A(a) +\delta a_{\text{conv}} 
++\delta a_{\text{strat}}-\delta a_{\text{evap}}
+\end{equation}
+
+The terms on the right-hand side represent the following processes:
+\begin{itemize}
+\item    $A(q), A(a)$  -- rate of change of water contents and cloud
+area due to transport through the boundaries of the grid volume (advection, 
+sedimentation).
+\item    $S_{\text{conv}}, \delta a_{\text{conv}}$ -- rate of formation 
+of cloud water/ice and cloud area by convective processes.
+\item    $S_{\text{strat}}, \delta a_{\text{strat}}$ -- rate of formation 
+of cloud water/ice and cloud area by stratiform condensation processes.
+\item    $S_{\text{evap}}$ -- rate of evaporation of cloud water/ice, 
+rain/snow. 
+\item    $S_{\text{auto}}$ -- rate of generation of precipitation from
+cloud water/ice (autoconversion).
+\item    $S_{\text{melt}}$ -- rate of melting ice/snow.
+\item    $S_{\text{rime}}$ -- rate of riming (collection of cloud liquid 
+drops).
+\item    $S_{\text{frz}} $ -- rate of freezing of rain.
+\item    $\delta a_{\text{evap}}$  -- rate of decrease of cloud area due 
+to evaporation.
+\end{itemize}
+
+The large-scale budget equations for specific humidity $q_v$, 
+and dry static energy $s =c_pT +gz$ in the cloud scheme are
+\begin{equation}
+\frac{\partial q_{\text{v}}}{\partial t} =A(q_{\text{v}}) -S_{\text{strat}} +
+S_{\text{evap}}
+\end{equation}
+and
+\begin{equation}
+\frac{\partial s}{\partial t} =A(s)+L_{\text{vap}}(S_{\text{strat}} -
+S_{\text{evap}})+L_{\text{fus}}(S_{\text{frz}} + S_{\text{rime}} - S_{\text{melt}})
+\end{equation}
+where $A(q_v)$ and $A(s)$ represent all processes except those
+related to clouds, $L_{\text{vap}}$ is the latent heat
+of condensation and $L_{\text{fus}}$ is the latent heat
+of freezing.
+
+Each of the microphysical source and sink terms is represented by an equation 
+or set of equations that vary in complexity, from a simple linear form to more 
+non-linear functions involving exponentials and power laws. Some terms are formulated
+explicitly and others implicitly and they are combined in a multi-dimensional solver 
+to produce the tendencies for the prognostic variables
+(cloud liquid, cloud ice, rain, snow and humidity). Cloud fraction is treated
+separately as this is a non-conservative variable. The temperature tendency due
+to change in phase (vapour, liquid, ice) is calculated after the solver once the
+final tendencies are known. 
+
+
+%-------------------------------------------------------------------------------
+\subsection{Integration of the equations}
+  
+The above equations governing the tendency for each prognostic cloud
+variable within the cloud scheme can be written as:
+\begin{equation}
+\frac{\partial {q}_x}{\partial t} = A_x +
+\frac{1}{\rho}\frac{\partial}{\partial z} \left( \rho V_x {q}_x \right)
+\end{equation}
+where $q_x$ is the specific water content for category $x$ (so $x=1$
+represents cloud liquid, $x=2$ for rain, and so on), $A_x$ is the net source
+or sink of $q_x$ through microphysical processes, and the last term
+represents the sedimentation of $q_x$ with fall speed $V_x$.
+
+The solution to this set of equations uses the upstream approach. Writing the
+advection term in mass flux form and collecting all fast processes (relative 
+to the model timestep) into an implicit term, gives:
+\begin{equation}
+\frac{q_x^{n+1}-q_x^{n}}{\Delta t} = A_x 
++\sum_{x=1}^{m}B_{xy}q_y^{n+1}
+-\sum_{x=1}^{m}B_{yx}q_x^{n+1}
++\frac{ 
+\rho_{k-1} V_{x} q_{x,k-1}^{n+1} - \rho V_{x} q_{x}^{n+1} }{ \rho \Delta
+Z}
+\label{eqn-impl}
+\end{equation}
+
+for timestep $n$. The subscript "$k-1$" refers to a term calculated at the model
+level above the present level $k$ for which all other terms are being
+calculated. The matrix $\widetilde{B}$ (with terms $B_{xx}$, $B_{xy}$, $B_{yx}$)
+represents all the implicit microphysical pathways such that $B_{xy}>0$
+represents a sink of $q_y$ and a source of $q_x$. Matrix $\widetilde{B}$ is
+positive-definite off the diagonal, with zero diagonal terms since $B_{xx}=0$ by
+definition.  Some terms, such as the creation of cloud through condensation
+resulting from adiabatic motion or diabatic heating, are more suitable for an
+explicit framework, and are retained in the explicit term $A$.
+
+For cloud fraction, there are no multi-dimensional dependencies, so the equation
+simplifies to
+\begin{equation}
+\frac{a^{n+1}-a^{n}}{\Delta t} = A + Ba^{n+1}
+\end{equation}
+
+However, for the cloud and precipitation variables,  a
+matrix approach is required. Due to the cross-terms $q_y^{n+1}$, 
+(\ref{eqn-impl}) is rearranged to give a straight forward matrix equation which
+can be solved with standard methods. 
+The solution method is simplified by assuming the vertical advection terms due
+to convective subsidence and sedimentation act only in the downward direction,
+allowing the solution to be conducted level by level from the model top down.
+
+The matrix on the left-hand side has the microphysical terms in isolation off the diagonal,
+with the sedimentation term on the diagonal, thus the matrix equation for a 3-variable 
+system is
+{\footnotesize
+\begin{eqnarray}
+\left(
+\begin{array}{ccc}
+1+ \Delta t(\frac{V_1}{\Delta z} + B_{21} + B_{31}) & -\Delta t B_{12}
+& -\Delta t B_{13} \\
+-\Delta t B_{21} & 1+ \Delta t(\frac{V_2}{\Delta z} + B_{12} + B_{32}) &
+-\Delta t B_{23}  \\
+-\Delta t B_{31} & -\Delta t B_{32} & 1+ \Delta t(\frac{V_3}{\Delta z} 
++ B_{13} + B_{23}) \\
+\end{array}
+\right) \cdot
+\left(
+\begin{array}{c}
+q_1^{n+1} \\
+q_2^{n+1} \\
+q_3^{n+1} \\
+\end{array}
+\right)
+= \nonumber \\
+\newline
+\left[ 
+q_1^{n} + \Delta t \left(A_1 +
+\frac{ \rho_{k-1} V_{1} q_{1,k-1}^{n+1}}{\rho \Delta Z} \right) 
+,q_2^{n} + \Delta t \left(A_2 +
+\frac{ \rho_{k-1} V_{2} q_{2,k-1}^{n+1}}{\rho \Delta Z} \right) 
+,q_3^{n} + \Delta t \left(A_3 +
+\frac{ \rho_{k-1} V_{3} q_{3,k-1}^{n+1}}{\rho \Delta Z} \right) 
+\right].
+\end{eqnarray}
+}
+
+There are some aspects that require attention.  Firstly, although implicit terms are unable 
+to reduce a cloud category to zero, the explicit can, and often will, achieve this.  Thus 
+safety checks are required to ensure that all end-of-timestep variables remain positive 
+definite, in addition to ensuring conservation.  Practically, to aid the conservation requirement, 
+the explicit source and sink terms are thus also generalised from a vector $\vec A$ to an 
+anti-symmetric matrix  $\widetilde{A}$,
+%
+\begin{eqnarray}
+\widetilde{A}=\left(
+\begin{array}{ccc}
+A_{11} & A_{21} & A_{31} \\
+-A_{12} & A_{22} & A_{32} \\
+-A_{13} & -A_{23} & A_{33} \\
+\end{array}
+\right)
+\end{eqnarray}
+%
+Thus $A_{xy}>0$ represents a source of $q_{x}$ and a sink of $q_{y}$, and the original vector 
+for $A$ can be obtained by summing over the rows. Although this matrix approach involves 
+a degree of redundancy, it is a simple method of ensuring conservation properties. The matrix 
+diagonals $A_{xx}$ contain the 'external' sources of $q_{x}$ such as the cloud water detrainment 
+terms from the convection scheme.
+
+In order to simultaneously guarantee conservation and positive-definite properties, the sum of all 
+sinks for a given variable are scaled to avoid negative values. 
+
+
+\newpage
+\subsection{Pseudo-algorithm}
+The steps described in the previous subsections leads to the cloud microphysics pseudo-algorithm 
+reported in the following blocks of code. Note that, to solve the cloud/precipitation/vapour equation, 
+(see also line \ref{lst:equation11} in Algorithm~\ref{alg:core-loop}), this dwarf uses an LU decomposition 
+with non-pivoting recursive factorization followed by back substitution to give the cloud variables 
+at the new timestep $q_{n+1}$.
+
+\newpage
+%
+\begin{algorithm}[H]
+\caption{Core cloud micro physics loop}\label{alg:core-loop}
+\begin{algorithmic}
+\State \textbf{set} constants
+\vspace{.1cm}
+\State \textbf{for} jk = ncldtop,...,klev
+\Indent
+\LineComment{initialize variables}
+\Indent
+\State $A_{a} = 0$;\;\;\; $B_{a} = 0$; \;\;\; 
+$A_{q_{x} q_{y}} = 0$; \;\;\; $B_{q_{x} q_{y}} = 0$
+\EndIndent
+\vspace{.2cm}
+\State \textcolor{blue}{\textbf{compute} cloud processes} \label{lis:cloud-proc}
+\State \textcolor{blue}{\textbf{compute} precipitation processes} \label{lis:precipitation-proc}
+\vspace{.3cm}
+\State \textbf{solve} for cloud cover (a) at $t^{n+1}$: $a^{n+1} = (a^{n} + A_{a})/(1 + B_{a})$
+\vspace{.1cm}
+\LineComment{cloud microphysics calculations}
+\Indent
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{-.2cm}
+\For{jl = 0,...,ngptot}
+\For{jm = 0,...,mtot}
+\For{jn = 0,...,ntot}
+\State \textbf{add up} all sink terms and \textbf{calculate} overshoot
+\State \textbf{if} overshoot == false \textbf{then} scaling factor = 1
+\State \textbf{else if} overshoot == true \textbf{then} compute scaling factor 
+\State \textbf{scale} sink terms in the correct order
+\EndFor
+\EndFor
+\EndFor
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{-.2cm}
+\EndIndent
+\vspace{.5cm}
+\LineComment{cloud/precipitation//vapour calculations}
+\Indent
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{-.2cm}
+\For{jl = 0,...,ngptot}
+\For{jm = 0,...,mtot}
+\For{jn = 0,...,ntot}
+\If{jn == jm}
+\State zqlhs(jl,jn,jm) = 1 + zfallsink(jl,jm)
+\For{jo = 0,...,nclv}
+\State $zqlhs(jl,jn,jm)=zqlhs(jl,jn,jm) + zsolqb(jl,jo,jn)$ 
+\EndFor
+\EndIf
+\If{jn != jm}
+\State $zqlhs(jl,jn,jm)= -zsolqb(jl,jn,jm)$ 
+\EndIf
+\EndFor
+\EndFor
+\EndFor
+\State ....
+\EndIndent
+\EndIndent
+\algstore{bkbreak1}
+\end{algorithmic}
+\end{algorithm}
+%
+%
+\begin{algorithm}[H]
+\begin{algorithmic}
+\algrestore{bkbreak1}
+\Indent
+\Indent
+\State ...
+\LineComment{continuing cloud/precipitation/vapour calculations}
+\LineComment{Set the right hand side of the equation (explicit terms)}
+\State $q_{n+1} = q_{n} + A_{q_{x} q_{y}}$
+\vspace{.1cm}
+\State \textbf{solve} matrix equation (11) \label{lst:equation11} 
+\State \textbf{compute} precipitation fluxes (loops over jl and jm)
+\vspace{.2cm}
+\State \textbf{update} tendencies (jl,jm) - temperature and cloud condensate
+\Indent
+\State \textbf{compute} temperature changes from phase changes
+\State \textbf{compute} cloud tendencies $q_{n+1} - q_{n}$
+\EndIndent
+\vspace{.1cm}
+\State \textbf{update} tendencies (jl) - humidity and cloud cover
+\vspace{-.2cm}
+\EndIndent
+\State ---------------------------------------------------------------------------------------
+\EndIndent
+\State \textbf{end for} (close main loop over levels jk)
+\State \textbf{compute} flux changes for diagnostics (jl,jk-loops)
+\end{algorithmic}
+\end{algorithm}
+
+
+\newpage
+%
+\begin{algorithm}[H]
+\caption{Computation of cloud processes (see line \ref{lis:cloud-proc} 
+in Algorithm~\ref{alg:core-loop})}
+\label{alg:cloud-proc}
+\begin{algorithmic}
+\vspace{.2cm}
+\LineComment{supersaturation due to change in humidity}
+\Indent
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{-.2cm}
+\State - from this timestep (jl-loop)
+\State $A_{q_li q_v} = A_{q_li q_v} + S_{q_{zsupsat}}$
+\State $A_{q_v q_li} = A_{q_v q_li} - S_{q_{zsupsat}}$
+\State $A_a = A_a + S_{a_zsupsat}$
+\State - from previous timestep (jl-loop)
+\State $A_{q_l q_l} = A_{q_l q_l} + S_{q_{psupsat}}$
+\State $A_{q_i q_i} = A_{q_i q_i} + S_{q_{psupsat}}$
+\State $A_a = A_a + S_{a_psupsat}$
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{.4cm}
+\EndIndent
+
+\LineComment{detrain cloud from convection (jl-loop)}
+\Indent
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{-.2cm}
+\State $A_{q_l q_l} = A_{q_l q_l} + S_{q_{zconvsrce}}$
+\State $A_{q_i q_i} = A_{q_i q_i} + S_{q_{zconvsrce}}$
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{.4cm}
+\EndIndent
+
+\LineComment{environmental subsidence and evaporation (jl,jm-loops)}
+\Indent
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{-.2cm}
+\State - subsidence source (explicit - dependency on level above)
+\State $A_{q_l q_l} = A_{q_l q_l} + S_{q_{zlcust}}$
+\State $A_{q_i q_i} = A_{q_i q_i} + S_{q_{zlcust}}$
+\State $A_a = A_a + S_{a_zacust}$
+\State - evaporation (explicit)    
+\State $A_{q_li q_v} = A_{q_li q_v} + S_{q_{zevap}}$
+\State $A_{q_v q_li} = A_{q_v q_li} - S_{q_{zevap}}$
+\State - Subsidence sink (implicit)
+\State $B_{q_l q_l} = B_{q_l q_l} + S_{q_{zmfdn}}$
+\State $B_{q_i q_i} = B_{q_i q_i} + S_{q_{zmfdn}}$
+\State $B_a = B_a + S_{a_zmfdn}$
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{.4cm}
+\EndIndent
+
+\LineComment{erosion of clouds by turbulent mixing (jl-loop)}
+\Indent
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{-.2cm}
+\State $A_{q_li q_v} = A_{q_li q_v} + S_{q_{zleros}}$
+\State $A_{q_v q_li} = A_{q_v q_li} - S_{q_{zleros}}$
+\State $A_a = A_a + S_{a_zaeros}$
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{.4cm}
+\EndIndent
+\State ...
+\algstore{bkbreak2}
+\end{algorithmic}
+\end{algorithm}
+%
+
+%
+\begin{algorithm}[H]
+\begin{algorithmic}
+\algrestore{bkbreak2}
+\vspace{.2cm}
+\State ...
+\vspace{.2cm}
+\LineComment{condensation/evaporation (jl-loop)}
+\Indent
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{-.2cm}
+\State \textbf{call cuadjtq} to calculate saturation adjustment (jl,jk 2d arrays)
+\State - evaporation of cloud
+\State $A_{q_li q_v} = A_{q_li q_v} + S_{q_{zlevap}}$
+\State $A_{q_v q_li} = A_{q_v q_li} - S_{q_{zlevap}}$
+\State - condensation in existing cloud
+\State $A_{q_li q_v} = A_{q_li q_v} + S_{q_{zlcond1}}$
+\State $A_{q_v q_li} = A_{q_v q_li} - S_{q_{zlcond1}}$
+\State - condensation of new cloud
+\State $A_{q_li q_v} = A_{q_li q_v} + S_{q_{zlcond2}}$
+\State $A_{q_v q_li} = A_{q_v q_li} - S_{q_{zlcond2}}$
+\State $A_a = A_a + S_{a_zacond}$
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{.4cm}
+\EndIndent
+\LineComment{growth of ice by vapour deposition (jl-loop)}
+\Indent
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{-.2cm}
+\State $A_{q_i q_l} = A_{q_i q_l} + S_{q_{zdepos}}$
+\State $A_{q_l q_i} = A_{q_l q_i} + S_{q_{zdepos}}$
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\EndIndent
+\end{algorithmic}
+\end{algorithm}
+%
+
+
+
+\newpage
+%
+\begin{algorithm}[H]
+\caption{Computation of precipitation processes (see line \ref{lis:precipitation-proc} 
+in Algorithm~\ref{alg:core-loop})}
+\label{alg:cloud-proc}
+\begin{algorithmic}
+\vspace{.2cm}
+\LineComment{sedimentation of ice, rain, snow (jl,jm-loops, dependency on level above)}
+\Indent
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{-.2cm}
+\State $A_{q_i q_i} = A_{q_i q_i} + S_{q_{zfallsrce}}$
+\State $A_{q_r q_r} = A_{q_r q_r} + S_{q_{zfallsrce}}$
+\State $A_{q_s q_s} = A_{q_s q_s} + S_{q_{zfallsrce}}$
+\State \textbf{update} precipitation cover zcovptot and related variables
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{.4cm}
+\EndIndent
+
+\LineComment{autoconversion of ice to snow (implicit) (jl-loop)}
+\Indent
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{-.2cm}
+\State $B_{q_s q_i} = B_{q_s q_i} + S_{q_{zsnowaut}}$
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{.4cm}
+\EndIndent
+
+\LineComment{autoconversion of liquid to rain (jl-loop)}
+\Indent
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{-.2cm}
+\State $A_{q_rs q_l} = A_{q_rs q_l} + S_{q_{zrainaut}}$
+\State $A_{q_l q_rs} = A_{q_l q_rs} - S_{q_{zrainaut}}$
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{.4cm}
+\EndIndent
+
+\LineComment{riming - collection of cloud liquid by snow (implicit) (jl-loop,}
+\State dependency on level above)
+\Indent
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{-.2cm}
+\State $B_{q_s q_l} = B_{q_s q_l} + S_{q_{zsnowrime}}$
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{.4cm}
+\EndIndent
+\LineComment{melting of snow and ice (jl,jm-loops, dependency on level above)}
+\Indent
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{-.2cm}
+\State $A_{q_r q_is} = A_{q_r q_is} + S_{q_{zmelt}}$
+\State $A_{q_is q_r} = A_{q_is q_r} - S_{q_{zmelt}}$
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{.4cm}
+\EndIndent
+\LineComment{freezing of rain (jl-loop, dependency on level above)}
+\Indent
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{-.2cm}
+\State $A_{q_s q_r} = A_{q_s q_r} + S_{q_{zfrz}}$
+\State $A_{q_r q_s} = A_{q_r q_s} - S_{q_{zfrz}}$
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{.4cm}
+\EndIndent
+\LineComment{freezing of cloud liquid (jl-loop)}
+\Indent
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{-.2cm}
+\State $A_{q_i q_l} = A_{q_i q_l} + S_{q_{zfrz}}$
+\State $A_{q_l q_i} = A_{q_l q_i} - S_{q_{zfrz}}$
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{.4cm}
+\EndIndent
+\State ...
+\algstore{bkbreak3}
+\end{algorithmic}
+\end{algorithm}
+%
+
+%
+\begin{algorithm}[H]
+\begin{algorithmic}
+\algrestore{bkbreak3}
+\vspace{.2cm}
+\State ...
+\vspace{.2cm}
+\LineComment{rain evaporation (jl-loop, dependency on level above)}
+\Indent
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{-.2cm}
+\State $A_{q_v q_r} = A_{q_v q_r} + S_{q_{zevap}}$
+\State $A_{q_r q_v} = A_{q_r q_v} - S_{q_{zevap}}$
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{.4cm}
+\EndIndent
+\LineComment{snow evaporation (jl-loop, dependency on level above)}
+\Indent
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{-.2cm}
+\State $A_{q_v q_s} = A_{q_v q_s} + S_{q_{zevap}}$
+\State $A_{q_s q_v} = A_{q_s q_v} - S_{q_{zevap}}$
+\vspace{-.2cm}
+\State ---------------------------------------------------------------------------------------
+\vspace{.4cm}
+\EndIndent
+\end{algorithmic}
+\end{algorithm}
+%
+
+
+
+
+\newpage
+\subsection{I/O interfaces}
+The primary I/O interface data is as follows:
+%
+\begin{itemize}
+\item \textbf{Input}: an array of vertical profiles in grid point space of the start of 
+timestep temperature, humidity, cloud liquid water, cloud ice, cloud fraction, rain 
+and snow, as well as the accumulated tendencies for these variables from all the 
+processes up to this point (dynamics and physics). Adding the accumulated tendencies 
+to the start of timestep values gives the updated values at the current point in the 
+timestep.
+\item \textbf{Output}: an array of vertical profiles of the tendencies of temperature, 
+humidity, cloud liquid water, cloud ice, cloud fraction, rain and snow calculated 
+within this call of the cloud scheme.
+\end{itemize}
+%
+The dimensions of the grid point fields are (KLON,KLEV) where KLON is the number 
+of grid columns and KLEV is the number of levels. KLEV is 91 or 137 for current operational 
+applications and could be around 200 for next generation systems. Grid columns are 
+completely independent of each other for the call to the cloud scheme, so KLON can 
+be any value depending on the domain decomposition. For the full globe for current 
+operations and for next generation NWP, typical global number of grid columns are 
+of order 6.E6 for TCo1279 (9 km global resolution ? currently operational), 2.E7 for 
+TCo1999 (5 km global resolution), 8.E7 for TCo3999 (2.5 km global resolution), and 
+3.E8 for TCo7999 (1.3 km global resolution). The acronym TCo refers to the Cubic 
+Octahedral grid.
+
+
+
+\section{Prototypes}
+In this section we describe the prototypes available.
+
+\subsection{Prototype1}
+The first prototype implements the cloud microphysics using 
+the column-based scheme coming from the IFS. The implementation 
+is optimised to run on a traditional host-based machine.
+
+
+
+
+\section{Dwarf installation and testing}
+In this section we describe how to download and install 
+the dwarf along with all its dependencies and we show 
+how to run it for a simple test case.
+
+
+
+\subsection{Download and installation}
+The first step is to download and install the dwarf along 
+with all its dependencies. With this purpose, it is possible 
+to use the script provided under the ESCAPE software collaboration 
+platform:\\
+\url{https://software.ecmwf.int/stash/projects/ESCAPE}.
+
+Here you can find a repository called \inlsh{escape}.
+You need to download it. You could first create a 
+folder named, for instance, ESCAPE, enter into it 
+and subsequently download the repository. 
+This can be done following the steps below:
+%
+\begin{lstlisting}[style=BashStyle]
+mkdir ESCAPE
+cd ESCAPE/
+git clone ssh://git@software.ecmwf.int:7999/escape/escape.git
+\end{lstlisting}
+%
+Once downloaded the repository into the \inlsh{ESCAPE} folder 
+just created, you should find a new folder called \inlsh{escape}. 
+The folder contains a sub-folder called \inlsh{bin} that has the 
+python/bash script (called \inlsh{escape}) that needs to be 
+run for downloading and installing the dwarf and its dependencies. 
+To see the various options provided by the script you can type:
+%
+\begin{lstlisting}[style=BashStyle]
+./escape/bin/escape -h
+\end{lstlisting}
+%
+To download the dwarf and its dependencies you need to run 
+the following command:
+%
+\begin{lstlisting}[style=BashStyle]
+./escape/bin/escape checkout dwarf-D-cloudMicrophysics-IFSScheme --ssh
+\end{lstlisting}
+% 
+Note the option \inlsh{--ssh}. This can be used only internally 
+at ECMWF for the moment. If you are an external project partner
+you should use the following command instead:
+%
+\begin{lstlisting}[style=BashStyle]
+./escape/bin/escape checkout dwarf-D-cloudMicrophysics-IFSScheme --user <username>
+\end{lstlisting}
+% 
+and follow the instructions. 
+The commands above automatically check out the \inlsh{develop}
+version of the dwarf. If you want to download a specific branch 
+of this dwarf, you can do so by typing:
+%
+\begin{lstlisting}[style=BashStyle]
+./escape/bin/escape checkout dwarf-D-cloudMicrophysics-IFSScheme --ssh \
+--version <branch-name>
+\end{lstlisting}
+% 
+An analogous approach can be used for the \inlsh{-\,-user} 
+version of the command. You should now have a folder called 
+\inlsh{dwarf-D-cloudMicrophysics-IFSScheme}.
+
+In the above command, you can specify several other optional 
+parameters. To see all these options and how to use them you 
+can type the following command:
+%
+\begin{lstlisting}[style=BashStyle]
+./escape checkout -h
+\end{lstlisting}
+%
+
+At this stage it is possible to install the dwarf 
+and all its dependencies. This can be done in two 
+different ways. The first way is to compile and 
+install each dependency and the dwarf separately:
+%
+\begin{lstlisting}[style=BashStyle]
+./escape/bin/escape generate-install dwarf-D-cloudMicrophysics-IFSScheme
+\end{lstlisting}
+% 
+The command above will generate a script 
+called \inlsh{install-dwarf-D-cloudMicrophysics-IFSScheme} 
+that can be run by typing:
+%
+\begin{lstlisting}[style=BashStyle]
+./install-dwarf-D-cloudMicrophysics-IFSScheme
+\end{lstlisting}
+%
+This last step will build and install the dwarf 
+along with all its dependencies in the following 
+paths:
+%
+\begin{lstlisting}[style=BashStyle]
+dwarf-D-cloudMicrophysics-IFSScheme/builds/
+dwarf-D-cloudMicrophysics-IFSScheme/install/
+\end{lstlisting}
+%
+
+The second way is to create a bundle that compile 
+and install all the dependencies together:
+%
+\begin{lstlisting}[style=BashStyle]
+./escape/bin/escape generate-bundle dwarf-D-cloudMicrophysics-IFSScheme
+\end{lstlisting}
+% 
+This command will create an infrastructure to avoid
+compiling the single third-party libraries individually
+when some modifications are applied locally to one of 
+them. To complete the compilation and installation process, 
+after having run the above command for the bundle, simply 
+follow the instructions on the terminal.
+
+In the commands above that generate the installation 
+file, you can specify several other optional parameters. 
+To see all these options and how to use them you 
+can type the following command:
+%
+\begin{lstlisting}[style=BashStyle]
+./escape generate-install -h
+./escape generate-bundle -h
+\end{lstlisting}
+%
+
+\subsection{Testing}
+Not supported yet.
+
+%You should now verify that the dwarf works as expected.
+%With this purpose, we created a testing framework that
+%allows us to verify that the main features of the dwarf 
+%are working correctly.
+
+%To run this verification, you should run the following 
+%command:
+%%
+%\begin{lstlisting}[style=BashStyle]
+%ctest -j<number-of-tasks>
+%\end{lstlisting}
+%%
+%from inside the \inlsh{builds/dwarf-D-cloudMicrophysics-IFSScheme}
+%folder.
+%%
+%\begin{warningbox}
+%We strongly advise you to verify via ctest that 
+%the main functionalities of the dwarf are working 
+%properly any time you apply modifications to the 
+%code. Updates that do not pass the tests cannot 
+%be merged. 
+%In addition, if you add a new feature to the dwarf,
+%this should be supported by a test if the existing
+%testing framework is not already able to verify its
+%functionality.
+%\end{warningbox}
+%%
+%For instructions on how to run the executables 
+%see the next section.
+
+
+\section{Run the dwarf}
+For the sake of compactness, we rename the various main 
+folders of the downloaded dwarf as follows 
+%
+\begin{lstlisting}[style=BashStyle]
+srcs=dwarf-D-cloudMicrophysics-IFSScheme/sources/
+inst=dwarf-D-cloudMicrophysics-IFSScheme/sources/
+\end{lstlisting}
+%
+To run a simple test case you need to link the input file, 
+called \inlsh{cloudsc.bin}, required by this dwarf to the 
+directory from where you intend to run the excutable.
+This is located in the \inlsh{config-files} subfolder inside 
+the \inlsh{dwarf-D-cloudMicrophysics-IFSScheme} directory 
+and the link can be created as follows
+%
+\begin{lstlisting}[style=BashStyle]
+ln -s srcs/dwarf-D-cloudMicrophysics-IFSScheme/config-files/cloudsc.bin .
+\end{lstlisting}
+%
+The input data cloudsc.bin is a Fortran unformatted stream binary 
+(no record delimiters). It contains data for just 100 grid point 
+columns and will be inflated to full spectre of NGPTOT, where 
+NGPTOT is the number of grid point columns. To run the a simple 
+test you can now type:
+%
+\begin{lstlisting}[style=BashStyle]
+inst/bundle/bin/dwarf-D-cloudMicrophysics-IFSScheme-prototype1 \
+OMP NGPTOT NPROMA-list
+\end{lstlisting}
+%
+where OMP is the number of threads for OMP-parallel regions, 
+NGPTOT is the already mentioned number of grid point columns, 
+NPROMA-list is a list of NPROMAs to use. For a simple test-case 
+you can try the following parameter-combination:
+%
+\begin{lstlisting}[style=BashStyle]
+inst/bin/dwarf-P-cloudMicrophysics-IFSScheme-prototype1 4 160000 2
+\end{lstlisting}
+%
+Note that if you installed the dwarf through the bundle option, 
+the executable can be run with the following command:
+%
+\begin{lstlisting}[style=BashStyle]
+inst/bundle/bin/dwarf-D-cloudMicrophysics-IFSScheme-prototype1 4 160000 2
+\end{lstlisting}
+%
+
+ 
+
+
+\section{Integration}
+The cloud scheme is part of the physical processes required 
+by any NWP model. Its integration is therefore naturally 
+guaranteed independently from the dynamical core being 
+used.
+
+
+\backmatter
+
+%%% BIBLIOGRAPHY
+%%% -------------------------------------------------------------
+
+\bibliographystyle{plain}
+\bibliography{refs}
+
+
+\end{document}

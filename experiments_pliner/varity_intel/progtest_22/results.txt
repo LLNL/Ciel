@@ -1,0 +1,10 @@
+Print result: 
+Individual statements: 
+offending text: ./test.cpp:18:3, ./test.cpp:18:83
+Has continuous statements: no
+	offending subexpression: DeclRefExpr, ldexp
+offending text: ./test.cpp:18:10, ./test.cpp:18:10
+	offending subexpression: DeclRefExpr, var_10
+offending text: ./test.cpp:18:16, ./test.cpp:18:16
+	offending subexpression: IntegerLiteral, 2
+offending text: ./test.cpp:18:82, ./test.cpp:18:82

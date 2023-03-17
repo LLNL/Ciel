@@ -1,0 +1,37 @@
+CLASS = S
+
+PROGRAM  = $(BINDIR)/$(BENCHMARK).$(CLASS)
+FCOMPILE = $(F77) -c $(F_INC) $(FFLAGS)
+CCOMPILE = $(COMPILER)  -c $(C_INC) $(CFLAGS)
+
+default:: ${PROGRAM}
+
+${RAND}.o: ${RAND}.f
+	${FCOMPILE} ${RAND}.f
+
+c_${RAND}.o: c_${RAND}.cpp
+	${CCOMPILE} c_${RAND}.cpp
+
+print_results.o: print_results.f
+	${FCOMPILE} print_results.f
+
+c_print_results.o: c_print_results.cpp
+	${CCOMPILE} c_print_results.cpp
+
+timers.o: timers.f
+	${FCOMPILE} timers.f
+
+c_timers.o: c_timers.cu
+	${CCOMPILE} c_timers.cu
+
+wtime.o: ${WTIME}
+	${CCOMPILE} ${MACHINE} ${WTIME}
+
+c_wtime.o: ${WTIME}
+	${CCOMPILE} -o c_wtime.o ${WTIME}
+
+# So that "make benchmark-name" works
+${BENCHMARK}:  default
+${BENCHMARKU}: default
+
+

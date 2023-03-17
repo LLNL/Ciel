@@ -1,0 +1,36 @@
+*.pyc
+*.log
+*.old
+*.out
+*.DS_Store
+*.~
+*~
+*.user
+*.project
+*.cproject
+*.settings
+.idea
+*/unittest-tmp-dir/*
+
+# Build directories
+build*/
+install*/
+buildenv*
+
+# External projects
+external/*
+!external/googletest
+
+# Shared library in source dir
+*.so
+*.dylib
+*.dll
+
+# Ignore gh-pages folder
+gh-pages*
+
+#Ignore Eclipse files
+/.settings/
+/.cproject
+/.pydevproject
+

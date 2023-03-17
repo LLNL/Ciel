@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+##===-------------------------------------------------------------------------------*- bash -*-===##
+##
+##                                   S E R I A L B O X
+##
+## This file is distributed under terms of BSD license. 
+## See LICENSE.txt for more information.
+##
+##===------------------------------------------------------------------------------------------===##
+
+# Description:
+#   Build serialbox and downstream example projects in
+#   a bundle environment and tries to run it from within
+#   the build. Then install and try to run from install
+#   This script returns non-zero exit code if any of the
+#   steps has failed
+#
+# Usage:
+#   test-bundle.sh [CMAKE_ARGUMENTS]
+
+SOURCE=@CMAKE_CURRENT_SOURCE_DIR@/bundle
+BUILD=@CMAKE_CURRENT_BINARY_DIR@/bundle-build
+INSTALL=@CMAKE_CURRENT_BINARY_DIR@/bundle-install
+
+# Error handling
+function test_failed {
+  EXIT_CODE=$?
+  { set +ex; } 2>/dev/null
+  if [ $EXIT_CODE -ne 0 ]; then
+    echo "+++++++++++++++++"
+    echo "Test failed"
+    echo "+++++++++++++++++"
+  fi
+  exit $EXIT_CODE
+}
+trap test_failed EXIT
+set -e -o pipefail
+set -x
+
+# Start with clean build
+rm -rf $BUILD
+
+# Build
+mkdir -p $BUILD && cd $BUILD
+cmake $SOURCE -DCMAKE_INSTALL_PREFIX=$INSTALL -DBUILD_SHARED_LIBS=ON -DSERIALBOX_ENABLE_FORTRAN=ON "$@"
+make -j@MAKE_PARALLEL@
+
+# Test
+bin/downstream_fortran_producer
+bin/downstream_fortran_consumer
+bin/downstream_c
+
+# Install
+make -j@MAKE_PARALLEL@ install
+$INSTALL/bin/downstream_fortran_producer
+$INSTALL/bin/downstream_fortran_consumer
+$INSTALL/bin/downstream_c
+
+{ set +ex; } 2>/dev/null
+echo "+++++++++++++++++"
+echo "Test passed"
+echo "+++++++++++++++++"
+

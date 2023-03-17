@@ -1,0 +1,11 @@
+Print result: 
+offending text: ./test.cpp:12:5, ./test.cpp:12:57
+offending text: ./test.cpp:13:3, ./test.cpp:16:1
+offending text: ./test.cpp:16:31, ./test.cpp:18:1
+Individual statements: 
+offending text: ./test.cpp:12:5, ./test.cpp:12:44
+offending text: ./test.cpp:13:3, ./test.cpp:13:29
+offending text: ./test.cpp:14:1, ./test.cpp:14:83
+offending text: ./test.cpp:15:1, ./test.cpp:15:39
+offending text: ./test.cpp:17:3, ./test.cpp:17:26
+Has continuous statements: yes

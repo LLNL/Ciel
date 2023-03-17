@@ -21,7 +21,7 @@ inconsistencies.
 
 ## How Ciel Works
 
-![The workflow of Ciel.](./overview.svg)
+![Ciel workflow.](./overview.svg)
 
 Ciel is based on the clang/LLVM source-to-source compiler, with a Python-based
 framework driver. Ciel uses a floating-point precision enhancement strategy,

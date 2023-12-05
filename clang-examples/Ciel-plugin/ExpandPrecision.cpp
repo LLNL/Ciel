@@ -1935,7 +1935,7 @@ void ExpandPrecisionVisitor::Region_InsertEntryExitBlocks() {
                 << ", end of block " << regionInRange.endOfBlock); 
             rewriter.InsertText(beginLoc, "/* begin region " + to_string(i) + " */", false, true);              
             for (const VarDecl* item : region.replaceVars) {
-                PRINT_DEBUG_MESSAGE("\tchecking var " << item->getName().str());
+                PRINT_DEBUG_MESSAGE("\tchecking replace var " << item->getName().str());
                 FloatingPointTypeInfo info;
                 string newTypeString = GetRaisedTypeString(item, &info);
                 if (newTypeString != "") {
@@ -1992,7 +1992,7 @@ void ExpandPrecisionVisitor::Region_InsertEntryExitBlocks() {
                     FloatingPointTypeInfo info;
                     string newTypeString = GetRaisedTypeString(item.first, &info);
                     string origTypeName = item.first->getType().getAsString();
-                    PRINT_DEBUG_MESSAGE("\tchecking var " << item.second);
+                    PRINT_DEBUG_MESSAGE("\tchecking revise var " << item.second);
 
                     SourceRange range = FindVarDeclScope(item.first, astContext);
                     SourceRange endRange(endLoc);
@@ -2002,7 +2002,7 @@ void ExpandPrecisionVisitor::Region_InsertEntryExitBlocks() {
                     PRINT_DEBUG_MESSAGE("end range:");
                     PrintSourceRange(endRange, astContext);
 
-                    if (range.fullyContains(endRange) && newTypeString != "" && info.isSimpleFPType() && !info.isConst) {
+                    if (range.fullyContains(endRange) && newTypeString != "" && info.isSimpleFPType()) {
                         string newDeclText;
                         if (info.isVector == 0) {
                             newDeclText = origTypeName + " " + item.second + " = " + castBackFuncName + "(" + GetTransformedVarName(item.second, i) + ");\n";                            

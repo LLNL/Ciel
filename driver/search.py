@@ -95,7 +95,7 @@ def find_source_info():
 
     return funcs
 
-def compile_and_run(cc, level, transformCounter, retValue, subexpression):
+def compile_and_run(cc, level, transformCounter, retValue, subexpression, ParallelExecution):
     global transformIndex
     retValue.value = 0
     # copy all files to destination
@@ -104,13 +104,16 @@ def compile_and_run(cc, level, transformCounter, retValue, subexpression):
     else:
         dirPrefix = "config_"
 
-    tempPath = "./workspace/" + dirPrefix + "{:03d}".format(transformIndex) + "/" + str(transformCounter) + "/"
-    fullTempPath = os.path.abspath(tempPath)
     origPath = os.getcwd()
-    if os.path.exists(tempPath):
-        shutil.rmtree(tempPath)
-    shutil.copytree(origPath, fullTempPath, ignore=shutil.ignore_patterns("workspace"), symlinks=True)
-    os.chdir(tempPath)
+    if ParallelExecution:
+        tempPath = "./workspace/" + dirPrefix + "{:03d}".format(transformIndex) + "/" + str(transformCounter) + "/"
+        fullTempPath = os.path.abspath(tempPath)
+        if os.path.exists(tempPath):
+            shutil.rmtree(tempPath)
+        shutil.copytree(origPath, fullTempPath, ignore=shutil.ignore_patterns("workspace"), symlinks=True)
+        os.chdir(tempPath)
+    else:
+        fullTempPath = origPath
 
     outFile = os.path.join(origPath, "build_" + cc.name + "_" + level.name + ".out")
     command = ["make", "CC=" + cc.value]
@@ -220,13 +223,13 @@ def transform_and_evaluate(doRestoreFiles, subexpression):
                 origPath = os.getcwd()
                 retValue = mp.Value("i", 0, lock=True)
                 if ParallelExecution == False:
-                    compile_and_run(cc, level, transformCounter, retValue, subexpression)
+                    compile_and_run(cc, level, transformCounter, retValue, subexpression, ParallelExecution)
                     if retValue.value != 0:
                         print("Exiting...")
                         hasError = True
                         break
                 else:
-                    process = mp.Process(target=compile_and_run, args=(cc, level, transformCounter, retValue, subexpression, ))
+                    process = mp.Process(target=compile_and_run, args=(cc, level, transformCounter, retValue, subexpression, ParallelExecution, ))
                     process.start()
                     processList.append((process, retValue))
                 transformCounter = transformCounter + 1

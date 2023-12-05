@@ -1296,10 +1296,12 @@ bool ExpandPrecisionVisitor::Block_ProcessStmtSecondPass(Stmt* st) {
                     rewriter.InsertText(uop->getBeginLoc(), "RefConverter" + dimension + "<" + extendPrecisionTypeName + dimension + ", " + uop->getSubExpr()->getType().getAsString() + ">(");
                     rewriter.InsertTextAfterToken(uop->getEndLoc(), ").ptr()");                                
                 }                    
-                /*else {
-                    rewriter.InsertText(uop->getBeginLoc(), "RefConverter<" + extendPrecisionTypeName + ", " + uop->getSubExpr()->getType().getAsString() + ">(");
-                    rewriter.InsertTextAfterToken(uop->getEndLoc(), ").ptr()");        
-                }*/
+                else if (currentFuncType == FUNC_TYPE_HOST && useExtendedPrecision && isa<DeclRefExpr>(uop->getSubExpr())) {
+                    SourceLocation uopBegin = sm->getFileLoc(uop->getBeginLoc());
+                    SourceLocation uopEnd = sm->getFileLoc(uop->getEndLoc());
+                    rewriter.InsertText(uopBegin, "RefConverter<" + extendPrecisionTypeName + ", " + uop->getSubExpr()->getType().getAsString() + ">(");
+                    rewriter.InsertTextAfterToken(uopEnd, ").ptr()");        
+                }
             }
         }
     }
@@ -1519,10 +1521,12 @@ bool ExpandPrecisionVisitor::Func_ProcessStmt(Stmt* st) {
                     rewriter.InsertText(uop->getBeginLoc(), "RefConverter" + dimension + "<" + extendPrecisionTypeName + dimension + ", " + uop->getSubExpr()->getType().getAsString() + ">(");
                     rewriter.InsertTextAfterToken(uop->getEndLoc(), ").ptr()");                                
                 }                    
-                /*else {
-                    rewriter.InsertText(uop->getBeginLoc(), "RefConverter<" + extendPrecisionTypeName + ", " + uop->getSubExpr()->getType().getAsString() + ">(");
-                    rewriter.InsertTextAfterToken(uop->getEndLoc(), ").ptr()");        
-                }*/
+                else if (currentFuncType == FUNC_TYPE_HOST && useExtendedPrecision && isa<DeclRefExpr>(uop->getSubExpr())) {
+                    SourceLocation uopBegin = sm->getFileLoc(uop->getBeginLoc());
+                    SourceLocation uopEnd = sm->getFileLoc(uop->getEndLoc());
+                    rewriter.InsertText(uopBegin, "RefConverter<" + extendPrecisionTypeName + ", " + uop->getSubExpr()->getType().getAsString() + ">(");
+                    rewriter.InsertTextAfterToken(uopEnd, ").ptr()");        
+                }
             }
         }
     }

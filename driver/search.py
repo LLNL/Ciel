@@ -362,7 +362,8 @@ def perform_func_search(funcDict, HasSignatureChanged):
 
     if result_all == False:
         print("strange, cannot resolve inconsistency even all functions are transformed")
-        if HasSignatureChanged:
+        # Dolores: temporarily disable signature check
+        if True:#HasSignatureChanged:
             print("enhancing precision cannot resolve this inconsistency.")
             os.system("touch ./cant_solve.out")
             exit(0)

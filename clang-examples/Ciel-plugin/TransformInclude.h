@@ -6,7 +6,7 @@ static std::string transformInclude = R""""(
 #include "/root/ciel/clang-examples/Ciel-plugin/ciel-base.h"
 #include <cmath>
 
-typedef long double float_80;
+typedef __float128 float_80;
 inline void cudaErrorCheck(cudaError_t code) {
     if (code != cudaSuccess) {
         printf("kernel error: %s\n", cudaGetErrorString(code));
@@ -21,13 +21,13 @@ static std::string transformIncludePureHost = R""""(
 #include "/root/ciel/clang-examples/Ciel-plugin/ciel-base.h"
 #include <cmath>
 
-typedef long double float_80;
+typedef __float128 float_80;
 
 )"""";
 
 static std::string transformIncludeSignature = R""""(
 
-typedef long double float_80;
+typedef __float128 float_80;
 
 )"""";
 

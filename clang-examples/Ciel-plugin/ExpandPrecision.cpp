@@ -237,7 +237,6 @@ bool ExpandPrecisionVisitor::PrintEnabledStatementsInStatements(json& root, Basi
 
 void ExpandPrecisionVisitor::FindRegionsInBlocks(json& root, BasicBlockInfo& info, vector<RegionInRange>& regions) {
     RegionInRange item;
-    bool inCompoundBlock = info.blockType == BLOCK_TYPE_LOOP || info.blockType == BLOCK_TYPE_COND;
     for (unsigned int i = 0; i < info.blocks.size(); i++) {
         if (subExpressionIsolation) {
             statementIndices.push_back(i);
@@ -251,7 +250,10 @@ void ExpandPrecisionVisitor::FindRegionsInBlocks(json& root, BasicBlockInfo& inf
             continue;
         }
         
-        item.compoundBlock = (inCompoundBlock && i != 0); // TODO: for do-while
+        if (info.blockType == BLOCK_TYPE_COND)
+            item.compoundBlock = i != 0;
+        if (info.blockType == BLOCK_TYPE_LOOP)
+            item.compoundBlock = info.blocks[i].blockType == BLOCK_TYPE_LOOP_BODY;
         switch (info.blocks[i].enabled) {
             case ENABLED: 
             {
@@ -1019,7 +1021,7 @@ bool ExpandPrecisionVisitor::Block_ProcessStmtSecondPass(Stmt* st) {
                         // check if they are used as part of addressing or sizeof(). If they are, ignore it.
                         else if ((uop = dyn_cast<UnaryOperator>(parentStmt)) && 
                                 (uop->getOpcode() == UO_AddrOf || 
-                                uop->getOpcode() >= UO_PostInc && uop->getOpcode() <= UO_PreDec)) {
+                                (uop->getOpcode() >= UO_PostInc && uop->getOpcode() <= UO_PreDec))) {
 
                         }
                         else {

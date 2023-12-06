@@ -94,10 +94,11 @@ struct StatementInfo {
 
 #define BLOCK_TYPE_BASIC 0          // basic
 #define BLOCK_TYPE_LOOP 1           // for, while, do while
-#define BLOCK_TYPE_LOOP_COMPONENT 2 // loop cond + body
-#define BLOCK_TYPE_COND 3           // switch case, if
-#define BLOCK_TYPE_COND_COMPONENT 4 // if/switch cond + body 
-#define BLOCK_TYPE_FUNC 5           // function body
+#define BLOCK_TYPE_LOOP_COND 2      // loop cond
+#define BLOCK_TYPE_LOOP_BODY 3      // loop body
+#define BLOCK_TYPE_COND 4           // switch case, if
+#define BLOCK_TYPE_COND_COMPONENT 5 // if/switch cond + body 
+#define BLOCK_TYPE_FUNC 6           // function body
 
 #define DISABLED 0
 #define PARTIAL_ENABLED 1

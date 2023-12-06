@@ -294,7 +294,7 @@ void FunctionAnalysisVisitor::ProcessStatement(BasicBlockInfo* info, CompoundStm
 
         // process head
         BasicBlockInfo headBlock;
-        headBlock.blockType = BLOCK_TYPE_LOOP_COMPONENT;
+        headBlock.blockType = BLOCK_TYPE_LOOP_COND;
         SourceRange forHeadRange;
         forHeadRange.setBegin(loopInit->getSourceRange().getBegin());
         forHeadRange.setEnd(loopInc->getSourceRange().getEnd());
@@ -308,7 +308,7 @@ void FunctionAnalysisVisitor::ProcessStatement(BasicBlockInfo* info, CompoundStm
 
         // process body
         BasicBlockInfo basicBlock;
-        basicBlock.blockType = BLOCK_TYPE_LOOP_COMPONENT;
+        basicBlock.blockType = BLOCK_TYPE_LOOP_BODY;
         basicBlock.range = forStmt->getBody()->getSourceRange();
 
         const Stmt* loopBody = forStmt->getBody();
@@ -340,7 +340,7 @@ void FunctionAnalysisVisitor::ProcessStatement(BasicBlockInfo* info, CompoundStm
 
         // body block
         BasicBlockInfo basicBlock;
-        basicBlock.blockType = BLOCK_TYPE_LOOP_COMPONENT;
+        basicBlock.blockType = BLOCK_TYPE_LOOP_BODY;
         basicBlock.range = body->getSourceRange();
 
         // compound do body;
@@ -359,7 +359,7 @@ void FunctionAnalysisVisitor::ProcessStatement(BasicBlockInfo* info, CompoundStm
 
         // condition block
         BasicBlockInfo condBB;
-        condBB.blockType = BLOCK_TYPE_LOOP_COMPONENT;
+        condBB.blockType = BLOCK_TYPE_LOOP_COND;
         condBB.range = doSt->getCond()->getSourceRange();
         condBB.statements.push_back(CreateStatementInfo(doSt->getCond()));
         topBB.blocks.push_back(condBB);
@@ -377,7 +377,7 @@ void FunctionAnalysisVisitor::ProcessStatement(BasicBlockInfo* info, CompoundStm
 
         // condition block
         BasicBlockInfo condBB;
-        condBB.blockType = BLOCK_TYPE_LOOP_COMPONENT;
+        condBB.blockType = BLOCK_TYPE_LOOP_COND;
         condBB.range = whileStmt->getCond()->getSourceRange();
         condBB.statements.push_back(CreateStatementInfo(whileStmt->getCond()));
 
@@ -385,7 +385,7 @@ void FunctionAnalysisVisitor::ProcessStatement(BasicBlockInfo* info, CompoundStm
 
         // body block
         BasicBlockInfo basicBlock;
-        basicBlock.blockType = BLOCK_TYPE_LOOP_COMPONENT;
+        basicBlock.blockType = BLOCK_TYPE_LOOP_BODY;
         basicBlock.range = body->getSourceRange();
 
         // compound do body;

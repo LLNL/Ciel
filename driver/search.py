@@ -19,10 +19,11 @@ import copy
 class BlockType(IntEnum):
     BASIC = 0          # basic
     LOOP = 1           # for, while, do while
-    LOOP_COMPONENT = 2 # loop cond + body
-    COND = 3           # switch case, if
-    COND_COMPONENT = 4 # if/switch cond + body 
-    FUNC = 5           # function body
+    LOOP_COND = 2      # loop cond
+    LOOP_COMPONENT = 3 # loop body
+    COND = 4           # switch case, if
+    COND_COMPONENT = 5 # if/switch cond + body 
+    FUNC = 6           # function body
 
 class BlockStatus(IntEnum):
     DISABLED = 0

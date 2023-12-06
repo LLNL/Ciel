@@ -250,6 +250,7 @@ void ExpandPrecisionVisitor::FindRegionsInBlocks(json& root, BasicBlockInfo& inf
             continue;
         }
         
+        item.compoundBlock = false;
         if (info.blockType == BLOCK_TYPE_COND)
             item.compoundBlock = i != 0;
         if (info.blockType == BLOCK_TYPE_LOOP)

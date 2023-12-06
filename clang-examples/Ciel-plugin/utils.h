@@ -183,7 +183,8 @@ const map<std::string, std::string> mathcalls_base = {
     {"cos", "cosl"},
     {"fmax", "fmaxl"},
     {"fmin", "fminl"},
-    {"copysign", "copysignl"}
+    {"copysign", "copysignl"},
+    {"log1p", "log1pl"}
 };
 
 FloatingPointTypeInfo DissectFloatingPointType(const clang::QualType type, bool builtIn);

@@ -1821,6 +1821,9 @@ void ExpandPrecisionVisitor::Region_InsertExitBlockBeforeBreak(string traversing
 
     for (const VarDecl* item : region.replaceVars) {
         FloatingPointTypeInfo info;
+        SourceRange range = FindVarDeclScope(item, astContext);
+        if (!range.fullyContains(st->getSourceRange()))
+            continue;
         string newTypeString = GetRaisedTypeString(item, &info);
         if (newTypeString != "" && !info.isConst) {
             if (info.isVector == 0) {
@@ -1841,6 +1844,9 @@ void ExpandPrecisionVisitor::Region_InsertExitBlockBeforeBreak(string traversing
         unsigned varDeclOffset = sm->getFileOffset(sm->getFileLoc(item.first->getBeginLoc()));
         if (returnLocOffset < varDeclOffset)
             continue;
+        SourceRange range = FindVarDeclScope(item.first, astContext);
+        if (!range.fullyContains(st->getSourceRange()))
+            continue;       
         string newTypeString = GetRaisedTypeString(item.first, &info);
         string origTypeName = item.first->getType().getAsString();
         if (newTypeString != "" && info.isSimpleFPType() && !info.isConst) {

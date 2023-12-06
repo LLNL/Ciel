@@ -114,8 +114,6 @@ void ExpandPrecisionVisitor::AnalyzeBlocks(json& j, BasicBlockInfo& info) {
         subBlockInfo->range = transformRange;
         subBlockInfo->blockType = j["blocks"][i]["type"];
         subBlockInfo->enabled = j["blocks"][i]["enabled"];
-        
-        bool isIndividualEnabled = j["blocks"][i]["enabled"] == INDIVIDUAL_ENABLED;
 
         if (j["blocks"][i].contains("blocks")) {
             AnalyzeBlocks(j["blocks"][i], *subBlockInfo);
@@ -123,10 +121,7 @@ void ExpandPrecisionVisitor::AnalyzeBlocks(json& j, BasicBlockInfo& info) {
         else {
             AnalyzeStatements(j["blocks"][i], *subBlockInfo);
         }
-        blockAllEnabled &= subBlockInfo->enabled == ENABLED;  
-        if (isIndividualEnabled) {
-            subBlockInfo->enabled = INDIVIDUAL_ENABLED;
-        }          
+        blockAllEnabled &= subBlockInfo->enabled == ENABLED;     
     }
     if (info.enabled != DISABLED && blockAllEnabled == false) {
         info.enabled = PARTIAL_ENABLED;
@@ -175,16 +170,6 @@ bool ExpandPrecisionVisitor::PrintEnabledStatementsInBlocks(json& root, BasicBlo
         statementIndices.push_back(i);
         switch (info.blocks[i].enabled) {
             case ENABLED: 
-            case INDIVIDUAL_ENABLED:
-            {
-                if (info.blocks[i].blocks.size() == 0) {
-                    continousStatements |= PrintEnabledStatementsInStatements(root, info.blocks[i], true, outFile);
-                }
-                else {
-                    continousStatements |= PrintEnabledStatementsInBlocks(root, info.blocks[i], true, outFile);
-                }
-            }
-            break;
             case PARTIAL_ENABLED:
             {
                 if (info.blocks[i].blocks.size() == 0) {
@@ -283,32 +268,6 @@ void ExpandPrecisionVisitor::FindRegionsInBlocks(json& root, BasicBlockInfo& inf
                     item.endOfBlock = END_OF_BLOCK_NORMAL;
                     regions.push_back(item);                    
                 }
-            }
-            break;
-            case INDIVIDUAL_ENABLED:
-            {
-                if (startLocationValid == true) {
-                    startLocationValid = false;
-                    item.range.setBegin(regionStartLocation);
-                    item.range.setEnd(info.blocks[i].range.getBegin());
-                    item.endOfBlock = END_OF_BLOCK_FALSE;
-                    regions.push_back(item);
-                }     
-
-                // last block processing
-                if (i == info.blocks.size() - 1 || item.compoundBlock) {
-                    startLocationValid = false;
-                    item.range.setBegin(regionStartLocation);
-                    item.range.setEnd(info.blocks[i].range.getEnd());
-                    item.endOfBlock = END_OF_BLOCK_NORMAL;
-                    regions.push_back(item);                         
-                }
-                else {
-                    // itself as a region
-                    item.range = info.blocks[i].range;
-                    item.endOfBlock = END_OF_BLOCK_FALSE;
-                    regions.push_back(item);    
-                }    
             }
             break;
             case DISABLED:
@@ -1058,7 +1017,9 @@ bool ExpandPrecisionVisitor::Block_ProcessStmtSecondPass(Stmt* st) {
 
                         }
                         // check if they are used as part of addressing or sizeof(). If they are, ignore it.
-                        else if ((uop = dyn_cast<UnaryOperator>(parentStmt)) && uop->getOpcode() == UO_AddrOf){
+                        else if ((uop = dyn_cast<UnaryOperator>(parentStmt)) && 
+                                (uop->getOpcode() == UO_AddrOf || 
+                                uop->getOpcode() >= UO_PostInc && uop->getOpcode() <= UO_PreDec)) {
 
                         }
                         else {

@@ -28,7 +28,6 @@ class BlockStatus(IntEnum):
     DISABLED = 0
     PARTIAL_ENABLED = 1
     ENABLED = 2
-    INDIVIDUAL_ENABLED = 3
 
 class SubExType(IntEnum):
     OTHER = 0

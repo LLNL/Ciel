@@ -102,7 +102,6 @@ struct StatementInfo {
 #define DISABLED 0
 #define PARTIAL_ENABLED 1
 #define ENABLED 2
-#define INDIVIDUAL_ENABLED 3
 
 #define END_OF_BLOCK_FALSE 0
 #define END_OF_BLOCK_NORMAL 1
@@ -201,6 +200,7 @@ bool IsComplexStatement(const Stmt* st);
 const Stmt* FindLHSRHS(Stmt* st, const Stmt* anchor, const Expr** lhsPtr, ASTContext* astContext);
 void FindCompoundAssignment(const Stmt* st, const Expr** lhsPtr, const Expr** rhsPtr);
 void FindRegularAssignment(const Stmt* st, const Expr** lhsPtr, const Expr** rhsPtr);
+bool IsSelfIncremental(const DeclRefExpr* st, ASTContext *astContext);
 
 // lifted from clang source code (TODO: licensing?)
 SourceLocation findLocationAfterSemi(SourceLocation loc, ASTContext &Ctx, bool IsDecl);

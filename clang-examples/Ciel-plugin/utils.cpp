@@ -488,3 +488,17 @@ void SetupTransformIdentifiers(bool isHost)
         }
     }    
 }
+
+bool IsSelfIncremental(const DeclRefExpr* st, ASTContext *astContext) {
+    const auto& parents = astContext->getParents(*st);
+    if (!parents.empty()) {
+        const Stmt* parentStmt = parents[0].get<Stmt>();
+        if (parentStmt) {
+            const UnaryOperator* uop;
+            if ((uop = dyn_cast<UnaryOperator>(parentStmt)) && uop->getOpcode() >= UO_PostInc && uop->getOpcode() <= UO_PreDec){
+                return true;
+            }            
+        }
+    }
+    return false;
+}

@@ -125,7 +125,9 @@ void PrintSourceRange(SourceRange range, ASTContext *astContext)
 {
     std::string text1 = range.getBegin().printToString(astContext->getSourceManager());
     std::string text2 = range.getEnd().printToString(astContext->getSourceManager());
-    PRINT_DEBUG_MESSAGE("\toffset: " << text1 << ", " << text2);
+    int isMacro1 = range.getBegin().isMacroID();
+    int isMacro2 = range.getEnd().isMacroID();
+    PRINT_DEBUG_MESSAGE("\toffset: " << text1 << ", " << text2 << "(" << isMacro1 << "," << isMacro2 << ")");
 }
 
 void PrintSourceRangeToFile(SourceRange range, ASTContext *astContext, ostream &out)
@@ -499,6 +501,22 @@ bool IsSelfIncremental(const DeclRefExpr* st, ASTContext *astContext) {
                 return true;
             }            
         }
+    }
+    return false;
+}
+
+bool IsExprWithinAMacro(SourceManager* sm, SourceLocation beginLoc, SourceLocation endLoc) {
+    if (beginLoc.isMacroID() && endLoc.isMacroID()) {
+        CharSourceRange beginExpansionRange = sm->getImmediateExpansionRange(beginLoc);
+        CharSourceRange endExpansionRange = sm->getImmediateExpansionRange(endLoc);
+        if (beginExpansionRange.getBegin() == endExpansionRange.getBegin() &&
+            beginExpansionRange.getEnd() == endExpansionRange.getEnd()) {
+            PRINT_DEBUG_MESSAGE("within same macro");
+            return true;
+        }
+        PRINT_DEBUG_MESSAGE("not within same macro");
+    } else {
+        PRINT_DEBUG_MESSAGE("at least one is not a macro");
     }
     return false;
 }

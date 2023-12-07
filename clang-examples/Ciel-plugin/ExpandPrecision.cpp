@@ -973,12 +973,14 @@ bool ExpandPrecisionVisitor::Block_ProcessStmtSecondPass(Stmt* st) {
                 insertTypeCast = true;
             }
             // TODO: possible vector initializer
-            if (useExtendedPrecision) {
+            if (useExtendedPrecision) {//&& (currentFuncType != FUNC_TYPE_HOST)) {
                 if (insertTypeCast) {
                     SourceLocation beginLoc = GetExpandedLocation(anchorPointForRHS->getBeginLoc(), true);
                     SourceLocation endLoc = GetExpandedLocation(anchorPointForRHS->getEndLoc(), false);
-                    rewriter.InsertText(beginLoc, castBackFuncName + "(");
-                    rewriter.InsertTextAfterToken(endLoc, ")");
+                    if (!IsExprWithinAMacro(sm, anchorPointForRHS->getBeginLoc(), anchorPointForRHS->getEndLoc())) {
+                        rewriter.InsertText(sm->getFileLoc(beginLoc), castBackFuncName + "(");
+                        rewriter.InsertTextAfterToken(sm->getFileLoc(endLoc), ")");
+                    }
                 }
             }
         }
@@ -1108,8 +1110,11 @@ bool ExpandPrecisionVisitor::Block_ProcessStmtSecondPass(Stmt* st) {
                     if (useExtendedPrecision) {
                         if (const Expr* initializer = varDecl->getInit()) {
                             if (!isa<CXXConstructExpr>(initializer)) {
-                                rewriter.InsertText(initializer->getBeginLoc(), castBackFuncName + "(");
-                                rewriter.InsertTextAfterToken(initializer->getEndLoc(), ")");
+                                // TODO: macroed single variable?
+                                if (!IsExprWithinAMacro(sm, initializer->getBeginLoc(), initializer->getEndLoc())) {                                
+                                    rewriter.InsertText(sm->getFileLoc(initializer->getBeginLoc()), castBackFuncName + "(");
+                                    rewriter.InsertTextAfterToken(sm->getFileLoc(initializer->getEndLoc()), ")");
+                                }
                             }
                         }                
                     }
@@ -1176,8 +1181,10 @@ bool ExpandPrecisionVisitor::Block_ProcessStmtSecondPass(Stmt* st) {
                     // TODO: possible vector initializer
                     if (info.isSimpleFPType()) {
                         if (useExtendedPrecision) {
-                            rewriter.InsertText(call->getArg(i)->getBeginLoc(), castBackFuncName + "(");
-                            rewriter.InsertTextAfterToken(call->getArg(i)->getEndLoc(), ")");
+                            if (!IsExprWithinAMacro(sm, call->getArg(i)->getBeginLoc(), call->getArg(i)->getEndLoc())) {
+                                rewriter.InsertText(sm->getFileLoc(call->getArg(i)->getBeginLoc()), castBackFuncName + "(");
+                                rewriter.InsertTextAfterToken(sm->getFileLoc(call->getArg(i)->getEndLoc()), ")");
+                            }
                         }
                         else if (info.isVector) {
                             // REWRITE value conversion
@@ -1298,40 +1305,15 @@ bool ExpandPrecisionVisitor::Func_ProcessStmt(Stmt* st) {
             if (useExtendedPrecision) {
                 SourceLocation beginLoc = GetExpandedLocation(anchorPointForRHS->getBeginLoc(), true);
                 SourceLocation endLoc = GetExpandedLocation(anchorPointForRHS->getEndLoc(), false);
-                rewriter.InsertText(beginLoc, castBackFuncName + "(");
-                rewriter.InsertTextAfterToken(endLoc, ")");
+                if (!IsExprWithinAMacro(sm, anchorPointForRHS->getBeginLoc(), anchorPointForRHS->getEndLoc())) {
+                    rewriter.InsertText(sm->getFileLoc(beginLoc), castBackFuncName + "(");
+                    rewriter.InsertTextAfterToken(sm->getFileLoc(endLoc), ")");
+                }
             }
         }
     }
     // end tracking writes / L-values
 
-    // array subscript
-    /*if (anchorPointForRHS == NULL) {
-        if (const ArraySubscriptExpr* subscriptExpr = dyn_cast<ArraySubscriptExpr>(st)) {
-            // find parent, if it is &, ignore
-            const auto& parents = astContext->getParents(*subscriptExpr);
-            if (!parents.empty()) {
-                const UnaryOperator* parentExpr = parents[0].get<UnaryOperator>();
-                if (!parentExpr || parentExpr->getOpcode() != UO_AddrOf) {
-                    FloatingPointTypeInfo info = DissectFloatingPointType(subscriptExpr->getType(), true); 
-                    if (info.isSimpleFPType()) {
-                        SourceLocation beginLoc = GetExpandedLocation(subscriptExpr->getBeginLoc(), true);
-                        SourceLocation endLoc = GetExpandedLocation(subscriptExpr->getEndLoc(), false);
-                        if (info.isVector && !info.isReference) {
-                            string dimension = std::to_string(info.isVector + 1);
-                            rewriter.InsertText(beginLoc, "ConvertValue" + dimension + "(" + extendPrecisionTypeName + dimension + ", " + 
-                                subscriptExpr->getType().getAsString() + ", ");
-                            rewriter.InsertTextAfterToken(endLoc, ")");                       
-                        }
-                        else {
-                            rewriter.InsertText(beginLoc, extendPrecisionFuncName + "(");
-                            rewriter.InsertTextAfterToken(endLoc, ")");   
-                        }         
-                    }                    
-                }
-            }
-        }
-    }*/
     if (const DeclRefExpr* declRefExpr = dyn_cast<DeclRefExpr>(st)) {
         const ValueDecl* valueDecl = declRefExpr->getDecl();
         if (valueDecl && valueDecl->getIdentifier() && argReplacement.find(valueDecl->getName().str()) != argReplacement.end()) {
@@ -1367,8 +1349,10 @@ bool ExpandPrecisionVisitor::Func_ProcessStmt(Stmt* st) {
                     // TODO: possible vector initializer
                     if (info.isSimpleFPType()) {
                         if (useExtendedPrecision || convertToOriginal) {
-                            rewriter.InsertText(call->getArg(i)->getBeginLoc(), castBackFuncName + "(");
-                            rewriter.InsertTextAfterToken(call->getArg(i)->getEndLoc(), ")");
+                            if (!IsExprWithinAMacro(sm, call->getArg(i)->getBeginLoc(), call->getArg(i)->getEndLoc())) {
+                                rewriter.InsertText(sm->getFileLoc(call->getArg(i)->getBeginLoc()), castBackFuncName + "(");
+                                rewriter.InsertTextAfterToken(sm->getFileLoc(call->getArg(i)->getEndLoc()), ")");
+                            }
                         }
                         else if (info.isVector) {
                             // REWRITE reference conversion

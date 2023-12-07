@@ -203,6 +203,7 @@ const Stmt* FindLHSRHS(Stmt* st, const Stmt* anchor, const Expr** lhsPtr, ASTCon
 void FindCompoundAssignment(const Stmt* st, const Expr** lhsPtr, const Expr** rhsPtr);
 void FindRegularAssignment(const Stmt* st, const Expr** lhsPtr, const Expr** rhsPtr);
 bool IsSelfIncremental(const DeclRefExpr* st, ASTContext *astContext);
+bool IsExprWithinAMacro(SourceManager* sm, SourceLocation begin, SourceLocation end);
 
 // lifted from clang source code (TODO: licensing?)
 SourceLocation findLocationAfterSemi(SourceLocation loc, ASTContext &Ctx, bool IsDecl);

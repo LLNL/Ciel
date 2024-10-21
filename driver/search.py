@@ -84,7 +84,7 @@ def find_source_info():
     funcs = {}
 
     # look for all source files
-    for root, dirs, files in os.walk("./workspace/func_analysis", topdown=False):
+    for root, dirs, files in os.walk("./workspace/extract_hierarchy", topdown=False):
         for name in files:
             if name.endswith(".json"):
                 fullName = os.path.join(root, name)
@@ -134,12 +134,12 @@ def compile_and_run(cc, level, transformCounter, retValue, subexpression):
     os.chdir(origPath)  
 
 def precision_enhance():
-    outFile = "raise_precision.out"
+    outFile = "enhance_precision.out"
     if os.path.exists("./" + outFile):
         os.system("rm " + outFile)
     with open(outFile, "w") as f:
         try:
-            subprocess.check_call(["make", "raise_precision"], stdout=f, stderr=subprocess.STDOUT)
+            subprocess.check_call(["make", "enhance_precision"], stdout=f, stderr=subprocess.STDOUT)
         except subprocess.CalledProcessError as e:
             print(str(e.output) + " : exiting")
             os.system("touch ./transform_error.out")
@@ -426,7 +426,7 @@ def transform_sub_function_list(funcStructureDict):
         f.write("block\n")
         for func in funcStructureDict.keys():
             funcStructure = funcStructureDict[func]
-            tempJsonFile = func.replace("func_analysis", "transform_temp")
+            tempJsonFile = func.replace("extract_hierarchy", "transform_temp")
             os.makedirs(os.path.dirname(tempJsonFile), exist_ok=True)
             with open(tempJsonFile, "w") as jsonFile:
                 json.dump(funcStructure, jsonFile, indent=4)
@@ -630,7 +630,7 @@ def print_results(funcStructureDict):
         f.write("block\n")
         for func in funcStructureDict.keys():
             funcStructure = funcStructureDict[func]
-            tempJsonFile = func.replace("func_analysis", "transform_temp")
+            tempJsonFile = func.replace("extract_hierarchy", "transform_temp")
             os.makedirs(os.path.dirname(tempJsonFile), exist_ok=True)
             with open(tempJsonFile, "w") as jsonFile:
                 json.dump(funcStructure, jsonFile, indent=4)

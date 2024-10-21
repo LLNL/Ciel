@@ -199,13 +199,13 @@ clean:
 
 mk_workspace:
 	mkdir -p workspace
-	mkdir -p workspace/func_analysis
+	mkdir -p workspace/extract_hierarchy
 	mkdir -p workspace/original_files
 
-func_analysis: mk_workspace
+extract_hierarchy: mk_workspace
 	clang -Xclang -load -Xclang Ciel-plugin.so -Xclang -plugin -Xclang -pliner-gpu-function-analysis -c ./cg.cpp -emit-llvm
 
-raise_precision: 
+enhance_precision: 
 	clang -Xclang -load -Xclang Ciel-plugin.so -Xclang -plugin -Xclang -pliner-gpu-expand-precision -c ./cg.cpp -emit-llvm
 
 print_results: 

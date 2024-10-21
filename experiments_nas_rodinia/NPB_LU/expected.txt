@@ -30,13 +30,13 @@ has enhancing precision resolve inconsistency: True
 [timer] transform time for 7: 0.2284069061279297
 [timer] compile run time for 7: 5.715911149978638
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/lu_cu/ssor_gpu_kernel_2.json from 0 to 3 ======
+====== begin blocks search of ./workspace/extract_hierarchy/lu_cu/ssor_gpu_kernel_2.json from 0 to 3 ======
 block 0 fpcount: 0
 block 1 fpcount: 0
 block 2 fpcount: 15
 loops in this level: []
 ====== enter block 2 ======
-====== begin stmts search of ./workspace/func_analysis/lu_cu/ssor_gpu_kernel_2.json from 0 to 8 ======
+====== begin stmts search of ./workspace/extract_hierarchy/lu_cu/ssor_gpu_kernel_2.json from 0 to 8 ======
 block 0 fpcount: 0
 block 1 fpcount: 0
 block 2 fpcount: 0

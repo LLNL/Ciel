@@ -21,7 +21,7 @@ make: *** [Makefile:40: run] Segmentation fault
 max diff: 1.5894326304591e-12
 [timer] compile run time for 1: 12.597894668579102
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/cloudsc_c_cpp/cloudsc_c.json from 0 to 25 ======
+====== begin blocks search of ./workspace/extract_hierarchy/cloudsc_c_cpp/cloudsc_c.json from 0 to 25 ======
 block 0 fpcount: 302
 block 1 fpcount: 3
 block 2 fpcount: 1
@@ -121,12 +121,12 @@ max diff: 7.2829236310142e-12
 [timer] compile run time for 10: 11.31325888633728
 has enhancing precision resolve inconsistency: True
 ====== enter block 19 ======
-====== begin blocks search of ./workspace/func_analysis/cloudsc_c_cpp/cloudsc_c.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/cloudsc_c_cpp/cloudsc_c.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 2233
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/cloudsc_c_cpp/cloudsc_c.json from 0 to 54 ======
+====== begin blocks search of ./workspace/extract_hierarchy/cloudsc_c_cpp/cloudsc_c.json from 0 to 54 ======
 block 0 fpcount: 2
 block 1 fpcount: 32
 block 2 fpcount: 4
@@ -271,23 +271,23 @@ max diff: 1.3215059552536e-12
 [timer] compile run time for 21: 12.954832315444946
 has enhancing precision resolve inconsistency: True
 ====== enter block 24 ======
-====== begin blocks search of ./workspace/func_analysis/cloudsc_c_cpp/cloudsc_c.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/cloudsc_c_cpp/cloudsc_c.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 27
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/cloudsc_c_cpp/cloudsc_c.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/cloudsc_c_cpp/cloudsc_c.json from 0 to 1 ======
 block 0 fpcount: 27
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/cloudsc_c_cpp/cloudsc_c.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/cloudsc_c_cpp/cloudsc_c.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 27
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/cloudsc_c_cpp/cloudsc_c.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/cloudsc_c_cpp/cloudsc_c.json from 0 to 1 ======
 block 0 fpcount: 27
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/cloudsc_c_cpp/cloudsc_c.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/cloudsc_c_cpp/cloudsc_c.json from 0 to 2 ======
 block 0 fpcount: 4
 block 1 fpcount: 23
 loops in this level: []
@@ -308,7 +308,7 @@ max diff: 1.3215059552536e-12
 [timer] compile run time for 23: 11.635453462600708
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/cloudsc_c_cpp/cloudsc_c.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/cloudsc_c_cpp/cloudsc_c.json from 0 to 2 ======
 block 0 fpcount: 4
 block 1 fpcount: 19
 loops in this level: []
@@ -321,7 +321,7 @@ max diff: 1.3215821874992e-12
 [timer] compile run time for 24: 12.388617753982544
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/cloudsc_c_cpp/cloudsc_c.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/cloudsc_c_cpp/cloudsc_c.json from 0 to 1 ======
 block 0 fpcount: 4
 Print result:
 offending text: ./src/cloudsc_c/cloudsc/cloudsc_c.cpp:1779:4, ./src/cloudsc_c/cloudsc/cloudsc_c.cpp:1783:4

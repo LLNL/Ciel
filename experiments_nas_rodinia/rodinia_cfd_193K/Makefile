@@ -48,7 +48,7 @@ clean:
 
 mk_workspace:
 	mkdir -p workspace
-	mkdir -p workspace/func_analysis
+	mkdir -p workspace/extract_hierarchy
 	mkdir -p workspace/original_files
 
 run:
@@ -57,10 +57,10 @@ run:
 run_ex:
 	./euler3d_double fvcorr.domn.193K
 
-func_analysis: mk_workspace
+extract_hierarchy: mk_workspace
 	clang -Xclang -load -Xclang Ciel-plugin.so -Xclang -plugin -Xclang -pliner-gpu-function-analysis -c ./euler3d.cu --cuda-gpu-arch=$(CUDA_CC_VERSION) -x cuda -emit-llvm
 
-raise_precision: 
+enhance_precision: 
 	clang -Xclang -load -Xclang Ciel-plugin.so -Xclang -plugin -Xclang -pliner-gpu-expand-precision -c ./euler3d.cu --cuda-gpu-arch=$(CUDA_CC_VERSION) -x cuda -emit-llvm
 
 print_results: 

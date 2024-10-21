@@ -26,10 +26,10 @@ has enhancing precision resolve inconsistency: True
 [timer] transform time for 6: 0.5906989574432373
 [timer] compile run time for 6: 18.23268461227417
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/euler3d_cu/cuda_compute_step_factor.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/euler3d_cu/cuda_compute_step_factor.json from 0 to 1 ======
 block 0 fpcount: 35
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/euler3d_cu/cuda_compute_step_factor.json from 0 to 13 ======
+====== begin stmts search of ./workspace/extract_hierarchy/euler3d_cu/cuda_compute_step_factor.json from 0 to 13 ======
 block 0 fpcount: 0
 block 1 fpcount: 2
 block 2 fpcount: 1

@@ -561,7 +561,7 @@ bool FunctionAnalysisVisitor::VisitFunctionDecl(FunctionDecl* func) {
         ProcessEndOfBasicBlock(info, &iter);
 
         ofstream funcJsonFile;
-        std::string tmpDir = "./workspace/func_analysis/";
+        std::string tmpDir = "./workspace/extract_hierarchy/";
         std::string jsonFileName = tmpDir + g_dirName + "/" + info->name + ".json";
         funcJsonFile.open(jsonFileName);
         if (funcJsonFile.is_open()) {
@@ -777,7 +777,7 @@ unique_ptr<ASTConsumer> PluginFunctionAnalysisAction::CreateASTConsumer(Compiler
     size_t dotpos = g_dirName.find(".");
     if (dotpos != std::string::npos)
         g_dirName = g_dirName.replace(dotpos, 1, "_");
-    std::string tmpDir = "./workspace/func_analysis/";
+    std::string tmpDir = "./workspace/extract_hierarchy/";
     mkdir((tmpDir + g_dirName).c_str(), 0777);
 
     // read setup.ini

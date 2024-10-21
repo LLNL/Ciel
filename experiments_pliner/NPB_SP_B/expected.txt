@@ -151,7 +151,7 @@ cp: cannot stat './workspace/x_solve.c': No such file or directory
 [timer] compile run time for 8: 100.10931515693665
 ['./workspace/config_008/run_GCC5_O3_fastmath.out']
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/exact_solution_c/exact_solution.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/exact_solution_c/exact_solution.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 26
 loops in this level: [1]
@@ -175,15 +175,15 @@ cp: cannot stat './workspace/x_solve.c': No such file or directory
 ['./workspace/config_009/run_GCC5_O3_fastmath.out']
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/exact_solution_c/exact_solution.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/exact_solution_c/exact_solution.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 26
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/exact_solution_c/exact_solution.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/exact_solution_c/exact_solution.json from 0 to 1 ======
 block 0 fpcount: 26
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/exact_solution_c/exact_solution.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/exact_solution_c/exact_solution.json from 0 to 1 ======
 block 0 fpcount: 26
 Print result:
 Print result:

@@ -17,7 +17,7 @@ MaxCCVersion = 7.5
 # - with single directory argument: run the script in the specified directory
 DebugMode = False
 UseExtendedPrecision = True
-SearchInHeaders = True
+SearchInHeaders = False
 SearchInHostFunctions = True
 ParallelExecution = True
 SubExpressionIsolation = True

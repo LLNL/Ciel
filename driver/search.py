@@ -52,7 +52,7 @@ class OptLevel(Enum):
 transformIndex = 0
 DebugMode = False
 UseExtendedPrecision = True
-SearchInHeaders = True
+SearchInHeaders = False
 SearchInHostFunctions = True
 ParallelExecution = True
 SubExpressionIsolation = False

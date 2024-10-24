@@ -2,15 +2,19 @@
 
 # 1. fetch json.hpp 3.10.4
 cd clang-examples/Ciel-plugin
-wget https://raw.githubusercontent.com/nlohmann/json/v3.10.4/single_include/nlohmann/json.hpp
+if ! test -f json.hpp; then
+    wget https://raw.githubusercontent.com/nlohmann/json/v3.10.4/single_include/nlohmann/json.hpp
+fi
 cd ../../
 
 # 2. fetch gpuprec, apply patch
-git clone https://github.com/lumianph/gpuprec thirdparty/gpuprec
-cd thirdparty/gpuprec
-git checkout 452baddaf631f8810d7a70e452f0adfefed43fdd
-git apply ../../gpuprec_patch.txt
-cd ../../
+if ! test -d thirdparty/gpuprec; then
+    git clone https://github.com/lumianph/gpuprec thirdparty/gpuprec
+    cd thirdparty/gpuprec
+    git checkout 452baddaf631f8810d7a70e452f0adfefed43fdd
+    git apply ../../gpuprec_patch.txt
+    cd ../../
+fi
 
 # 3. install Intel oneAPI because it is not strictly required and too large
 # cd /tmp

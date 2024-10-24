@@ -2470,19 +2470,19 @@ unique_ptr<ASTConsumer> PluginExpandPrecisionAction::CreateASTConsumer(CompilerI
         string s;
         while (getline(setupFile, s)) {
             if (s.find("UseExtendedPrecision") != std::string::npos) {
-                useExtendedPrecision = s.find("yes") != std::string::npos;
+                useExtendedPrecision = string_to_lower(s).find("yes") != std::string::npos;
                 PRINT_DEBUG_MESSAGE("Line: UseExtendedPrecision " << useExtendedPrecision);
             }
             if (s.find("SearchInHeaders") != std::string::npos) {
-                searchInHeaders = s.find("yes") != std::string::npos;
+                searchInHeaders = string_to_lower(s).find("yes") != std::string::npos;
                 PRINT_DEBUG_MESSAGE("Line: SearchInHeaders " << searchInHeaders);
             }
             if (s.find("SearchInHostFunctions") != std::string::npos) {
-                searchInHostFunctions = s.find("yes") != std::string::npos;
+                searchInHostFunctions = string_to_lower(s).find("yes") != std::string::npos;
                 PRINT_DEBUG_MESSAGE("Line: SearchInHostFunctions " << searchInHostFunctions);
             }
             if (s.find("PureHostFunctions") != std::string::npos) {
-                pureHostFunctions = s.find("yes") != std::string::npos;
+                pureHostFunctions = string_to_lower(s).find("yes") != std::string::npos;
                 PRINT_DEBUG_MESSAGE("Line: PureHostFunctions " << pureHostFunctions);
             }
         }

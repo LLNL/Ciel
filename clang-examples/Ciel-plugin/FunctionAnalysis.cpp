@@ -787,11 +787,11 @@ unique_ptr<ASTConsumer> PluginFunctionAnalysisAction::CreateASTConsumer(Compiler
         while (getline(setupFile, s)) {
             PRINT_DEBUG_MESSAGE("line: " << s);
             if (s.find("UseExtendedPrecision") != std::string::npos)
-                useExtendedPrecision = s.find("yes") != std::string::npos;
+                useExtendedPrecision = string_to_lower(s).find("yes") != std::string::npos;
             if (s.find("SearchInHeaders") != std::string::npos)
-                searchInHeaders = s.find("yes") != std::string::npos;
+                searchInHeaders = string_to_lower(s).find("yes") != std::string::npos;
             if (s.find("SearchInHostFunctions") != std::string::npos)
-                searchInHostFunctions = s.find("yes") != std::string::npos;
+                searchInHostFunctions = string_to_lower(s).find("yes") != std::string::npos;
         }
         setupFile.close();
     }

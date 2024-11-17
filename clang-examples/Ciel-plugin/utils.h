@@ -242,6 +242,17 @@ inline std::string GetTransformedVarName(std::string varName, int regionIndex = 
         return varName + "_d" + to_string(regionIndex);
 }
 
+inline std::string string_to_lower(const string& str)
+{
+    string result = "";
+
+    for (char ch : str) {
+        result += tolower(ch);
+    }
+
+    return result;
+}
+
 inline bool ends_with(std::string const & value, std::string const & ending) {
     if (ending.size() > value.size()) return false;
     return std::equal(ending.rbegin(), ending.rend(), value.rbegin());

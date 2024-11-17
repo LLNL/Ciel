@@ -112,7 +112,7 @@ cp: cannot stat './workspace/x_solve.c': No such file or directory
 [timer] compile run time for 6: 22.552189826965332
 ['./workspace/config_006/run_GCC5_O3_fastmath.out']
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/tzetar_c/tzetar.json from 0 to 4 ======
+====== begin blocks search of ./workspace/extract_hierarchy/tzetar_c/tzetar.json from 0 to 4 ======
 block 0 fpcount: 15
 block 1 fpcount: 0
 block 2 fpcount: 67
@@ -138,31 +138,31 @@ cp: cannot stat './workspace/x_solve.c': No such file or directory
 ['./workspace/config_007/run_GCC5_O3_fastmath.out']
 has enhancing precision resolve inconsistency: True
 ====== enter block 2 ======
-====== begin blocks search of ./workspace/func_analysis/tzetar_c/tzetar.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/tzetar_c/tzetar.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 67
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/tzetar_c/tzetar.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/tzetar_c/tzetar.json from 0 to 1 ======
 block 0 fpcount: 67
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/tzetar_c/tzetar.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/tzetar_c/tzetar.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 67
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/tzetar_c/tzetar.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/tzetar_c/tzetar.json from 0 to 1 ======
 block 0 fpcount: 67
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/tzetar_c/tzetar.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/tzetar_c/tzetar.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 67
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/tzetar_c/tzetar.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/tzetar_c/tzetar.json from 0 to 1 ======
 block 0 fpcount: 67
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/tzetar_c/tzetar.json from 0 to 20 ======
+====== begin stmts search of ./workspace/extract_hierarchy/tzetar_c/tzetar.json from 0 to 20 ======
 block 0 fpcount: 2
 block 1 fpcount: 2
 block 2 fpcount: 2

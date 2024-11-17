@@ -36,7 +36,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 9: 0.21507740020751953
 [timer] compile run time for 9: 5.951648950576782
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/bt_cu/exact_solution.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/bt_cu/exact_solution.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 13
 loops in this level: [1]
@@ -44,15 +44,15 @@ loops in this level: [1]
 [timer] compile run time for 10: 6.0136260986328125
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/bt_cu/exact_solution.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/bt_cu/exact_solution.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 13
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/bt_cu/exact_solution.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/bt_cu/exact_solution.json from 0 to 1 ======
 block 0 fpcount: 13
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/bt_cu/exact_solution.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/bt_cu/exact_solution.json from 0 to 1 ======
 block 0 fpcount: 13
 Print result:
 offending text: ./bt.cu:1873:20, ./bt.cu:1887:2

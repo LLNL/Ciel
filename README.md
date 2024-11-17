@@ -62,9 +62,7 @@ to the Docker container. If you can see detailed information about your NVIDIA
 GPU when running `nvidia-smi`, this step is done.
 
 ```
-docker pull ucdavisplse/ciel:latest
-docker run --gpus all -it -v [ciel directory]:/root/ciel/ --name ciel ucdavisplse/ciel:latest
-nvidia-smi
+./run_docker.sh
 ```
 
 #### Option 2: build your own Docker container on local machine
@@ -78,7 +76,6 @@ several hours to finish building the docker image.
 cd [ciel directory]
 docker build . -t ciel-image
 docker run --gpus all -it -v [ciel directory]:/root/ciel/ --name ciel ciel-image
-nvidia-smi
 ```
 
 ### Setup environments and Build the Clang plugins

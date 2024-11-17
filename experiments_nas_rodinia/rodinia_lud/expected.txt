@@ -20,7 +20,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 4: 0.1772301197052002
 [timer] compile run time for 4: 4.335051536560059
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/lud_kernel_cu/lud_internal.json from 0 to 3 ======
+====== begin blocks search of ./workspace/extract_hierarchy/lud_kernel_cu/lud_internal.json from 0 to 3 ======
 block 0 fpcount: 8
 block 1 fpcount: 0
 block 2 fpcount: 2
@@ -35,7 +35,7 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 7: 3.9624111652374268
 has enhancing precision resolve inconsistency: False
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/lud_kernel_cu/lud_internal.json from 0 to 10 ======
+====== begin stmts search of ./workspace/extract_hierarchy/lud_kernel_cu/lud_internal.json from 0 to 10 ======
 block 0 fpcount: 1
 block 1 fpcount: 1
 block 2 fpcount: 0
@@ -77,7 +77,7 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 17: 4.30138635635376
 has enhancing precision resolve inconsistency: False
 ====== enter block 2 ======
-====== begin stmts search of ./workspace/func_analysis/lud_kernel_cu/lud_internal.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/lud_kernel_cu/lud_internal.json from 0 to 1 ======
 block 0 fpcount: 2
 Print result:
 offending text: ./lud_kernel.cu:170:3, ./lud_kernel.cu:173:3

@@ -27,7 +27,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 6: 0.21986103057861328
 [timer] compile run time for 6: 4.603266000747681
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/cg_cu/sparse.json from 0 to 14 ======
+====== begin blocks search of ./workspace/extract_hierarchy/cg_cu/sparse.json from 0 to 14 ======
 block 0 fpcount: 4
 block 1 fpcount: 0
 block 2 fpcount: 0
@@ -56,12 +56,12 @@ has enhancing precision resolve inconsistency: True
 [timer] compile run time for 10: 4.579306125640869
 has enhancing precision resolve inconsistency: True
 ====== enter block 9 ======
-====== begin blocks search of ./workspace/func_analysis/cg_cu/sparse.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/cg_cu/sparse.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 20
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/cg_cu/sparse.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/cg_cu/sparse.json from 0 to 2 ======
 block 0 fpcount: 17
 block 1 fpcount: 3
 loops in this level: [0]
@@ -75,12 +75,12 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 13: 4.418089151382446
 has enhancing precision resolve inconsistency: False
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/cg_cu/sparse.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/cg_cu/sparse.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 17
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/cg_cu/sparse.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/cg_cu/sparse.json from 0 to 2 ======
 block 0 fpcount: 3
 block 1 fpcount: 14
 loops in this level: [1]
@@ -94,16 +94,16 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 16: 4.1620447635650635
 has enhancing precision resolve inconsistency: False
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/cg_cu/sparse.json from 0 to 2 ======
+====== begin stmts search of ./workspace/extract_hierarchy/cg_cu/sparse.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 3
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/cg_cu/sparse.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/cg_cu/sparse.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 14
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/cg_cu/sparse.json from 0 to 6 ======
+====== begin blocks search of ./workspace/extract_hierarchy/cg_cu/sparse.json from 0 to 6 ======
 block 0 fpcount: 3
 block 1 fpcount: 4
 block 2 fpcount: 0
@@ -121,11 +121,11 @@ has enhancing precision resolve inconsistency: True
 [timer] compile run time for 19: 4.2710182666778564
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/cg_cu/sparse.json from 0 to 2 ======
+====== begin stmts search of ./workspace/extract_hierarchy/cg_cu/sparse.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 3
 ====== enter block 1 ======
-====== begin stmts search of ./workspace/func_analysis/cg_cu/sparse.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/cg_cu/sparse.json from 0 to 1 ======
 block 0 fpcount: 3
 Print result:
 offending text: ./cg.cu:1710:4, ./cg.cu:1710:30

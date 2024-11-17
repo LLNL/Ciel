@@ -17,7 +17,7 @@ MaxCCVersion = 7.5
 # - with single directory argument: run the script in the specified directory
 DebugMode = False
 UseExtendedPrecision = True
-SearchInHeaders = True
+SearchInHeaders = False
 SearchInHostFunctions = True
 ParallelExecution = True
 SubExpressionIsolation = True
@@ -60,12 +60,12 @@ set_configs(DebugMode, UseExtendedPrecision, SearchInHeaders, SearchInHostFuncti
 os.system("make clean")
 os.mkdir("./workspace")
 os.mkdir("./workspace/original_files")
-os.mkdir("./workspace/func_analysis")
+os.mkdir("./workspace/extract_hierarchy")
 
 # build function analysis
-with open("./func_analysis.out", "w") as f:
+with open("./extract_hierarchy.out", "w") as f:
     start = time.time()
-    subprocess.run(["make", "func_analysis"], stdout=f, stderr=subprocess.STDOUT)
+    subprocess.run(["make", "extract_hierarchy"], stdout=f, stderr=subprocess.STDOUT)
     end = time.time()
     print("[timer] func analysis time: " + str(end - start))
 

@@ -93,24 +93,24 @@ run:
 
 mk_workspace:
 	mkdir -p workspace
-	mkdir -p workspace/func_analysis
+	mkdir -p workspace/extract_hierarchy
 	mkdir -p workspace/original_files
 
 clean_temp:
 	rm -f workspace/*.c
 
-func_analysis: export CC = clang++
-func_analysis: export PLUGIN_FLAGS = -Xclang -load -Xclang Ciel-plugin.so -Xclang -plugin -Xclang -pliner-gpu-function-analysis -emit-llvm
-func_analysis: export CFLAGS =  
+extract_hierarchy: export CC = clang++
+extract_hierarchy: export PLUGIN_FLAGS = -Xclang -load -Xclang Ciel-plugin.so -Xclang -plugin -Xclang -pliner-gpu-function-analysis -emit-llvm
+extract_hierarchy: export CFLAGS =  
 
-func_analysis: mk_workspace ${OBJS_CORE}
+extract_hierarchy: mk_workspace ${OBJS_CORE}
 	echo "function analysis done."
 
-raise_precision: export CC = clang++
-raise_precision: export PLUGIN_FLAGS = -Xclang -load -Xclang Ciel-plugin.so -Xclang -plugin -Xclang -pliner-gpu-expand-precision -emit-llvm
-raise_precision: export CFLAGS =  
+enhance_precision: export CC = clang++
+enhance_precision: export PLUGIN_FLAGS = -Xclang -load -Xclang Ciel-plugin.so -Xclang -plugin -Xclang -pliner-gpu-expand-precision -emit-llvm
+enhance_precision: export CFLAGS =  
 
-raise_precision: clean_temp ${OBJS_CORE}
+enhance_precision: clean_temp ${OBJS_CORE}
 	echo "raise precision done."
 
 print_results: export CC = clang++

@@ -11,7 +11,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.0825350284576416
 [timer] compile run time for 1: 0.12603020668029785
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 3
 block 1 fpcount: 2
 loops in this level: [0]
@@ -19,23 +19,23 @@ loops in this level: [0]
 [timer] compile run time for 2: 0.1273670196533203
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 3
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 3
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 3
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 3
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 3
 Print result:
 offending text: ./test.cpp:13:33, ./test.cpp:15:1
@@ -98,7 +98,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.058437347412109375
 [timer] compile run time for 1: 0.11475634574890137
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 3 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 3 ======
 block 0 fpcount: 17
 block 1 fpcount: 35
 block 2 fpcount: 2
@@ -107,15 +107,15 @@ loops in this level: [1]
 [timer] compile run time for 2: 0.12854623794555664
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 35
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 35
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 4 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 4 ======
 block 0 fpcount: 2
 block 1 fpcount: 4
 block 2 fpcount: 5
@@ -327,7 +327,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.04998302459716797
 [timer] compile run time for 1: 0.08741617202758789
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 4 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 4 ======
 block 0 fpcount: 8
 block 1 fpcount: 20
 block 2 fpcount: 15
@@ -340,7 +340,7 @@ has enhancing precision resolve inconsistency: True
 [timer] compile run time for 3: 0.11700057983398438
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 8
 Print result:
 offending text: ./test.cpp:12:1, ./test.cpp:13:1
@@ -461,7 +461,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.051934242248535156
 [timer] compile run time for 1: 0.08021783828735352
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 55
 block 1 fpcount: 2
 loops in this level: []
@@ -469,7 +469,7 @@ loops in this level: []
 [timer] compile run time for 2: 0.07845354080200195
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 3
 block 1 fpcount: 52
 loops in this level: []
@@ -477,7 +477,7 @@ loops in this level: []
 [timer] compile run time for 3: 0.08866024017333984
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 3
 Print result:
 offending text: ./test.cpp:12:5, ./test.cpp:12:29
@@ -571,7 +571,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.048065185546875
 [timer] compile run time for 1: 0.09480643272399902
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 13
 block 1 fpcount: 2
 loops in this level: [0]
@@ -579,15 +579,15 @@ loops in this level: [0]
 [timer] compile run time for 2: 0.0944371223449707
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 13
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 13
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 3 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 3 ======
 block 0 fpcount: 3
 block 1 fpcount: 2
 block 2 fpcount: 8
@@ -660,7 +660,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.06854057312011719
 [timer] compile run time for 1: 0.16014647483825684
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 5 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 5 ======
 block 0 fpcount: 12
 block 1 fpcount: 19
 block 2 fpcount: 22
@@ -686,7 +686,7 @@ has enhancing precision resolve inconsistency: True
 [timer] compile run time for 7: 0.16949915885925293
 has enhancing precision resolve inconsistency: True
 ====== enter block 3 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 5
 block 1 fpcount: 9
 loops in this level: []
@@ -694,7 +694,7 @@ loops in this level: []
 [timer] compile run time for 8: 0.1262972354888916
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 5
 Print result:
 offending text: ./test.cpp:25:5, ./test.cpp:25:65
@@ -758,7 +758,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.10186600685119629
 [timer] compile run time for 1: 0.16954302787780762
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 3 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 3 ======
 block 0 fpcount: 19
 block 1 fpcount: 6
 block 2 fpcount: 2
@@ -770,7 +770,7 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 3: 0.15368890762329102
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 4 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 4 ======
 block 0 fpcount: 3
 block 1 fpcount: 2
 block 2 fpcount: 8
@@ -843,10 +843,10 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.0437471866607666
 [timer] compile run time for 1: 0.07923340797424316
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 17
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 3 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 3 ======
 block 0 fpcount: 10
 block 1 fpcount: 5
 block 2 fpcount: 2
@@ -926,7 +926,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.0639793872833252
 [timer] compile run time for 1: 0.11992645263671875
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 72
 block 1 fpcount: 2
 loops in this level: []
@@ -934,7 +934,7 @@ loops in this level: []
 [timer] compile run time for 2: 0.14029312133789062
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 5
 block 1 fpcount: 67
 loops in this level: []
@@ -942,7 +942,7 @@ loops in this level: []
 [timer] compile run time for 3: 0.22713875770568848
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 5
 Print result:
 offending text: ./test.cpp:12:5, ./test.cpp:12:52
@@ -1024,7 +1024,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.06706523895263672
 [timer] compile run time for 1: 0.21750569343566895
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 3 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 3 ======
 block 0 fpcount: 15
 block 1 fpcount: 17
 block 2 fpcount: 2
@@ -1033,15 +1033,15 @@ loops in this level: [1]
 [timer] compile run time for 2: 0.17178654670715332
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 17
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 17
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 3 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 3 ======
 block 0 fpcount: 4
 block 1 fpcount: 4
 block 2 fpcount: 9
@@ -1143,7 +1143,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.06074237823486328
 [timer] compile run time for 1: 0.1197509765625
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 38
 block 1 fpcount: 2
 loops in this level: []
@@ -1151,7 +1151,7 @@ loops in this level: []
 [timer] compile run time for 2: 0.1614851951599121
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 8
 block 1 fpcount: 30
 loops in this level: []
@@ -1162,15 +1162,15 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 4: 0.1760396957397461
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 30
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 30
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 14
 block 1 fpcount: 16
 loops in this level: [1]
@@ -1178,15 +1178,15 @@ loops in this level: [1]
 [timer] compile run time for 5: 0.14693498611450195
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 16
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 16
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 6
 block 1 fpcount: 10
 [timer] transform time for 6: 0.16214561462402344
@@ -1254,7 +1254,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.04476189613342285
 [timer] compile run time for 1: 0.14206910133361816
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 4 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 4 ======
 block 0 fpcount: 15
 block 1 fpcount: 10
 block 2 fpcount: 8
@@ -1264,15 +1264,15 @@ loops in this level: [2]
 [timer] compile run time for 2: 0.13771343231201172
 has enhancing precision resolve inconsistency: True
 ====== enter block 2 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 8
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 8
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 8
 Print result:
 offending text: ./test.cpp:17:31, ./test.cpp:19:1
@@ -1355,7 +1355,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.05530571937561035
 [timer] compile run time for 1: 0.11017942428588867
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 23
 block 1 fpcount: 2
 loops in this level: [0]
@@ -1363,31 +1363,31 @@ loops in this level: [0]
 [timer] compile run time for 2: 0.14211583137512207
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 23
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 23
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 23
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 23
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 23
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 23
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 3
 block 1 fpcount: 20
 loops in this level: []
@@ -1398,10 +1398,10 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 4: 0.16965293884277344
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 20
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 3 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 3 ======
 block 0 fpcount: 2
 block 1 fpcount: 6
 block 2 fpcount: 12
@@ -1564,7 +1564,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.05557441711425781
 [timer] compile run time for 1: 0.11011767387390137
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 5 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 5 ======
 block 0 fpcount: 4
 block 1 fpcount: 3
 block 2 fpcount: 14
@@ -1587,15 +1587,15 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 6: 0.15530705451965332
 has enhancing precision resolve inconsistency: True
 ====== enter block 3 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 14
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 14
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 4 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 4 ======
 block 0 fpcount: 2
 block 1 fpcount: 4
 block 2 fpcount: 4
@@ -1674,7 +1674,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.09436964988708496
 [timer] compile run time for 1: 0.1616964340209961
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 29
 block 1 fpcount: 2
 loops in this level: []
@@ -1682,7 +1682,7 @@ loops in this level: []
 [timer] compile run time for 2: 0.16684365272521973
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 3
 block 1 fpcount: 26
 loops in this level: []
@@ -1690,7 +1690,7 @@ loops in this level: []
 [timer] compile run time for 3: 0.15265107154846191
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 3
 Print result:
 offending text: ./test.cpp:12:5, ./test.cpp:12:28
@@ -1749,7 +1749,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.06234383583068848
 [timer] compile run time for 1: 0.10862874984741211
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 17
 block 1 fpcount: 2
 loops in this level: [0]
@@ -1757,15 +1757,15 @@ loops in this level: [0]
 [timer] compile run time for 2: 0.14475774765014648
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 17
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 17
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 13
 block 1 fpcount: 4
 loops in this level: []
@@ -1776,10 +1776,10 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 4: 0.12729167938232422
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 4
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 4
 Print result:
 offending text: ./test.cpp:13:139, ./test.cpp:15:1
@@ -1829,7 +1829,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.08604550361633301
 [timer] compile run time for 1: 0.13224315643310547
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 10
 block 1 fpcount: 2
 loops in this level: [0]
@@ -1837,15 +1837,15 @@ loops in this level: [0]
 [timer] compile run time for 2: 0.13361859321594238
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 10
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 10
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 2
 block 1 fpcount: 8
 [timer] transform time for 3: 0.07905697822570801
@@ -1877,7 +1877,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.06778669357299805
 [timer] compile run time for 1: 0.10463809967041016
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 57
 block 1 fpcount: 2
 loops in this level: []
@@ -1885,7 +1885,7 @@ loops in this level: []
 [timer] compile run time for 2: 0.08934855461120605
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 6
 block 1 fpcount: 51
 loops in this level: []
@@ -1893,7 +1893,7 @@ loops in this level: []
 [timer] compile run time for 3: 0.12059426307678223
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 6
 Print result:
 offending text: ./test.cpp:12:5, ./test.cpp:12:51
@@ -1952,7 +1952,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.0838935375213623
 [timer] compile run time for 1: 0.12366247177124023
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 3 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 3 ======
 block 0 fpcount: 24
 block 1 fpcount: 20
 block 2 fpcount: 2
@@ -1961,15 +1961,15 @@ loops in this level: [1]
 [timer] compile run time for 2: 0.12742090225219727
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 20
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 20
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 4 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 4 ======
 block 0 fpcount: 3
 block 1 fpcount: 5
 block 2 fpcount: 9
@@ -2098,10 +2098,10 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.07680225372314453
 [timer] compile run time for 1: 0.14494800567626953
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 5
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 3
 block 1 fpcount: 2
 [timer] transform time for 2: 0.07625770568847656
@@ -2160,7 +2160,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.08295226097106934
 [timer] compile run time for 1: 0.1447141170501709
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 54
 block 1 fpcount: 2
 loops in this level: []
@@ -2168,7 +2168,7 @@ loops in this level: []
 [timer] compile run time for 2: 0.11700081825256348
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 4
 block 1 fpcount: 50
 loops in this level: []
@@ -2179,10 +2179,10 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 4: 0.12304925918579102
 has enhancing precision resolve inconsistency: False
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 4
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 30
 block 1 fpcount: 20
 loops in this level: []
@@ -2193,7 +2193,7 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 6: 0.1380326747894287
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 4
 block 1 fpcount: 16
 loops in this level: []
@@ -2204,10 +2204,10 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 8: 0.13414311408996582
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 16
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 3 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 3 ======
 block 0 fpcount: 6
 block 1 fpcount: 5
 block 2 fpcount: 5
@@ -2333,7 +2333,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.09982585906982422
 [timer] compile run time for 1: 0.14218735694885254
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 5 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 5 ======
 block 0 fpcount: 10
 block 1 fpcount: 27
 block 2 fpcount: 24
@@ -2353,7 +2353,7 @@ has enhancing precision resolve inconsistency: True
 [timer] compile run time for 5: 0.14865827560424805
 has enhancing precision resolve inconsistency: True
 ====== enter block 2 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 5
 block 1 fpcount: 19
 loops in this level: []
@@ -2364,10 +2364,10 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 7: 0.12822675704956055
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 19
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 10
 block 1 fpcount: 9
 [timer] transform time for 8: 0.09562969207763672
@@ -2528,7 +2528,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.0912621021270752
 [timer] compile run time for 1: 0.16378569602966309
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 4 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 4 ======
 block 0 fpcount: 9
 block 1 fpcount: 23
 block 2 fpcount: 8
@@ -2547,7 +2547,7 @@ has enhancing precision resolve inconsistency: True
 [timer] compile run time for 5: 0.13873004913330078
 has enhancing precision resolve inconsistency: True
 ====== enter block 2 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 4
 block 1 fpcount: 4
 loops in this level: []
@@ -2555,7 +2555,7 @@ loops in this level: []
 [timer] compile run time for 6: 0.1481478214263916
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 4
 Print result:
 offending text: ./test.cpp:19:5, ./test.cpp:19:53
@@ -2633,7 +2633,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.07570099830627441
 [timer] compile run time for 1: 0.13096165657043457
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 4 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 4 ======
 block 0 fpcount: 50
 block 1 fpcount: 13
 block 2 fpcount: 13
@@ -2649,7 +2649,7 @@ has enhancing precision resolve inconsistency: True
 [timer] compile run time for 4: 0.12544608116149902
 has enhancing precision resolve inconsistency: True
 ====== enter block 2 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 3
 block 1 fpcount: 10
 loops in this level: []
@@ -2660,10 +2660,10 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 6: 0.12361574172973633
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 10
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 7
 block 1 fpcount: 3
 [timer] transform time for 7: 0.09379243850708008
@@ -2733,10 +2733,10 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.07468318939208984
 [timer] compile run time for 1: 0.11885666847229004
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 17
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 5 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 5 ======
 block 0 fpcount: 3
 block 1 fpcount: 2
 block 2 fpcount: 5
@@ -2805,7 +2805,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.05623316764831543
 [timer] compile run time for 1: 0.12208771705627441
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 88
 block 1 fpcount: 2
 loops in this level: []
@@ -2813,7 +2813,7 @@ loops in this level: []
 [timer] compile run time for 2: 0.12082123756408691
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 5
 block 1 fpcount: 83
 loops in this level: []
@@ -2821,7 +2821,7 @@ loops in this level: []
 [timer] compile run time for 3: 0.14400386810302734
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 5
 Print result:
 offending text: ./test.cpp:12:5, ./test.cpp:12:50
@@ -2903,7 +2903,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.08807659149169922
 [timer] compile run time for 1: 0.1743474006652832
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 42
 block 1 fpcount: 2
 loops in this level: []
@@ -2911,7 +2911,7 @@ loops in this level: []
 [timer] compile run time for 2: 0.14278459548950195
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 5
 block 1 fpcount: 37
 loops in this level: []
@@ -2919,7 +2919,7 @@ loops in this level: []
 [timer] compile run time for 3: 0.13753962516784668
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 5
 Print result:
 offending text: ./test.cpp:12:5, ./test.cpp:12:47
@@ -2992,7 +2992,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.07730793952941895
 [timer] compile run time for 1: 0.1099100112915039
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 33
 block 1 fpcount: 2
 loops in this level: []
@@ -3000,7 +3000,7 @@ loops in this level: []
 [timer] compile run time for 2: 0.19789338111877441
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 7
 block 1 fpcount: 26
 loops in this level: []
@@ -3011,7 +3011,7 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 4: 0.1664295196533203
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 18
 block 1 fpcount: 8
 loops in this level: []
@@ -3019,7 +3019,7 @@ loops in this level: []
 [timer] compile run time for 5: 0.12645697593688965
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 3 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 3 ======
 block 0 fpcount: 6
 block 1 fpcount: 4
 block 2 fpcount: 8
@@ -3110,7 +3110,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.0551605224609375
 [timer] compile run time for 1: 0.0814964771270752
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 21
 block 1 fpcount: 2
 loops in this level: []
@@ -3118,7 +3118,7 @@ loops in this level: []
 [timer] compile run time for 2: 0.07919788360595703
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 3
 block 1 fpcount: 18
 loops in this level: []
@@ -3129,10 +3129,10 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 4: 0.08806824684143066
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 18
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 5
 block 1 fpcount: 13
 loops in this level: []
@@ -3140,7 +3140,7 @@ loops in this level: []
 [timer] compile run time for 5: 0.08812856674194336
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 5
 Print result:
 offending text: ./test.cpp:13:7, ./test.cpp:13:64
@@ -3218,7 +3218,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.08257150650024414
 [timer] compile run time for 1: 0.13481974601745605
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 51
 block 1 fpcount: 2
 loops in this level: []
@@ -3226,7 +3226,7 @@ loops in this level: []
 [timer] compile run time for 2: 0.13116884231567383
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 10
 block 1 fpcount: 41
 loops in this level: []
@@ -3237,7 +3237,7 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 4: 0.14754533767700195
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 3 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 3 ======
 block 0 fpcount: 22
 block 1 fpcount: 5
 block 2 fpcount: 14
@@ -3258,7 +3258,7 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 9: 0.12668609619140625
 has enhancing precision resolve inconsistency: True
 ====== enter block 2 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 6
 block 1 fpcount: 8
 loops in this level: []
@@ -3266,7 +3266,7 @@ loops in this level: []
 [timer] compile run time for 10: 0.1289834976196289
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 6
 Print result:
 offending text: ./test.cpp:20:5, ./test.cpp:20:74
@@ -3339,7 +3339,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.07273244857788086
 [timer] compile run time for 1: 0.12447500228881836
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 3 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 3 ======
 block 0 fpcount: 10
 block 1 fpcount: 14
 block 2 fpcount: 2
@@ -3348,7 +3348,7 @@ loops in this level: []
 [timer] compile run time for 2: 0.12453794479370117
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 10
 Print result:
 offending text: ./test.cpp:12:1, ./test.cpp:13:1
@@ -3458,7 +3458,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.07939386367797852
 [timer] compile run time for 1: 0.14111995697021484
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 71
 block 1 fpcount: 2
 loops in this level: []
@@ -3466,7 +3466,7 @@ loops in this level: []
 [timer] compile run time for 2: 0.13330078125
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 3
 block 1 fpcount: 68
 loops in this level: []
@@ -3477,10 +3477,10 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 4: 0.13462090492248535
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 68
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 12
 block 1 fpcount: 56
 loops in this level: []
@@ -3491,10 +3491,10 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 6: 0.13284564018249512
 has enhancing precision resolve inconsistency: False
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 12
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 3 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 3 ======
 block 0 fpcount: 19
 block 1 fpcount: 15
 block 2 fpcount: 22
@@ -3509,7 +3509,7 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 9: 0.08320236206054688
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 4 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 4 ======
 block 0 fpcount: 4
 block 1 fpcount: 5
 block 2 fpcount: 7
@@ -3524,7 +3524,7 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 12: 0.12603473663330078
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 3
 block 1 fpcount: 12
 loops in this level: []
@@ -3535,10 +3535,10 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 14: 0.13304686546325684
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 12
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 12
 Print result:
 offending text: ./test.cpp:13:7, ./test.cpp:13:119
@@ -3769,7 +3769,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.06709432601928711
 [timer] compile run time for 1: 0.09604430198669434
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 30
 block 1 fpcount: 2
 loops in this level: []
@@ -3777,7 +3777,7 @@ loops in this level: []
 [timer] compile run time for 2: 0.11409878730773926
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 6
 block 1 fpcount: 24
 loops in this level: []
@@ -3788,10 +3788,10 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 4: 0.11264181137084961
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 24
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 7
 block 1 fpcount: 17
 loops in this level: []
@@ -3799,7 +3799,7 @@ loops in this level: []
 [timer] compile run time for 5: 0.10519075393676758
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 7
 Print result:
 offending text: ./test.cpp:13:7, ./test.cpp:13:97
@@ -3872,7 +3872,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.062010765075683594
 [timer] compile run time for 1: 0.11620450019836426
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 3
 block 1 fpcount: 2
 loops in this level: [0]
@@ -3880,31 +3880,31 @@ loops in this level: [0]
 [timer] compile run time for 2: 0.10471701622009277
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 3
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 3
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 3
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 3
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 3
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 3
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 3
 Print result:
 offending text: ./test.cpp:14:35, ./test.cpp:16:1
@@ -3962,7 +3962,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.06166863441467285
 [timer] compile run time for 1: 0.106597900390625
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 20
 block 1 fpcount: 2
 loops in this level: [0]
@@ -3970,15 +3970,15 @@ loops in this level: [0]
 [timer] compile run time for 2: 0.12115669250488281
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 20
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 20
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 4
 block 1 fpcount: 16
 loops in this level: []
@@ -3986,7 +3986,7 @@ loops in this level: []
 [timer] compile run time for 3: 0.16258597373962402
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 4
 Print result:
 offending text: ./test.cpp:13:7, ./test.cpp:13:48
@@ -4064,7 +4064,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.07425546646118164
 [timer] compile run time for 1: 0.17290663719177246
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 29
 block 1 fpcount: 2
 loops in this level: [0]
@@ -4072,23 +4072,23 @@ loops in this level: [0]
 [timer] compile run time for 2: 0.13840889930725098
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 29
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 29
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 29
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 29
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 3
 block 1 fpcount: 26
 loops in this level: []
@@ -4099,7 +4099,7 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 4: 0.13482308387756348
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 9
 block 1 fpcount: 17
 loops in this level: [1]
@@ -4107,15 +4107,15 @@ loops in this level: [1]
 [timer] compile run time for 5: 0.12944817543029785
 has enhancing precision resolve inconsistency: True
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 17
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 17
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 7
 block 1 fpcount: 10
 [timer] transform time for 6: 0.09003424644470215
@@ -4408,7 +4408,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.09240555763244629
 [timer] compile run time for 1: 0.13408470153808594
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 24
 block 1 fpcount: 2
 loops in this level: []
@@ -4416,7 +4416,7 @@ loops in this level: []
 [timer] compile run time for 2: 0.13292336463928223
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 4
 block 1 fpcount: 20
 loops in this level: []
@@ -4427,10 +4427,10 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 4: 0.15012121200561523
 has enhancing precision resolve inconsistency: False
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 4
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 17
 block 1 fpcount: 3
 loops in this level: [1]
@@ -4444,7 +4444,7 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 7: 0.1386876106262207
 has enhancing precision resolve inconsistency: False
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 3 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 3 ======
 block 0 fpcount: 2
 block 1 fpcount: 9
 block 2 fpcount: 6
@@ -4461,15 +4461,15 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 11: 0.1359999179840088
 has enhancing precision resolve inconsistency: False
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 3
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 3
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 3
 Print result:
 offending text: ./test.cpp:12:5, ./test.cpp:12:57
@@ -4499,7 +4499,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.06603145599365234
 [timer] compile run time for 1: 0.14006829261779785
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 35
 block 1 fpcount: 2
 loops in this level: []
@@ -4507,7 +4507,7 @@ loops in this level: []
 [timer] compile run time for 2: 0.13517022132873535
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 3
 block 1 fpcount: 32
 loops in this level: []
@@ -4515,7 +4515,7 @@ loops in this level: []
 [timer] compile run time for 3: 0.1592705249786377
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 3
 Print result:
 offending text: ./test.cpp:12:5, ./test.cpp:12:27
@@ -4574,7 +4574,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.07598567008972168
 [timer] compile run time for 1: 0.1283714771270752
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 64
 block 1 fpcount: 2
 loops in this level: []
@@ -4582,7 +4582,7 @@ loops in this level: []
 [timer] compile run time for 2: 0.12444400787353516
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 20
 block 1 fpcount: 44
 loops in this level: []
@@ -4590,7 +4590,7 @@ loops in this level: []
 [timer] compile run time for 3: 0.15471911430358887
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 20
 Print result:
 offending text: ./test.cpp:12:5, ./test.cpp:12:197
@@ -4768,7 +4768,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.125777006149292
 [timer] compile run time for 1: 0.18323898315429688
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 4 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 4 ======
 block 0 fpcount: 16
 block 1 fpcount: 20
 block 2 fpcount: 21
@@ -4781,7 +4781,7 @@ has enhancing precision resolve inconsistency: True
 [timer] compile run time for 3: 0.13651132583618164
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 4 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 4 ======
 block 0 fpcount: 2
 block 1 fpcount: 5
 block 2 fpcount: 2
@@ -4883,10 +4883,10 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.07993626594543457
 [timer] compile run time for 1: 0.14249539375305176
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 17
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 4 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 4 ======
 block 0 fpcount: 5
 block 1 fpcount: 5
 block 2 fpcount: 5
@@ -4968,7 +4968,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.16099023818969727
 [timer] compile run time for 1: 0.2353506088256836
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 5 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 5 ======
 block 0 fpcount: 8
 block 1 fpcount: 18
 block 2 fpcount: 32
@@ -4982,7 +4982,7 @@ has enhancing precision resolve inconsistency: True
 [timer] compile run time for 3: 0.18775558471679688
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 8
 Print result:
 offending text: ./test.cpp:12:1, ./test.cpp:13:1
@@ -5055,7 +5055,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.08671712875366211
 [timer] compile run time for 1: 0.16902542114257812
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 5 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 5 ======
 block 0 fpcount: 12
 block 1 fpcount: 20
 block 2 fpcount: 19
@@ -5066,15 +5066,15 @@ loops in this level: [3]
 [timer] compile run time for 2: 0.14883661270141602
 has enhancing precision resolve inconsistency: True
 ====== enter block 3 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 25
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 25
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 4 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 4 ======
 block 0 fpcount: 2
 block 1 fpcount: 14
 block 2 fpcount: 3
@@ -5171,7 +5171,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 1: 0.2115039825439453
 [timer] compile run time for 1: 0.34117555618286133
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 24
 block 1 fpcount: 2
 loops in this level: []
@@ -5179,7 +5179,7 @@ loops in this level: []
 [timer] compile run time for 2: 0.21911334991455078
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 2 ======
 block 0 fpcount: 5
 block 1 fpcount: 19
 loops in this level: []
@@ -5187,7 +5187,7 @@ loops in this level: []
 [timer] compile run time for 3: 0.1652989387512207
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/test_cpp/compute.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/test_cpp/compute.json from 0 to 1 ======
 block 0 fpcount: 5
 Print result:
 offending text: ./test.cpp:12:5, ./test.cpp:12:40

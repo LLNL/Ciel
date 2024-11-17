@@ -27,7 +27,7 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 4: 42.23491072654724
 ['./workspace/config_004/run_GCC5_O3_fastmath.out']
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/cg_cpp/sparse.json from 0 to 14 ======
+====== begin blocks search of ./workspace/extract_hierarchy/cg_cpp/sparse.json from 0 to 14 ======
 block 0 fpcount: 4
 block 1 fpcount: 0
 block 2 fpcount: 0
@@ -76,7 +76,7 @@ has enhancing precision resolve inconsistency: False
 ['./workspace/config_012/run_GCC5_O3_fastmath.out']
 has enhancing precision resolve inconsistency: False
 ====== enter block 8 ======
-====== begin stmts search of ./workspace/func_analysis/cg_cpp/sparse.json from 0 to 2 ======
+====== begin stmts search of ./workspace/extract_hierarchy/cg_cpp/sparse.json from 0 to 2 ======
 block 0 fpcount: 2
 block 1 fpcount: 4
 [timer] transform time for 13: 0.0996713638305664
@@ -88,12 +88,12 @@ has enhancing precision resolve inconsistency: False
 ['./workspace/config_014/run_GCC5_O3_fastmath.out']
 has enhancing precision resolve inconsistency: True
 ====== enter block 9 ======
-====== begin blocks search of ./workspace/func_analysis/cg_cpp/sparse.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/cg_cpp/sparse.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 20
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/cg_cpp/sparse.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/cg_cpp/sparse.json from 0 to 2 ======
 block 0 fpcount: 17
 block 1 fpcount: 3
 loops in this level: [0]
@@ -110,12 +110,12 @@ has enhancing precision resolve inconsistency: False
 ['./workspace/config_017/run_GCC5_O3_fastmath.out']
 has enhancing precision resolve inconsistency: False
 ====== enter block 0 ======
-====== begin blocks search of ./workspace/func_analysis/cg_cpp/sparse.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/cg_cpp/sparse.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 17
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/cg_cpp/sparse.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/cg_cpp/sparse.json from 0 to 2 ======
 block 0 fpcount: 3
 block 1 fpcount: 14
 loops in this level: [1]
@@ -128,11 +128,11 @@ has enhancing precision resolve inconsistency: False
 ['./workspace/config_019/run_GCC5_O3_fastmath.out']
 has enhancing precision resolve inconsistency: True
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/cg_cpp/sparse.json from 0 to 2 ======
+====== begin stmts search of ./workspace/extract_hierarchy/cg_cpp/sparse.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 3
 ====== enter block 1 ======
-====== begin stmts search of ./workspace/func_analysis/cg_cpp/sparse.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/cg_cpp/sparse.json from 0 to 1 ======
 block 0 fpcount: 3
 Print result:
 offending text: ./cg.cpp:814:2, ./cg.cpp:814:40

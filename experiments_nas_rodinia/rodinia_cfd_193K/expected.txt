@@ -38,15 +38,15 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 10: 0.5075960159301758
 [timer] compile run time for 10: 30.009318113327026
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/euler3d_cu/compute_pressure.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/euler3d_cu/compute_pressure.json from 0 to 1 ======
 block 0 fpcount: 6
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/euler3d_cu/compute_pressure.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/euler3d_cu/compute_pressure.json from 0 to 1 ======
 block 0 fpcount: 6
-====== begin blocks search of ./workspace/func_analysis/euler3d_cu/compute_speed_sqd.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/euler3d_cu/compute_speed_sqd.json from 0 to 1 ======
 block 0 fpcount: 6
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/euler3d_cu/compute_speed_sqd.json from 0 to 1 ======
+====== begin stmts search of ./workspace/extract_hierarchy/euler3d_cu/compute_speed_sqd.json from 0 to 1 ======
 block 0 fpcount: 6
 Print result:
 offending text: ./euler3d.cu:257:2, ./euler3d.cu:257:83

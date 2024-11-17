@@ -33,7 +33,7 @@ has enhancing precision resolve inconsistency: False
 [timer] transform time for 8: 0.21469569206237793
 [timer] compile run time for 8: 5.085837125778198
 has enhancing precision resolve inconsistency: True
-====== begin blocks search of ./workspace/func_analysis/mg-no-cast_cu/rprj3_gpu_kernel.json from 0 to 4 ======
+====== begin blocks search of ./workspace/extract_hierarchy/mg-no-cast_cu/rprj3_gpu_kernel.json from 0 to 4 ======
 block 0 fpcount: 0
 block 1 fpcount: 0
 block 2 fpcount: 8
@@ -46,15 +46,15 @@ has enhancing precision resolve inconsistency: False
 [timer] compile run time for 10: 4.878356695175171
 has enhancing precision resolve inconsistency: True
 ====== enter block 3 ======
-====== begin blocks search of ./workspace/func_analysis/mg-no-cast_cu/rprj3_gpu_kernel.json from 0 to 2 ======
+====== begin blocks search of ./workspace/extract_hierarchy/mg-no-cast_cu/rprj3_gpu_kernel.json from 0 to 2 ======
 block 0 fpcount: 0
 block 1 fpcount: 12
 loops in this level: []
 ====== enter block 1 ======
-====== begin blocks search of ./workspace/func_analysis/mg-no-cast_cu/rprj3_gpu_kernel.json from 0 to 1 ======
+====== begin blocks search of ./workspace/extract_hierarchy/mg-no-cast_cu/rprj3_gpu_kernel.json from 0 to 1 ======
 block 0 fpcount: 12
 ====== enter block 0 ======
-====== begin stmts search of ./workspace/func_analysis/mg-no-cast_cu/rprj3_gpu_kernel.json from 0 to 4 ======
+====== begin stmts search of ./workspace/extract_hierarchy/mg-no-cast_cu/rprj3_gpu_kernel.json from 0 to 4 ======
 block 0 fpcount: 0
 block 1 fpcount: 1
 block 2 fpcount: 1
